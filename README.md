@@ -59,13 +59,13 @@ _public/images/icon256.png_
 
 #### 6. Testing your extension
 
-Thankfully you don't have to get your extension published before being able to test it. Refer to **0. Before starting** for information about testing an extension, also referred to as loading unpacked extensions.
+Thankfully you don't have to get your extension published before being able to test it. Refer to **0. Before starting** for information about testing an extension, also referred to as loading unpacked extensions. You do however need to build the extension to be able to test it, refer to the next section for this step.
 
 ## Build
 
 To build the extension, run:
 `npm run build`  
-The build folder _dist/_ is configured in _webpack/webpack.config.js_. You can add more files, just remember to add the relevant changes to _webpack.config.js_.
+The files that end up in the build folder _dist/_ are configured in _webpack/webpack.config.js_. This folder is your unpacked extension.
 
 # License
 
