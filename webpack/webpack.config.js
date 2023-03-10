@@ -5,7 +5,7 @@ module.exports = {
   mode: "production",
   entry: {
     content: path.resolve(__dirname, "..", "src/scripts", "content.ts"),
-    script: path.resolve(__dirname, "..", "src/scripts", "mute-button.ts"),
+    script: path.resolve(__dirname, "..", "src/scripts", "script.ts"),
   },
   output: {
     path: path.join(__dirname, "../dist"),
