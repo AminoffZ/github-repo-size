@@ -1,13 +1,13 @@
-
 <img src="https://raw.githubusercontent.com/AminoffZ/webpack-browser-extension-template/main/public/images/icon256.png" align="right" width="128" title="hover text">
 
-# Browser extension template with webpack 
+# Browser extension template with webpack
 
 Quickstart your extension development by using this repository!
 
 ## Features
+
 - Typescript for type safe development
-- Webpack for significant size reduction
+- Bun for blazing fast development
 - Manifest version 3 for faster publishing on Chrome
 
 ## Develop
@@ -15,13 +15,14 @@ Quickstart your extension development by using this repository!
 ### Setup
 
 Clone the project, navigate into folder using terminal and run:
-`npm install`
+`bun install`
 
 ### Adding behaviour
 
 #### 0. Before starting
 
 Make sure you have some understanding of extension development. Here are some resources:
+
 - [Chrome](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/)
 - [Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension)
 
