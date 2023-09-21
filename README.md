@@ -1,6 +1,6 @@
-<img src="https://raw.githubusercontent.com/AminoffZ/webpack-browser-extension-template/main/public/images/icon256.png" align="right" width="128" title="hover text">
+<img src="https://raw.githubusercontent.com/AminoffZ/bun-browser-extension-builder/main/public/images/icon256.png" align="right" width="128" title="hover text">
 
-# Browser extension template with webpack
+# Browser extension builder with Bun
 
 Quickstart your extension development by using this repository!
 
@@ -15,7 +15,9 @@ Quickstart your extension development by using this repository!
 ### Setup
 
 Clone the project, navigate into folder using terminal and run:
-`bun install`
+```bash
+bun install
+```
 
 ### Adding behaviour
 
@@ -28,7 +30,7 @@ Make sure you have some understanding of extension development. Here are some re
 
 #### 1. Manifest
 
-ChatGPT: In extension development, the manifest is a JSON file that defines the extension's name, version, functionality, permissions, and other details. It is required for all browser extensions and must be carefully constructed to ensure the extension is secure and efficient.
+The manifest is a JSON file that defines the extension's name, version, functionality, permissions, and other details. It is required for all browser extensions and must be carefully constructed to ensure the extension is secure and efficient (and works).
 
 For additional information visit the [Chrome](https://developer.chrome.com/docs/extensions/mv3/manifest/) manifest documentation page. Please note that some browsers, like [Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings), require specific information for extensions to work.
 
@@ -38,7 +40,9 @@ To add/modify code, modify the files in the _src/scripts/_ folder. They will be 
 
 #### What is a _content.ts_/_script.ts_?
 
-ChatGPT: In extension development, a content script is a JavaScript file that runs in the context of a web page and can modify its content and behavior. The content script can read and modify the HTML, CSS, and JavaScript of the web page, and can be used to add new functionality, modify existing functionality, or manipulate the content of the page in various ways.
+TLDR: I mainly use content.js/ts to add other scripts or files to the DOM when loaded. I use script.js/ts for almost everything else.
+
+A content script is a JavaScript file that runs in the context of a web page and can modify its content and behavior. The content script can read and modify the HTML, CSS, and JavaScript of the web page, and can be used to add new functionality, modify existing functionality, or manipulate the content of the page in various ways.
 
 The name "content.js" is often used as a convention to indicate that the file contains the code for a content script. However, developers are free to use any filename they like for their content script.
 
@@ -65,8 +69,24 @@ Thankfully you don't have to get your extension published before being able to t
 ## Build
 
 To build the extension, run:
-`npm run build`  
-The files that end up in the build folder _dist/_ are configured in _webpack/webpack.config.js_. This folder is your unpacked extension.
+```bash	
+bun run build
+```
+This will create a new folder called _build/_ with the extension files. The folder will contain the following files by default:
+- Anything in _public/_ (images, styles, manifest etc.)
+- .js and .ts files in _src/scripts/_
+This folder can be loaded as an unpacked extension in your browser.
+The files that end up in the build folder _build/_ are configured in _bundler.ts_.
+
+## Other items
+
+### Formatting
+
+I added a .prettierrc for contributing. If building for your own purposes, feel free to remove it.
+To format with the provided configuration, run:
+```bash
+bun run format
+```
 
 # License
 
