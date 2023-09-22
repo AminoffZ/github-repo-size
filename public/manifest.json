@@ -5,24 +5,23 @@
   "web_accessible_resources": [
     {
       "resources": ["script.js"],
-
-      "matches": ["http://*/*"]
+      "matches": ["https://github.com/*"]
     }
   ],
   "content_scripts": [
     {
-      "matches": ["http://*/*"],
+      "matches": ["https://github.com/*"],
       "js": ["content.js"],
-      "css": ["style.css"]
+      "run_at": "document_end"
     }
   ],
   "action": {
-    "default_icon": "./images/icon256.png"
+    "default_icon": "./images/icon256.png",
+    "default_popup": "./html/popup.html"
   },
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "yourcustom@token.io",
-      "strict_min_version": "42.0"
-    }
-  }
+  "background": {
+    "service_worker": "./background.js",
+    "type": "module"
+  },
+  "permissions": ["storage"]
 }

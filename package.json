@@ -1,5 +1,5 @@
 {
-  "name": "webpack-browser-extension-template",
+  "name": "github-repo-size",
   "module": "bundler.ts",
   "devDependencies": {
     "@types/chrome": "^0.0.246",

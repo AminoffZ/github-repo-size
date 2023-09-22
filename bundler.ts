@@ -6,7 +6,7 @@ const entrypoints = await entryPoints();
 await Bun.build({
   entrypoints: entrypoints,
   outdir: './build',
-  minify: true,
+  // minify: true,
 });
 
 await copyContents('./public', './build');
