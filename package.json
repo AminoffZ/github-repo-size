@@ -1,17 +1,25 @@
 {
-  "name": "github-repo-size",
-  "module": "bundler.ts",
-  "devDependencies": {
+  "name": "popup",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "bun run format && astro build && bun run csp && bun bundler.ts",
+    "preview": "astro preview",
+    "astro": "astro",
+    "csp": "bun extract-inline.cjs",
+    "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,md}' '!dist/**' '!node_modules/**'"
+  },
+  "dependencies": {
     "@types/chrome": "^0.0.246",
     "bun-types": "latest",
-    "prettier": "^3.0.3"
+    "prettier": "^3.0.3",
+    "@astrojs/svelte": "^4.0.2",
+    "astro": "^3.1.2",
+    "svelte": "^4.2.1"
   },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
-  "scripts": {
-    "build": "bun bundler.ts",
-    "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,md}' '!build/**' '!node_modules/**'"
-  },
-  "type": "module"
+  "devDependencies": {
+    "tiny-glob": "^0.2.9"
+  }
 }

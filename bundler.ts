@@ -1,12 +1,9 @@
-import copyContents from './copier';
 import entryPoints from './entrypoints';
 
 const entrypoints = await entryPoints();
 
 await Bun.build({
   entrypoints: entrypoints,
-  outdir: './build',
+  outdir: './dist',
   // minify: true,
 });
-
-await copyContents('./public', './build');
