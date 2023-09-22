@@ -1,0 +1,21 @@
+{
+  "name": "popup",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build && npm run csp",
+    "preview": "astro preview",
+    "astro": "astro",
+    "csp": "node extract-inline.cjs"
+  },
+  "dependencies": {
+    "@astrojs/svelte": "^4.0.2",
+    "astro": "^3.1.2",
+    "svelte": "^4.2.1"
+  },
+  "devDependencies": {
+    "tiny-glob": "^0.2.9"
+  }
+}
