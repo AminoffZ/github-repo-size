@@ -4,5 +4,20 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  safelist: [
+    {
+      pattern: /bg-.+/,
+    },
+    'mocha',
+    'macchiato',
+    'frappe',
+    'latte',
+  ],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@catppuccin/tailwindcss')({
+      prefix: 'ctp',
+      defaultFlavour: 'frappe',
+    }),
+  ],
 };
