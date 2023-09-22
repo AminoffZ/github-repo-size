@@ -74,6 +74,9 @@
   }
 </script>
 
-<div>
-  <button on:click={handleTokenButton}>Add Token</button>
+<div class="w-40 h-20">
+  <button class="rounded" on:click={handleTokenButton}>Add Token</button>
 </div>
+
+<style>
+</style>

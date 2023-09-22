@@ -12,12 +12,14 @@
     "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,md}' '!dist/**' '!node_modules/**'"
   },
   "dependencies": {
+    "@astrojs/svelte": "^4.0.2",
+    "@astrojs/tailwind": "^5.0.0",
     "@types/chrome": "^0.0.246",
+    "astro": "^3.1.2",
     "bun-types": "latest",
     "prettier": "^3.0.3",
-    "@astrojs/svelte": "^4.0.2",
-    "astro": "^3.1.2",
-    "svelte": "^4.2.1"
+    "svelte": "^4.2.1",
+    "tailwindcss": "^3.0.24"
   },
   "devDependencies": {
     "tiny-glob": "^0.2.9"
