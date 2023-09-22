@@ -1,12 +1,59 @@
 <script lang="ts">
-  import { createEventDispatcher } from 'svelte';
+  import { onMount } from 'svelte';
 
-  const dispatch = createEventDispatcher();
   export let expanded = false;
+
+  const GITHUB_TOKEN_KEY = 'x-github-token';
+
+  let token = '';
+  let storage: chrome.storage.SyncStorageArea;
   let showToken = false;
-  function toggle() {
-    dispatch('toggle');
+
+  const readStorage = async () => {
+    return new Promise((resolve, reject) => {
+      storage.get([GITHUB_TOKEN_KEY], function (result) {
+        if (result[GITHUB_TOKEN_KEY] === undefined) {
+          reject();
+        } else {
+          resolve(result[GITHUB_TOKEN_KEY]);
+        }
+      });
+    });
+  };
+
+  async function getGithubToken() {
+    return await readStorage();
   }
+
+  async function setGithubToken() {
+    const obj: { [key: string]: string } = {};
+    obj[GITHUB_TOKEN_KEY] = token;
+    await storage
+      .set(obj)
+      .then(() => {
+        console.log('Token set to ' + token);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }
+
+  onMount(async () => {
+    if (typeof chrome !== 'undefined') {
+      storage = chrome.storage.sync || chrome.storage.local;
+      if (!storage) {
+        return;
+      }
+      await getGithubToken()
+        .then((_token) => {
+          console.log('Token: ' + _token);
+          if (typeof _token === 'string') token = _token;
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    }
+  });
 </script>
 
 <div
@@ -15,12 +62,23 @@
     : 'h-0'} overflow-hidden"
 >
   <div class="flex justify-center items-center">
-    <input
-      class="bg-ctp-crust form-input pl-4 pr-12 py-3 rounded-full"
-      type={showToken ? 'text' : 'password'}
-      name="token"
-      id="token"
-    />
+    {#if showToken}
+      <input
+        bind:value={token}
+        class="bg-ctp-crust form-input pl-4 pr-12 py-3 rounded-full"
+        type="text"
+        name="token"
+        id="token"
+      />
+    {:else}
+      <input
+        bind:value={token}
+        class="bg-ctp-crust form-input pl-4 pr-12 py-3 rounded-full"
+        type="password"
+        name="token"
+        id="token"
+      />
+    {/if}
     <button
       class="eye {expanded
         ? 'eye-expanded'
@@ -50,7 +108,10 @@
     </button>
   </div>
   <div class="flex justify-center items-center">
-    <button class="bg-ctp-crust" on:click={toggle}>Toggle Token</button>
+    <button class="bg-ctp-crust" on:click={() => getGithubToken()}
+      >Get Token</button
+    >
+    <button class="bg-ctp-crust" on:click={setGithubToken}>Set Token</button>
   </div>
 </div>
 

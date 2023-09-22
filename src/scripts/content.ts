@@ -88,7 +88,7 @@ const checkStatus = (response: Response): Response => {
 
 const getAPIData = (uri: string): Promise<any> => {
   const headerObj: { [key: string]: string } = {
-    'User-Agent': 'harshjv/github-repo-size',
+    'User-Agent': 'AminoffZ/github-repo-size',
   };
   const token = localStorage.getItem(GITHUB_TOKEN_KEY) || githubToken;
   if (token) {
