@@ -19,5 +19,8 @@
     "default_icon": "favicon.png",
     "default_popup": "index.html"
   },
-  "permissions": ["storage"]
+  "permissions": ["storage", "identity", "tabs"],
+  "background": {
+    "service_worker": "background.js"
+  }
 }

@@ -92,7 +92,7 @@ const getAPIData = (uri: string): Promise<any> => {
   };
   const token = localStorage.getItem(GITHUB_TOKEN_KEY) || githubToken;
   if (token) {
-    headerObj.Authorization = 'token ' + token;
+    headerObj.Authorization = 'Bearer ' + token;
   }
   const request = new Request(`${API}${uri}`, {
     headers: new Headers(headerObj),
