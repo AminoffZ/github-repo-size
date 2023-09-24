@@ -2,7 +2,9 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   console.log(tab.url);
   if (
     tab.url &&
-    tab.url.startsWith('https://aminoffz.github.io/#access_token=')
+    tab.url.startsWith(
+      'https://aminoffz.github.io/github-repo-size/auth/#access_token='
+    )
   ) {
     console.log('url match!');
     // Extract the token or any other data from the URL.

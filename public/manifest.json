@@ -1,6 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Your Extension Name",
+  "name": "GitHub Repo Size",
+  "author": "mouiylus@gmail.com",
+  "description": "Show size summaries of GitHub repos",
   "version": "0.1.0",
   "web_accessible_resources": [
     {
@@ -19,7 +21,7 @@
     "default_icon": "favicon.png",
     "default_popup": "index.html"
   },
-  "permissions": ["storage", "identity", "tabs"],
+  "permissions": ["storage", "tabs"],
   "background": {
     "service_worker": "background.js"
   }
