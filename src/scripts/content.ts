@@ -7,9 +7,6 @@ import {
   FILE_BUTTON,
 } from '../constants';
 
-let oauthToken: string | undefined;
-let githubToken: string | undefined;
-
 interface RepoObject {
   repo: string;
   ref: string | undefined;
@@ -90,10 +87,16 @@ const checkStatus = (response: Response): Response => {
   throw new Error(`GitHub returned an invalid status: ${response.status}`);
 };
 
-const getAPIData = (uri: string): Promise<any> => {
+const getAPIData = async (uri: string): Promise<any> => {
   const headerObj: { [key: string]: string } = {
     'User-Agent': 'AminoffZ/github-repo-size',
   };
+  const oauthToken: string | undefined = (await storage.get(OAUTH_TOKEN_KEY))[
+    OAUTH_TOKEN_KEY
+  ];
+  const githubToken: string | undefined = (await storage.get(GITHUB_TOKEN_KEY))[
+    GITHUB_TOKEN_KEY
+  ];
   const token = githubToken || oauthToken;
   if (token) {
     headerObj.Authorization = 'Bearer ' + token;
@@ -246,22 +249,4 @@ const loadDirSizes = async (): Promise<void> => {
   }
 };
 
-storage.get(OAUTH_TOKEN_KEY, function (data: { [key: string]: string }) {
-  oauthToken = data[OAUTH_TOKEN_KEY];
-  chrome.storage.onChanged.addListener((changes, namespace) => {
-    if (changes[OAUTH_TOKEN_KEY]) {
-      oauthToken = changes[OAUTH_TOKEN_KEY].newValue;
-    }
-  });
-  document.addEventListener('pjax:end', checkForRepoPage, false);
-  checkForRepoPage();
-});
-
-storage.get(GITHUB_TOKEN_KEY, function (data: { [key: string]: string }) {
-  githubToken = data[GITHUB_TOKEN_KEY];
-  chrome.storage.onChanged.addListener((changes, namespace) => {
-    if (changes[GITHUB_TOKEN_KEY]) {
-      githubToken = changes[GITHUB_TOKEN_KEY].newValue;
-    }
-  });
-});
+checkForRepoPage();
