@@ -17,7 +17,7 @@ module.exports = {
     require('@tailwindcss/forms'),
     require('@catppuccin/tailwindcss')({
       prefix: 'ctp',
-      defaultFlavour: 'frappe',
+      defaultFlavour: 'macchiato',
     }),
   ],
 };
