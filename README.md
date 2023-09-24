@@ -7,12 +7,13 @@ A continuation on [github-repo-size](https://github.com/harshjv/github-repo-size
 
 View summary of file sizes in repositories.
 
-![Screenshot](assets/github-repo-size-tabs.png)
-![Screenshot](assets/github-repo-size-repo.png)
+<img src="https://github.com/AminoffZ/github-repo-size/blob/main/assets/github-repo-size-tabs.png" /> 
+
+<img src="https://github.com/AminoffZ/github-repo-size/blob/main/assets/github-repo-size-repo.png" /> 
 
 It's also possible to view private repository size summaries by adding a personal access token.[^1]
 
-![Screenshot](assets/github-repo-size-popup.png)
+<img src="https://github.com/AminoffZ/github-repo-size/blob/main/assets/github-repo-size-popup.png" /> 
 
 GitHubs API has a limit of 50 (at time of writing) requests per hour for unauthenticated requests. By clicking Authenticate and signing in with OAuth, you can make up to 5000 requests per hour.[^2]
 
