@@ -5,9 +5,10 @@
 
   export let expanded = false;
 
-  let token = '';
+  $: token = '';
+  $: tokenUpdated = false;
+  $: showToken = false;
   $: tokenValid = token.match(/^github_pat_[a-zA-Z0-9]{22}_[a-zA-Z0-9]{59}$/);
-  let showToken = false;
 
   const readStorage = async (): Promise<string> => {
     return new Promise((resolve, reject) => {
@@ -31,7 +32,7 @@
     await storage
       .set(obj)
       .then(() => {
-        console.log('Token set to ' + token);
+        tokenUpdated = true;
       })
       .catch((err) => {
         console.error(err);
@@ -51,8 +52,8 @@
 </script>
 
 <div
-  class="flex flex-col gap-3 justify-center items-center token-dropdown {expanded
-    ? 'h-28'
+  class="flex flex-col justify-center items-center token-dropdown {expanded
+    ? 'h-32'
     : 'h-0'} overflow-hidden"
 >
   <div
@@ -105,13 +106,18 @@
       {/if}
     </button>
   </div>
-  <div class="flex justify-center items-center">
+  <div class="mb-1 mt-2 flex justify-center items-center">
     <button
       disabled={!tokenValid}
       class="disabled:opacity-50 font-extrabold rounded text-base bg-ctp-crust px-3 py-1"
       on:click={setGithubToken}>Set Token</button
     >
   </div>
+  {#if tokenUpdated}
+    <span class="text-center">Token set, refresh the page to see changes.</span>
+  {:else}
+    <br />
+  {/if}
 </div>
 
 <style>
