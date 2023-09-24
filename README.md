@@ -1,3 +1,5 @@
+<img align="right" src="https://github.com/AminoffZ/github-repo-size/blob/main/public/favicon.png" />
+
 # GitHub Repo Size
 
 An extension to display the size of GitHub repositories.
