@@ -51,7 +51,7 @@
       .signInWithOAuth({
         provider: 'github',
         options: {
-          redirectTo: 'https://aminoffz.github.io/',
+          redirectTo: 'https://aminoffz.github.io/github-repo-size/auth',
         },
       })
       .then((res) => {
@@ -84,7 +84,7 @@
     >Authenticate</button
   >
 </div>
-<div class="pb-4 flex justify-center items-center gap-1">
+<div class="pb-3 flex justify-center items-center gap-1">
   <div>Calls remaining:</div>
   {#if rate}
     <div>{rate?.remaining}</div>
