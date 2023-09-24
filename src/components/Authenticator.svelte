@@ -1,6 +1,8 @@
 <script lang="ts">
   import { createEventDispatcher, onMount } from 'svelte';
   import { createClient } from '@supabase/supabase-js';
+  import { OAUTH_TOKEN_KEY, GITHUB_TOKEN_KEY } from '../constants';
+  import { storage } from '../constants';
 
   const supabase = createClient(
     'https://pyamttwvpgnenxtwmire.supabase.co',
@@ -9,10 +11,6 @@
 
   const dispatch = createEventDispatcher();
 
-  const OAUTH_TOKEN_KEY = 'repo-size-oauth-token';
-  const GITHUB_TOKEN_KEY = 'x-github-token';
-
-  let storage: chrome.storage.SyncStorageArea;
   let rate:
     | {
         limit: number;
@@ -26,10 +24,6 @@
   $: rate;
 
   onMount(async () => {
-    console.log('mounted');
-    if (typeof chrome !== 'undefined') {
-      storage = chrome.storage.sync || chrome.storage.local;
-    }
     const oauthToken: { [key: string]: any } = await checkOAuthToken();
     const githubToken: { [key: string]: any } = await checkGithubToken();
     testToken(githubToken[GITHUB_TOKEN_KEY] || oauthToken[OAUTH_TOKEN_KEY]);

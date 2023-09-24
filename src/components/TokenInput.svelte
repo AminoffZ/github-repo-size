@@ -1,13 +1,12 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { GITHUB_TOKEN_KEY } from '../constants';
+  import { storage } from '../constants';
 
   export let expanded = false;
 
-  const GITHUB_TOKEN_KEY = 'x-github-token';
-
   let token = '';
   $: tokenValid = token.match(/^github_pat_[a-zA-Z0-9]{22}_[a-zA-Z0-9]{59}$/);
-  let storage: chrome.storage.SyncStorageArea;
   let showToken = false;
 
   const readStorage = async (): Promise<string> => {
@@ -40,20 +39,14 @@
   }
 
   onMount(async () => {
-    if (typeof chrome !== 'undefined') {
-      storage = chrome.storage.sync || chrome.storage.local;
-      if (!storage) {
-        return;
-      }
-      await getGithubToken()
-        .then((_token) => {
-          console.log('Token: ' + _token);
-          if (typeof _token === 'string') token = _token;
-        })
-        .catch((err) => {
-          console.error(err);
-        });
-    }
+    await getGithubToken()
+      .then((_token) => {
+        console.log('Token: ' + _token);
+        if (typeof _token === 'string') token = _token;
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   });
 </script>
 

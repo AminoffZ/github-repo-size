@@ -1,8 +1,12 @@
-const API: string = 'https://api.github.com/repos/';
-const NAV_ELEM_ID: string = 'github-repo-size';
-const OAUTH_TOKEN_KEY: string = 'repo-size-oauth-token';
-const GITHUB_TOKEN_KEY = 'x-github-token';
-const storage = chrome.storage.sync || chrome.storage.local;
+import {
+  API,
+  storage,
+  OAUTH_TOKEN_KEY,
+  GITHUB_TOKEN_KEY,
+  NAV_ELEM_ID,
+  FILE_BUTTON,
+} from '../constants';
+
 let oauthToken: string | undefined;
 let githubToken: string | undefined;
 
@@ -13,9 +17,7 @@ interface RepoObject {
 }
 
 const getRepoObject = (): RepoObject | undefined => {
-  const elem = document.querySelector(
-    'a.d-none.js-permalink-shortcut'
-  ) as HTMLAnchorElement;
+  const elem = document.querySelector(FILE_BUTTON) as HTMLAnchorElement;
   if (!elem) return;
 
   if (!elem.href || !elem.href.match(/^https?:\/\/github.com\//)) {
