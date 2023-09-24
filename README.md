@@ -7,8 +7,7 @@ A continuation on [github-repo-size](https://github.com/harshjv/github-repo-size
 
 View summary of file sizes in repositories.
 
-![Screenshot](assets/github-repo-size-tabs.png)
-![Screenshot](assets/github-repo-size-repo.png)
+![Screenshot](assets/github-repo-size-screenshot.png)
 
 It's also possible to view private repository size summaries by adding a personal access token.[^1]
 
