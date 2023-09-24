@@ -1,0 +1,61 @@
+---
+const progress = 120;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body class="bg-ctp-base text-ctp-text p-6">
+    <h1 class="text-ctp-pink text-center">GitHub Repo Size</h1>
+    <div class="mt-9 flex flex-col items-center gap-10">
+      <div>
+        <div style={`--progress: ${progress}px`} class="w-32 h-32 rounded-full border-ctp-green border-[16px] animate-[ping_1s_ease-in-out_reverse]">
+        </div>
+        <div class="-rotate-12 translate-x-2 -translate-y-1">
+            <div class="border-b-4 bg-ctp-green w-24 translate-x-8 -translate-y-[4rem] -rotate-[40deg] h-4 absolute"></div>
+            <div class="border-b-4 border-r-4 bg-ctp-green w-[3.7rem] translate-x-[0.35rem] -translate-y-[3.43rem] rotate-[50deg] h-4 absolute"></div>
+          </div>
+
+        </div>
+      <p class="text-center max-w-xs">
+        Authentication complete. Your API rate limit is now 5000 requests per
+        hour. You can now close this window.
+      </p>
+    </div>
+  </body>
+</html>
+
+<style is:inline>
+  h1 {
+    font-weight: 900;
+    font-size: 3rem;
+  }
+  h2 {
+    font-weight: 900;
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-weight: 900;
+    font-size: 2rem;
+  }
+  h4 {
+    font-weight: 900;
+    font-size: 1.5rem;
+  }
+  p {
+    font-weight: 600;
+  }
+  @keyframes fadeIn {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 3.7rem;
+    }
+  }
+</style>
