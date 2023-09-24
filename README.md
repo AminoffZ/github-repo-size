@@ -1,4 +1,4 @@
-<img align="right" src="/public/favicon.png" />
+<img src="/public/favicon.png" align="right"  />
 
 # GitHub Repo Size
 
