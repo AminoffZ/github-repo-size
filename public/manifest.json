@@ -16,12 +16,11 @@
     }
   ],
   "action": {
-    "default_icon": "./images/icon256.png",
-    "default_popup": "./html/popup.html"
+    "default_icon": "favicon.png",
+    "default_popup": "index.html"
   },
+  "permissions": ["storage", "identity", "tabs"],
   "background": {
-    "service_worker": "./background.js",
-    "type": "module"
-  },
-  "permissions": ["storage"]
+    "service_worker": "background.js"
+  }
 }

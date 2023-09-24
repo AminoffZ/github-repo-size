@@ -1,0 +1,41 @@
+---
+import { marked } from 'marked';
+const response = await fetch('https://raw.githubusercontent.com/AminoffZ/github-repo-size/astro/README.md?token=GHSAT0AAAAAACHGVKU66KRAGSGSVSWMK466ZIQMLKQ');
+const markdown = await response.text();
+const content = marked.parse(markdown);
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body class="bg-ctp-base text-ctp-text p-6">
+		<article set:html={content} />
+	</body>
+</html>
+
+<style is:inline>
+	h1 {
+		font-weight: 900;
+		font-size: 3rem;
+	}
+	h2 {
+		font-weight: 900;
+		font-size: 2.5rem;
+	}
+	h3 {
+		font-weight: 900;
+		font-size: 2rem;
+	}
+	h4 {
+		font-weight: 900;
+		font-size: 1.5rem;
+	}
+	p {
+		font-weight: 600;
+	}
+</style>

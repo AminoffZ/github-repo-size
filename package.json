@@ -1,17 +1,30 @@
 {
-  "name": "github-repo-size",
-  "module": "bundler.ts",
-  "devDependencies": {
-    "@types/chrome": "^0.0.246",
-    "bun-types": "latest",
-    "prettier": "^3.0.3"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
+  "name": "popup",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "build": "bun bundler.ts",
-    "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,md}' '!build/**' '!node_modules/**'"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build && bun run csp && bun bundler.ts",
+    "preview": "astro preview",
+    "astro": "astro",
+    "csp": "bun extract-inline.cjs",
+    "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,md}' '!dist/**' '!node_modules/**'"
   },
-  "type": "module"
+  "dependencies": {
+    "@astrojs/svelte": "^4.0.2",
+    "@astrojs/tailwind": "^5.0.0",
+    "@supabase/supabase-js": "^2.36.0",
+    "@types/chrome": "^0.0.246",
+    "astro": "^3.1.2",
+    "bun-types": "latest",
+    "prettier": "^3.0.3",
+    "svelte": "^4.2.1",
+    "tailwindcss": "^3.0.24"
+  },
+  "devDependencies": {
+    "@catppuccin/tailwindcss": "^0.1.6",
+    "@tailwindcss/forms": "^0.5.6",
+    "tiny-glob": "^0.2.9"
+  }
 }
