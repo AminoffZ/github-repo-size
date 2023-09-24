@@ -1,5 +1,8 @@
 ---
-import Readme from '../content/README.md'
+import { marked } from 'marked';
+const response = await fetch('https://raw.githubusercontent.com/AminoffZ/github-repo-size/astro/README.md?token=GHSAT0AAAAAACHGVKU66KRAGSGSVSWMK466ZIQMLKQ');
+const markdown = await response.text();
+const content = marked.parse(markdown);
 ---
 
 <html lang="en">
@@ -11,7 +14,7 @@ import Readme from '../content/README.md'
 		<title>Astro</title>
 	</head>
 	<body class="bg-ctp-base text-ctp-text p-6">
-		<Readme />
+		<article set:html={content} />
 	</body>
 </html>
 

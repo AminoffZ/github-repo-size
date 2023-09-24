@@ -13,10 +13,12 @@
   "dependencies": {
     "@astrojs/tailwind": "^5.0.0",
     "astro": "^3.1.2",
+    "marked": "^9.0.3",
     "tailwindcss": "^3.0.24"
   },
   "devDependencies": {
     "@catppuccin/tailwindcss": "^0.1.6",
+    "@types/marked": "^5.0.1",
     "gh-pages": "^6.0.0"
   }
 }
