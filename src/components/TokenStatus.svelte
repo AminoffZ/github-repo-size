@@ -1,9 +1,9 @@
 <script lang="ts">
-  export let tokenEnabled = false;
+  export let tokenValid = false;
 </script>
 
 <h2
-  class="{tokenEnabled
+  class="{tokenValid
     ? 'text-ctp-green'
     : 'text-ctp-red'} select-none pb-2 whitespace-nowrap text-center text-xl font-bold"
 >

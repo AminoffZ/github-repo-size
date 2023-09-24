@@ -6,14 +6,15 @@
   const GITHUB_TOKEN_KEY = 'x-github-token';
 
   let token = '';
+  $: tokenValid = token.match(/^github_pat_[a-zA-Z0-9]{22}_[a-zA-Z0-9]{59}$/);
   let storage: chrome.storage.SyncStorageArea;
   let showToken = false;
 
-  const readStorage = async () => {
+  const readStorage = async (): Promise<string> => {
     return new Promise((resolve, reject) => {
       storage.get([GITHUB_TOKEN_KEY], function (result) {
         if (result[GITHUB_TOKEN_KEY] === undefined) {
-          reject();
+          reject('Token not found');
         } else {
           resolve(result[GITHUB_TOKEN_KEY]);
         }
@@ -58,10 +59,14 @@
 
 <div
   class="flex flex-col gap-3 justify-center items-center token-dropdown {expanded
-    ? 'h-24'
+    ? 'h-28'
     : 'h-0'} overflow-hidden"
 >
-  <div class="flex justify-center items-center">
+  <div
+    class="{tokenValid
+      ? 'text-ctp-green'
+      : 'text-ctp-red'}  flex justify-center items-center"
+  >
     {#if showToken}
       <input
         bind:value={token}
@@ -108,10 +113,11 @@
     </button>
   </div>
   <div class="flex justify-center items-center">
-    <button class="bg-ctp-crust" on:click={() => getGithubToken()}
-      >Get Token</button
+    <button
+      disabled={!tokenValid}
+      class="disabled:opacity-50 font-extrabold rounded text-base bg-ctp-crust px-3 py-1"
+      on:click={setGithubToken}>Set Token</button
     >
-    <button class="bg-ctp-crust" on:click={setGithubToken}>Set Token</button>
   </div>
 </div>
 
@@ -136,5 +142,8 @@
   }
   .eye-hidden {
     opacity: 0;
+  }
+  input {
+    color: var(--tokenValid);
   }
 </style>

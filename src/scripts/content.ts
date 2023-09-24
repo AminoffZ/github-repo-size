@@ -1,7 +1,9 @@
 const API: string = 'https://api.github.com/repos/';
 const NAV_ELEM_ID: string = 'github-repo-size';
-const GITHUB_TOKEN_KEY: string = 'x-github-token';
+const OAUTH_TOKEN_KEY: string = 'repo-size-oauth-token';
+const GITHUB_TOKEN_KEY = 'x-github-token';
 const storage = chrome.storage.sync || chrome.storage.local;
+let oauthToken: string | undefined;
 let githubToken: string | undefined;
 
 interface RepoObject {
@@ -90,7 +92,7 @@ const getAPIData = (uri: string): Promise<any> => {
   const headerObj: { [key: string]: string } = {
     'User-Agent': 'AminoffZ/github-repo-size',
   };
-  const token = localStorage.getItem(GITHUB_TOKEN_KEY) || githubToken;
+  const token = githubToken || oauthToken;
   if (token) {
     headerObj.Authorization = 'Bearer ' + token;
   }
@@ -242,6 +244,17 @@ const loadDirSizes = async (): Promise<void> => {
   }
 };
 
+storage.get(OAUTH_TOKEN_KEY, function (data: { [key: string]: string }) {
+  oauthToken = data[OAUTH_TOKEN_KEY];
+  chrome.storage.onChanged.addListener((changes, namespace) => {
+    if (changes[OAUTH_TOKEN_KEY]) {
+      oauthToken = changes[OAUTH_TOKEN_KEY].newValue;
+    }
+  });
+  document.addEventListener('pjax:end', checkForRepoPage, false);
+  checkForRepoPage();
+});
+
 storage.get(GITHUB_TOKEN_KEY, function (data: { [key: string]: string }) {
   githubToken = data[GITHUB_TOKEN_KEY];
   chrome.storage.onChanged.addListener((changes, namespace) => {
@@ -249,6 +262,4 @@ storage.get(GITHUB_TOKEN_KEY, function (data: { [key: string]: string }) {
       githubToken = changes[GITHUB_TOKEN_KEY].newValue;
     }
   });
-  document.addEventListener('pjax:end', checkForRepoPage, false);
-  checkForRepoPage();
 });

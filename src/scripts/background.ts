@@ -9,16 +9,16 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     // For example:
     const url: URL = new URL(tab.url);
     console.log(url.hash);
-    const accessTokenParam: string | undefined = url.hash
+    const providerTokenParam: string | undefined = url.hash
       .split('&')
       .find((param) => param.startsWith('provider_token='));
-    console.log(accessTokenParam);
-    const accessToken: string | undefined = accessTokenParam?.split('=')[1];
+    console.log(providerTokenParam);
+    const providerToken: string | undefined = providerTokenParam?.split('=')[1];
 
-    if (accessToken) {
+    if (providerToken) {
       (chrome.storage.sync || chrome.storage.local).set(
         {
-          'x-github-token': accessToken,
+          'repo-size-oauth-token': providerToken,
         },
         () => {
           console.log('Token stored successfully');
