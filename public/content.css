@@ -37,6 +37,7 @@ table[aria-labelledby='folders-and-files'] > thead > tr > th:nth-child(4) {
 }
 table[aria-labelledby='folders-and-files'] > thead > tr > th:nth-child(4):not(.grs) {
     flex: 2;
+    padding-left: 32px;
 }
 table[aria-labelledby='folders-and-files'] > thead > tr > th:nth-child(5) {
     justify-content: flex-end;
@@ -68,6 +69,7 @@ table[aria-labelledby='folders-and-files'] > tbody > tr > td:nth-child(4) {
 }
 table[aria-labelledby='folders-and-files'] > tbody > tr > td:nth-child(4):not(.grs) {
     flex: 2;
+    padding-left: 32px;
     padding-right: 16px;
 }
 table[aria-labelledby='folders-and-files'] > tbody > tr > td:nth-child(5) {
