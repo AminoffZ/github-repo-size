@@ -1,13 +1,7 @@
 <script lang="ts">
   import { createEventDispatcher, onMount } from 'svelte';
-  import { createClient } from '@supabase/supabase-js';
   import { OAUTH_TOKEN_KEY, GITHUB_TOKEN_KEY } from '../constants';
   import { storage } from '../constants';
-
-  const supabase = createClient(
-    'https://pyamttwvpgnenxtwmire.supabase.co',
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB5YW10dHd2cGduZW54dHdtaXJlIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTU0MjQwNzUsImV4cCI6MjAxMTAwMDA3NX0.WakCsaS4FyiOGMHtBEed-lc9ZI2HK-LNQK9WgOeQvbI'
-  );
 
   const dispatch = createEventDispatcher();
 
@@ -47,25 +41,10 @@
   }
 
   async function signInWithGithub() {
-    await supabase.auth
-      .signInWithOAuth({
-        provider: 'github',
-        options: {
-          redirectTo: 'https://aminoffz.github.io/github-repo-size/auth',
-        },
-      })
-      .then((res) => {
-        if (res.data.url) {
-          console.log(res.data.url);
-          chrome.runtime.sendMessage({
-            action: 'authenticate',
-            data: res.data.url,
-          });
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    chrome.runtime.sendMessage({
+      action: 'authenticate',
+      data: 'https://pyamttwvpgnenxtwmire.supabase.co/auth/v1/authorize?provider=github&redirect_to=https%3A%2F%2Faminoffz.github.io%2Fgithub-repo-size%2Fauth',
+    });
   }
 
   async function checkOAuthToken() {
