@@ -1,0 +1,85 @@
+.grs-size.hidden {
+  display: none;
+}
+table[aria-labelledby='folders-and-files'] {
+  display: flex;
+  flex-direction: column;
+  flex-col
+}
+table[aria-labelledby='folders-and-files'] > thead {
+  display: flex;
+}
+
+table[aria-labelledby='folders-and-files'] > thead > tr {
+    display: flex;
+    flex: 1;
+    padding: 0;
+}
+table[aria-labelledby='folders-and-files'] > thead > tr > th {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+table[aria-labelledby='folders-and-files'] > thead > tr > th:nth-child(1) {
+    display: none;
+}
+table[aria-labelledby='folders-and-files'] > thead > tr > th:nth-child(2) {
+    justify-content: flex-start;
+}
+table[aria-labelledby='folders-and-files'] > thead > tr > th:nth-child(3) {
+    justify-content: flex-start;
+}
+table[aria-labelledby='folders-and-files'] > thead > tr > th:nth-child(4) {
+    justify-content: flex-end;
+}
+table[aria-labelledby='folders-and-files'] > thead > tr > th:nth-child(4):not(.grs) {
+    flex: 2;
+}
+table[aria-labelledby='folders-and-files'] > thead > tr > th:nth-child(5) {
+    justify-content: flex-end;
+}
+
+table[aria-labelledby='folders-and-files'] > tbody {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+table[aria-labelledby='folders-and-files'] > tbody > tr {
+    display: flex;
+}
+table[aria-labelledby='folders-and-files'] > tbody > tr > td {
+    display: flex;
+    flex: 1;
+}
+table[aria-labelledby='folders-and-files'] > tbody > tr > td:nth-child(1) {
+    display: none;
+}
+table[aria-labelledby='folders-and-files'] > tbody > tr > td:nth-child(2) {
+    justify-content: flex-start;
+}
+table[aria-labelledby='folders-and-files'] > tbody > tr > td:nth-child(3) {
+    justify-content: flex-start;
+}
+table[aria-labelledby='folders-and-files'] > tbody > tr > td:nth-child(4) {
+    justify-content: flex-end;
+}
+table[aria-labelledby='folders-and-files'] > tbody > tr > td:nth-child(4):not(.grs) {
+    flex: 2;
+    padding-right: 16px;
+}
+table[aria-labelledby='folders-and-files'] > tbody > tr > td:nth-child(5) {
+    justify-content: flex-end;
+    padding-right: 16px;
+}
+
+table[aria-labelledby='folders-and-files'] > tbody > tr > td > div {
+    display: flex;
+    align-items: center;
+}
+table[aria-labelledby='folders-and-files'] > tbody > tr > td > span {
+    align-items: center;
+    display: flex;
+}

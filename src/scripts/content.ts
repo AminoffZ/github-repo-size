@@ -128,7 +128,7 @@ function extendUpNavigator() {
 function addSizeColumn() {
   const thead = document.querySelector('thead');
   const th = document.createElement('th');
-  th.className = 'grs-size';
+  th.className = 'grs grs-size';
   if (document.querySelector('th.grs-size')) {
     return;
   }
@@ -158,6 +158,7 @@ function appendToTableRow(anchor: HTMLAnchorElement, span: HTMLSpanElement) {
   }
   console.log(span.textContent);
   td.style.textAlign = 'right';
+  td.classList.add('grs');
   td.appendChild(span);
   console.log('inserting td');
   row.insertBefore(td, row.childNodes[row.childNodes.length - 1]);
