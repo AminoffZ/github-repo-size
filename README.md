@@ -1,3 +1,5 @@
+[![Google Chrome](https://img.shields.io/chrome-web-store/v/jpdmfnflpdgefbfkafcikmhipofhanfl?label=Get%20GRS%20for%20Chrome&logo=Google%20Chrome)](https://chrome.google.com/webstore/detail/github-repo-size/jpdmfnflpdgefbfkafcikmhipofhanfl)
+
 <img src="/public/favicon.png" align="right"  />
 
 # GitHub Repo Size
