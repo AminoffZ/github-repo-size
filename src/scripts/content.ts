@@ -117,7 +117,66 @@ function getNestedSize(
   }
 }
 
-async function main() {
+function extendUpNavigator() {
+  const up = document.querySelector('tbody')?.firstChild?.firstChild;
+  if (!(up instanceof HTMLElement)) {
+    return;
+  }
+  up.setAttribute('colspan', '4');
+}
+
+function addSizeColumn() {
+  const thead = document.querySelector('thead');
+  const th = document.createElement('th');
+  th.className = 'grs-size';
+  if (document.querySelector('th.grs-size')) {
+    return;
+  }
+  th.innerText = 'Size';
+  th.style.textAlign = 'right';
+  const headRow = thead?.firstChild;
+  if (!headRow) {
+    return;
+  }
+  headRow?.insertBefore(th, headRow.childNodes[headRow.childNodes.length - 1]);
+}
+
+function appendToTableRow(anchor: HTMLAnchorElement, span: HTMLSpanElement) {
+  console.log('appendToTableRow');
+  const row =
+    anchor.parentElement?.parentElement?.parentElement?.parentElement
+      ?.parentElement?.parentElement;
+  if (!row) {
+    console.log('row is null');
+    return;
+  }
+  console.log(row);
+  const td = row.childNodes[row.childNodes.length - 2].cloneNode(false);
+  if (!(td instanceof HTMLElement)) {
+    console.log('td is not HTMLElement');
+    return;
+  }
+  console.log(span.textContent);
+  td.style.textAlign = 'right';
+  td.appendChild(span);
+  console.log('inserting td');
+  row.insertBefore(td, row.childNodes[row.childNodes.length - 1]);
+  console.log(row);
+}
+
+function appendToHome(anchor: HTMLAnchorElement, span: HTMLSpanElement) {
+  const row = anchor.parentElement?.parentElement?.parentElement;
+  console.log(row);
+  const div = row?.childNodes[row.childNodes.length - 2].cloneNode(false);
+  div?.appendChild(span);
+  if (!div) {
+    return;
+  }
+
+  row?.insertBefore(div, row.childNodes[row.childNodes.length - 2]);
+}
+
+async function updateDOM() {
   const anchors = getAnchors();
   if (!anchors || anchors.length === 0) {
     return;
@@ -133,14 +192,25 @@ async function main() {
     return;
   }
   console.log(repoInfo);
-  anchors.forEach((anchor) => {
+
+  const updates: Array<{
+    anchor: HTMLAnchorElement;
+    span: HTMLSpanElement;
+    index: number;
+  }> = [];
+
+  anchors.forEach((anchor, index) => {
     const path = anchor.getAttribute('href');
     if (!path) {
       return;
     }
     const pathArray = path.split('/');
-    const pathName = pathArray[pathArray.length - 1];
-    const treeItem = repoInfo.tree.find((item) => item.path === pathName);
+    const fileName = pathArray[pathArray.length - 1];
+    const root = pathObject.path ? pathObject.path + '/' : '';
+    const treeItem = repoInfo.tree.find((item) => {
+      const path = item.path;
+      return path === root + fileName;
+    });
     if (!treeItem) {
       return;
     }
@@ -150,16 +220,63 @@ async function main() {
     }
     const sizeString = formatBytes(size);
     const span = document.createElement('span');
-    span.innerText = sizeString;
-    const row = anchor.parentElement?.parentElement?.parentElement;
-    const div = row?.childNodes[row.childNodes.length - 2].cloneNode(false);
-    div?.appendChild(span);
-    if (!div) {
+    const spanClass = `grs-${path.replaceAll('/', '-')}`;
+    span.className = spanClass;
+    if (document.querySelector(`span.${spanClass}`)) {
       return;
     }
-
-    row?.insertBefore(div, row.childNodes[row.childNodes.length - 2]);
+    span.style.color = 'var(--fgColor-muted, var(--color-fg-muted))';
+    span.innerText = sizeString;
+    updates.push({ anchor, span, index });
   });
+
+  if (pathObject.path) {
+    addSizeColumn();
+    extendUpNavigator();
+  }
+
+  updates.forEach(({ anchor, span, index }) => {
+    if (pathObject.path) {
+      if (index % 2 === 1) {
+        appendToTableRow(anchor, span);
+      }
+      return;
+    }
+    appendToHome(anchor, span);
+  });
+}
+
+async function start() {
+  console.log('start');
+  let lastUrl = window.location.href;
+  await updateDOM();
+  const popsate = setInterval(async () => {
+    if (lastUrl !== window.location.href) {
+      lastUrl = window.location.href;
+      clearInterval(popsate);
+      await startInterval();
+    }
+  }, 1000);
+}
+
+const checkGitHubContent = async (timer: Timer) => {
+  // Check if some expected GitHub content is present.
+  // Here, we're just using the presence of anchor elements as an example.
+  const anchors = document.querySelectorAll('a.Link--primary');
+  if (anchors.length > 0) {
+    clearInterval(timer); // Stop the periodic checks
+    await start();
+  }
+};
+
+async function startInterval() {
+  console.log('startInterval');
+  const timer = setInterval(async () => await checkGitHubContent(timer), 1000);
+}
+
+async function main() {
+  console.log('main');
+  await startInterval();
 }
 
 main();
