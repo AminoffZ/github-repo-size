@@ -42,7 +42,6 @@
   onMount(async () => {
     await getGithubToken()
       .then((_token) => {
-        console.log('Token: ' + _token);
         if (typeof _token === 'string') token = _token;
       })
       .catch((err) => {

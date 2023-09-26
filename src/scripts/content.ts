@@ -52,7 +52,7 @@ async function getToken() {
   return token;
 }
 
-async function createRequest(repo: string, branch: string) {
+async function createTreeRequest(repo: string, branch: string) {
   const headers = new Headers();
   headers.append('User-Agent', 'AminoffZ/github-repo-size');
   const token = await getToken();
@@ -69,23 +69,17 @@ async function createRequest(repo: string, branch: string) {
 }
 
 async function getRepoInfo(repo: string, branch: string = 'main') {
-  const request = await createRequest(repo, branch);
+  const request = await createTreeRequest(repo, branch);
   const response = await fetch(request)
     .then(async (res) => {
       const data = await res.json();
-      console.log(data);
       return data as GitHubTree;
     })
     .catch((err) => {
-      console.log(err);
+      console.error(err);
       return undefined;
     });
   return response;
-}
-
-function getAnchors() {
-  const anchors = document.querySelectorAll('a.Link--primary');
-  return anchors as NodeListOf<HTMLAnchorElement>;
 }
 
 function formatBytes(bytes: number, decimals: number = 2): string {
@@ -117,24 +111,16 @@ function getNestedSize(
   }
 }
 
-function extendUpNavigator() {
-  const up = document.querySelector('tbody')?.firstChild?.firstChild;
-  if (!(up instanceof HTMLElement)) {
-    return;
-  }
-  up.setAttribute('colspan', '4');
-}
-
 function addSizeColumn() {
-  const thead = document.querySelector('thead');
-  const th = document.createElement('th');
-  th.className = 'grs grs-size';
   if (document.querySelector('th.grs-size')) {
     return;
   }
+  const thead = document.querySelector('thead');
+  const th = document.createElement('th');
   const span = document.createElement('span');
   span.innerText = 'Size';
   span.style.color = 'var(--fgColor-muted, var(--color-fg-muted))';
+  th.className = 'grs grs-size';
   th.appendChild(span);
   const headRow = thead?.firstChild;
   if (!headRow) {
@@ -144,32 +130,24 @@ function addSizeColumn() {
 }
 
 function appendToTableRow(anchor: HTMLAnchorElement, span: HTMLSpanElement) {
-  console.log('appendToTableRow');
   const row =
     anchor.parentElement?.parentElement?.parentElement?.parentElement
       ?.parentElement?.parentElement;
   if (!row) {
-    console.log('row is null');
     return;
   }
-  console.log(row);
   const td = row.childNodes[row.childNodes.length - 2].cloneNode(false);
   if (!(td instanceof HTMLElement)) {
-    console.log('td is not HTMLElement');
     return;
   }
-  console.log(span.textContent);
   td.style.textAlign = 'right';
   td.classList.add('grs');
   td.appendChild(span);
-  console.log('inserting td');
   row.insertBefore(td, row.childNodes[row.childNodes.length - 1]);
-  console.log(row);
 }
 
 function appendToHome(anchor: HTMLAnchorElement, span: HTMLSpanElement) {
   const row = anchor.parentElement?.parentElement?.parentElement;
-  console.log(row);
   const div = row?.childNodes[row.childNodes.length - 2].cloneNode(false);
   div?.appendChild(span);
   if (!div) {
@@ -179,17 +157,105 @@ function appendToHome(anchor: HTMLAnchorElement, span: HTMLSpanElement) {
   row?.insertBefore(div, row.childNodes[row.childNodes.length - 2]);
 }
 
+// 🤓 will 😂
+function djb2(string: string) {
+  let hash = '🔏'.codePointAt(0)! & 0x1505; // 5381.
+  for (let i = 0; i < string.length; i++) {
+    hash = ((hash << 5) + hash + string.charCodeAt(i)) & 0x7fffffff; // multiply by 33 and force positive.
+  }
+  return hash;
+}
+
+function getNavButtons() {
+  return document.querySelector('.js-repo-nav')?.firstElementChild
+    ?.lastElementChild;
+}
+
+function getAnchors() {
+  const anchors = document.querySelectorAll('a.Link--primary');
+  return anchors as NodeListOf<HTMLAnchorElement>;
+}
+
+function getTotalSizeButton() {
+  return document.querySelector('.grs-total-size') as HTMLElement | undefined;
+}
+
+function createTotalSizeButton(navButtons: ChildNode) {
+  const totalSizeButton = navButtons?.lastChild?.cloneNode(true);
+  if (!(totalSizeButton instanceof HTMLElement)) {
+    return;
+  }
+  totalSizeButton.classList.add('grs-total-size');
+  const navTotalSizeAnchor = totalSizeButton.closest('a');
+  if (!(navTotalSizeAnchor instanceof HTMLElement)) {
+    return;
+  }
+  if (navTotalSizeAnchor.getAttribute('href')) {
+    navTotalSizeAnchor.attributes.removeNamedItem('href');
+  }
+  const svg = navTotalSizeAnchor.firstElementChild;
+  if (!svg) {
+    return;
+  }
+  navTotalSizeAnchor.removeChild(svg);
+  const span = navTotalSizeAnchor.querySelector('span') as
+    | HTMLSpanElement
+    | undefined;
+  if (!(span instanceof HTMLSpanElement)) {
+    return;
+  }
+  span.insertAdjacentHTML(
+    'beforebegin',
+    `
+    <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="UnderlineNav-octicon">
+      <title>database</title>
+      <path d="M8,2C5.05,2 2.67,3.19 2.67,4.67C2.67,6.15 5.05,7.33 8,7.33C10.95,7.33 13.33,6.15 13.33,4.67C13.33,3.19 10.95,2 8,2M2.67,6V8C2.67,9.48 5.05,10.67 8,10.67C10.95,10.67 13.33,9.48 13.33,8V6C13.33,7.48 10.95,8.67 8,8.67C5.05,8.67 2.67,7.48 2.67,6M2.67,9.33V11.33C2.67,12.81 5.05,14 8,14C10.95,14 13.33,12.81 13.33,11.33V9.33C13.33,10.81 10.95,12 8,12C5.05,12 2.67,10.81 2.67,9.33Z" />
+    </svg>
+    `
+  );
+  span.innerText = '...';
+  return totalSizeButton;
+}
+
+async function setTotalSize(repoInfo: GitHubTree) {
+  let navButtons = getNavButtons();
+  if (!navButtons) {
+    return;
+  }
+  let totalSizeButton = getTotalSizeButton();
+  if (!totalSizeButton) {
+    totalSizeButton = createTotalSizeButton(navButtons);
+    if (!totalSizeButton) {
+      return;
+    }
+  }
+  navButtons.appendChild(totalSizeButton);
+  if (!totalSizeButton) {
+    return;
+  }
+  const span = totalSizeButton.querySelector('span');
+  if (!span) {
+    return;
+  }
+  let totalSize = 0;
+  repoInfo.tree.forEach((item) => {
+    totalSize +=
+      item.type === 'blob'
+        ? item.size ?? 0
+        : getNestedSize(item, repoInfo.tree);
+  });
+  span.innerText = formatBytes(totalSize);
+}
+
 async function updateDOM() {
   const anchors = getAnchors();
   if (!anchors || anchors.length === 0) {
     return;
   }
-  console.log(anchors);
   const pathObject = getPathObject();
   if (!pathObject) {
     return;
   }
-  console.log(pathObject);
   const repoInfo = await getRepoInfo(
     pathObject.owner + '/' + pathObject.repo,
     pathObject.branch
@@ -197,7 +263,7 @@ async function updateDOM() {
   if (!repoInfo) {
     return;
   }
-  console.log(repoInfo);
+  await setTotalSize(repoInfo);
 
   const updates: Array<{
     anchor: HTMLAnchorElement;
@@ -206,27 +272,28 @@ async function updateDOM() {
   }> = [];
 
   anchors.forEach((anchor, index) => {
-    const path = anchor.getAttribute('href');
-    if (!path) {
+    const anchorPath = anchor.getAttribute('href');
+    if (!anchorPath) {
       return;
     }
-    const pathArray = path.split('/');
-    const fileName = pathArray[pathArray.length - 1];
-    const root = pathObject.path ? pathObject.path + '/' : '';
-    const treeItem = repoInfo.tree.find((item) => {
+    const anchorPaths = anchorPath.split('/');
+    const fileName = anchorPaths[anchorPaths.length - 1];
+    const base = pathObject.path ? pathObject.path + '/' : '';
+    const file = repoInfo.tree.find((item) => {
       const path = item.path;
-      return path === root + fileName;
+      return path === base + fileName;
     });
-    if (!treeItem) {
+    if (!file) {
       return;
     }
-    let size = treeItem.size;
+    // if file doesn't have a size, it's a directory
+    let size = file.size;
     if (!size) {
-      size = getNestedSize(treeItem, repoInfo.tree);
+      size = getNestedSize(file, repoInfo.tree);
     }
     const sizeString = formatBytes(size);
     const span = document.createElement('span');
-    const spanClass = `grs-${path.replaceAll('/', '-')}`;
+    const spanClass = `grs-${djb2(anchorPath.replaceAll('/', '-'))}`;
     span.className = spanClass;
     if (document.querySelector(`span.${spanClass}`)) {
       return;
@@ -238,11 +305,11 @@ async function updateDOM() {
 
   if (pathObject.path) {
     addSizeColumn();
-    extendUpNavigator();
   }
 
   updates.forEach(({ anchor, span, index }) => {
     if (pathObject.path) {
+      // for some reason the rows have two td's with name of each file
       if (index % 2 === 1) {
         appendToTableRow(anchor, span);
       }
@@ -253,9 +320,9 @@ async function updateDOM() {
 }
 
 async function start() {
-  console.log('start');
-  let lastUrl = window.location.href;
   await updateDOM();
+  // SPA redirect handling
+  let lastUrl = window.location.href;
   const popsate = setInterval(async () => {
     if (lastUrl !== window.location.href) {
       lastUrl = window.location.href;
@@ -266,8 +333,7 @@ async function start() {
 }
 
 const checkGitHubContent = async (timer: Timer) => {
-  // Check if some expected GitHub content is present.
-  // Here, we're just using the presence of anchor elements as an example.
+  // Get the anchors for files
   const anchors = document.querySelectorAll('a.Link--primary');
   if (anchors.length > 0) {
     clearInterval(timer); // Stop the periodic checks
@@ -276,12 +342,10 @@ const checkGitHubContent = async (timer: Timer) => {
 };
 
 async function startInterval() {
-  console.log('startInterval');
   const timer = setInterval(async () => await checkGitHubContent(timer), 1000);
 }
 
 async function main() {
-  console.log('main');
   await startInterval();
 }
 
