@@ -52,7 +52,7 @@ async function getToken() {
   return token;
 }
 
-async function createRequest(repo: string) {
+async function createRequest(repo: string, branch: string) {
   const headers = new Headers();
   headers.append('User-Agent', 'AminoffZ/github-repo-size');
   const token = await getToken();
@@ -60,7 +60,7 @@ async function createRequest(repo: string) {
     headers.append('Authorization', `Bearer ${token}`);
   }
   const request = new Request(
-    `https://api.github.com/repos/${repo}/git/trees/main?recursive=1`,
+    `https://api.github.com/repos/${repo}/git/trees/${branch}?recursive=1`,
     {
       headers,
     }
@@ -68,8 +68,8 @@ async function createRequest(repo: string) {
   return request;
 }
 
-async function getRepoInfo(repo: string) {
-  const request = await createRequest(repo);
+async function getRepoInfo(repo: string, branch: string = 'main') {
+  const request = await createRequest(repo, branch);
   const response = await fetch(request)
     .then(async (res) => {
       const data = await res.json();
@@ -132,8 +132,10 @@ function addSizeColumn() {
   if (document.querySelector('th.grs-size')) {
     return;
   }
-  th.innerText = 'Size';
-  th.style.textAlign = 'right';
+  const span = document.createElement('span');
+  span.innerText = 'Size';
+  span.style.color = 'var(--fgColor-muted, var(--color-fg-muted))';
+  th.appendChild(span);
   const headRow = thead?.firstChild;
   if (!headRow) {
     return;
@@ -188,7 +190,10 @@ async function updateDOM() {
     return;
   }
   console.log(pathObject);
-  const repoInfo = await getRepoInfo(pathObject.owner + '/' + pathObject.repo);
+  const repoInfo = await getRepoInfo(
+    pathObject.owner + '/' + pathObject.repo,
+    pathObject.branch
+  );
   if (!repoInfo) {
     return;
   }
