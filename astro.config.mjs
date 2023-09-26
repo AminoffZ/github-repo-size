@@ -9,15 +9,11 @@ export default defineConfig({
   integrations: [
     svelte(),
     tailwind(),
-    // purgecss({
-    //   safelist: [
-    //     'grs-size',
-    //     'hidden',
-    //     'table',
-    //     "[aria-labelledby='folders-and-files']",
-    //   ],
-    //   content: ['./src/**/*.astro'],
-    // }),
+    purgecss({
+      safelist: {
+        deep: [/^table/],
+      },
+    }),
   ],
   build: {
     assets: 'app',
