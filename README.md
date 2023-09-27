@@ -5,7 +5,7 @@
 # GitHub Repo Size
 
 An extension to display the size of GitHub repositories.
-A continuation on [github-repo-size](https://github.com/harshjv/github-repo-size).
+Inspired by [github-repo-size](https://github.com/harshjv/github-repo-size).
 
 ## Features
 
