@@ -266,6 +266,7 @@ async function updateDOM() {
     const sizeString = formatBytes(size);
     const span = document.createElement('span');
     const spanClass = `grs-${djb2(anchorPath.replaceAll('/', '-'))}`;
+    span.style.marginRight = '0.5rem';
     span.className = spanClass;
     if (document.querySelector(`span.${spanClass}`)) {
       return;
