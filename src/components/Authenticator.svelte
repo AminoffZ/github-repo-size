@@ -1,7 +1,6 @@
 <script lang="ts">
   import { createEventDispatcher, onMount } from 'svelte';
-  import { OAUTH_TOKEN_KEY, GITHUB_TOKEN_KEY } from '../constants';
-  import { storage } from '../constants';
+  import { getToken } from '../shared';
 
   const dispatch = createEventDispatcher();
 
@@ -18,12 +17,11 @@
   $: rate;
 
   onMount(async () => {
-    const oauthToken: { [key: string]: any } = await checkOAuthToken();
-    const githubToken: { [key: string]: any } = await checkGithubToken();
-    testToken(githubToken[GITHUB_TOKEN_KEY] || oauthToken[OAUTH_TOKEN_KEY]);
+    await testToken();
   });
 
-  async function testToken(token: string) {
+  async function testToken() {
+    const token = await getToken();
     const headers: { [key: string]: any } = {};
     if (token) {
       headers['Authorization'] = `Bearer ${token}`;
@@ -44,14 +42,6 @@
       action: 'authenticate',
       data: 'https://pyamttwvpgnenxtwmire.supabase.co/auth/v1/authorize?provider=github&redirect_to=https%3A%2F%2Faminoffz.github.io%2Fgithub-repo-size%2Fauth',
     });
-  }
-
-  async function checkOAuthToken() {
-    return await storage.get(OAUTH_TOKEN_KEY);
-  }
-
-  async function checkGithubToken() {
-    return await storage.get(GITHUB_TOKEN_KEY);
   }
 </script>
 

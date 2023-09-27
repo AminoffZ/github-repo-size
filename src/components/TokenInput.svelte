@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { GITHUB_TOKEN_KEY } from '../constants';
-  import { storage } from '../constants';
+  import { GITHUB_TOKEN_KEY } from '../shared';
+  import { storage } from '../shared';
 
   export let expanded = false;
 
