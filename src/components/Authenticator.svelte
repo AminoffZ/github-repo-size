@@ -31,7 +31,6 @@
     const res = await fetch('https://api.github.com/rate_limit', {
       headers: headers,
     });
-    console.log(res);
     res.json().then((data) => {
       rate = data.rate;
     });

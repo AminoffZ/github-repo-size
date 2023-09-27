@@ -6,7 +6,15 @@ import purgecss from 'astro-purgecss';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [svelte(), tailwind(), purgecss()],
+  integrations: [
+    svelte(),
+    tailwind(),
+    purgecss({
+      safelist: {
+        deep: [/^table/],
+      },
+    }),
+  ],
   build: {
     assets: 'app',
   },

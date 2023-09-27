@@ -7,7 +7,6 @@
 
   function toggle() {
     dispatch('toggle');
-    console.log('toggle');
   }
 </script>
 
