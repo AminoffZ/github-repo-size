@@ -35,10 +35,13 @@ Notice something that doesn't work the way you expected? Do you have your own su
 Because this project uses [Bun](https://bun.sh/docs), you can use either `bun` or `npm` for the commands listed bellow.
 
 Install dependencies
+
 ```bash
 bun install
 ```
+
 Build the project
+
 ```bash
 bun run build
 ```
