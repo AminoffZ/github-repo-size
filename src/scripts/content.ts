@@ -128,6 +128,7 @@ function appendToTableRow(anchor: HTMLAnchorElement, span: HTMLSpanElement) {
 }
 
 function appendToHome(anchor: HTMLAnchorElement, span: HTMLSpanElement) {
+  span.style.marginRight = '0.5rem';
   const row = anchor.parentElement?.parentElement?.parentElement;
   const div = row?.childNodes[row.childNodes.length - 2].cloneNode(false);
   div?.appendChild(span);
@@ -266,7 +267,6 @@ async function updateDOM() {
     const sizeString = formatBytes(size);
     const span = document.createElement('span');
     const spanClass = `grs-${djb2(anchorPath.replaceAll('/', '-'))}`;
-    span.style.marginRight = '0.5rem';
     span.className = spanClass;
     if (document.querySelector(`span.${spanClass}`)) {
       return;
