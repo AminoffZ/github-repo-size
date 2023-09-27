@@ -24,10 +24,11 @@ type GitHubTree = {
   truncated: boolean;
 };
 
-function getPathObject() {
+function getPathObject(path?: string) {
+  path = path ?? window.location.pathname;
   const pathObject = {};
   try {
-    const paths = window.location.pathname.split('/');
+    const paths = path.split('/');
     Object.assign(pathObject, {
       owner: paths.at(1),
       repo: paths.at(2),
@@ -89,26 +90,6 @@ function formatBytes(bytes: number, decimals: number = 2): string {
   const sizes = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
   const i = Math.floor(Math.log(bytes) / Math.log(k));
   return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
-}
-
-function getNestedSize(
-  treeItem: GitHubTreeItem,
-  tree: GitHubTreeItem[]
-): number {
-  if (treeItem.type === 'blob') {
-    return treeItem.size ?? 0;
-  } else if (treeItem.type === 'tree') {
-    const nestedTree = tree.filter((item) => {
-      return item.path.startsWith(treeItem.path + '/');
-    });
-    const size = nestedTree.reduce((acc, cur) => {
-      return acc + getNestedSize(cur, tree);
-    }, 0);
-    treeItem.size = size;
-    return size;
-  } else {
-    return 0;
-  }
 }
 
 function addSizeColumn() {
@@ -239,10 +220,7 @@ async function setTotalSize(repoInfo: GitHubTree) {
   }
   let totalSize = 0;
   repoInfo.tree.forEach((item) => {
-    totalSize +=
-      item.type === 'blob'
-        ? item.size ?? 0
-        : getNestedSize(item, repoInfo.tree);
+    totalSize += item.size ?? 0;
   });
   span.innerText = formatBytes(totalSize);
 }
@@ -253,17 +231,21 @@ async function updateDOM() {
     return;
   }
   const pathObject = getPathObject();
-  if (!pathObject) {
+  if (!pathObject || !pathObject.owner || !pathObject.repo) {
     return;
+  }
+  let type = pathObject.type;
+  let branch = pathObject.branch;
+  if (type !== 'tree' && type !== 'blob') {
+    branch = 'main';
   }
   const repoInfo = await getRepoInfo(
     pathObject.owner + '/' + pathObject.repo,
-    pathObject.branch
+    branch
   );
   if (!repoInfo) {
     return;
   }
-  await setTotalSize(repoInfo);
 
   const updates: Array<{
     anchor: HTMLAnchorElement;
@@ -276,21 +258,11 @@ async function updateDOM() {
     if (!anchorPath) {
       return;
     }
-    const anchorPaths = anchorPath.split('/');
-    const fileName = anchorPaths[anchorPaths.length - 1];
-    const base = pathObject.path ? pathObject.path + '/' : '';
-    const file = repoInfo.tree.find((item) => {
-      const path = item.path;
-      return path === base + fileName;
-    });
-    if (!file) {
+    const anchorPathObject = getPathObject(anchorPath);
+    if (!repoInfo.tree.some((file) => file.path === anchorPathObject.path)) {
       return;
     }
-    // if file doesn't have a size, it's a directory
-    let size = file.size;
-    if (!size) {
-      size = getNestedSize(file, repoInfo.tree);
-    }
+    const size = getSize(anchorPathObject, repoInfo.tree);
     const sizeString = formatBytes(size);
     const span = document.createElement('span');
     const spanClass = `grs-${djb2(anchorPath.replaceAll('/', '-'))}`;
@@ -306,7 +278,7 @@ async function updateDOM() {
   if (pathObject.path) {
     addSizeColumn();
   }
-
+  await setTotalSize(repoInfo);
   updates.forEach(({ anchor, span, index }) => {
     if (pathObject.path) {
       // for some reason the rows have two td's with name of each file
@@ -317,6 +289,20 @@ async function updateDOM() {
     }
     appendToHome(anchor, span);
   });
+}
+
+function getSize(anchorPath: PathObject, tree: GitHubTreeItem[]) {
+  let size = 0;
+  if (anchorPath.type === 'blob') {
+    return tree.find((item) => item.path === anchorPath.path)?.size ?? 0;
+  }
+  const nestedItems = tree.filter((item) => {
+    return item.path.startsWith(anchorPath.path + '/');
+  });
+  nestedItems.forEach((item) => {
+    size += item.size ?? 0;
+  });
+  return size;
 }
 
 async function start() {
