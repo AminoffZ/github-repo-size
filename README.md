@@ -26,6 +26,33 @@ GitHubs API has a limit of 50 (at time of writing) requests per hour for unauthe
 
 Chromium based browser.
 
+## Updates
+
+Notice something that doesn't work the way you expected? Do you have your own suggestions for how to make the user experience better? Submit an [Issue](https://github.com/AminoffZ/github-repo-size/issues) and explain your concern.
+
+## Contributing
+
+Because this project uses [Bun](https://bun.sh/docs), you can use either `bun` or `npm` for the commands listed bellow.
+
+Install dependencies
+```bash
+bun install
+```
+Build the project
+```bash
+bun run build
+```
+
+Please format the project before creating a PR.
+
+```bash
+bun run format
+```
+
+Most of the business logic for this extension happens inside the [src/scripts/](https://github.com/AminoffZ/github-repo-size/tree/main/src/scripts) folder. If you are looking to make changes, this is most likely the place to start.
+
+Thank you all and happy coding!
+
 ---
 
 MIT License
