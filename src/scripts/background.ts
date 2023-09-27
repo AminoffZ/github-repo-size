@@ -1,4 +1,4 @@
-import { storage } from '../constants';
+import { storage } from '../shared';
 
 storage.get('grs-installed', (result) => {
   if (result && result['grs-installed'] === true) {
