@@ -39,7 +39,7 @@
 
   async function signInWithGithub() {
     chrome.runtime.sendMessage({
-      action: 'authenticate',
+      action: 'grs-authenticate',
       data: 'https://pyamttwvpgnenxtwmire.supabase.co/auth/v1/authorize?provider=github&redirect_to=https%3A%2F%2Faminoffz.github.io%2Fgithub-repo-size%2Fauth',
     });
   }

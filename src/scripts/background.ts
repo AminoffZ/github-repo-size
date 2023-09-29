@@ -1,5 +1,37 @@
 import { storage } from '../shared';
 
+/**
+ * Listen for navigation events and send a message to the content script
+ * to update the DOM. This is needed because GitHub uses pushState to
+ * navigate between pages. This means that the content script is not
+ * reloaded when the user navigates to a new page. We need to send a
+ * message to the content script to update the DOM. We only send the
+ * message every other time to avoid sending the message twice when
+ * navigating to a new page.
+ * @see https://developer.chrome.com/docs/extensions/reference/webNavigation/#event-order
+ */
+function setupNavigationHandler() {
+  let redirects: { [url: string]: number } = {};
+
+  chrome.webNavigation.onHistoryStateUpdated.addListener(function (details) {
+    const url = new URL(details.url);
+    if (url.hostname !== 'github.com') {
+      return;
+    }
+    redirects[url.href] = redirects[url.href] + 1;
+    if ((redirects[url.href] + 1) % 2 == 0) {
+      return;
+    }
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+      const activeTab = tabs[0];
+      if (!activeTab) {
+        return;
+      }
+      chrome.tabs.sendMessage(activeTab.id!, { event: 'grs-update' });
+    });
+  });
+}
+
 /* Check if the extension has been installed before. If not, open the
  * extension's page in a new tab. This is to show the user how to use
  * the extension. The page is only opened once. The extension is considered
@@ -47,9 +79,11 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
  * authentication page in a new tab using the URL from the message payload.
  */
 chrome.runtime.onMessage.addListener((request) => {
-  if (request.action === 'authenticate') {
+  if (request.action === 'grs-authenticate') {
     chrome.tabs.create({
       url: request.data,
     });
   }
 });
+
+setupNavigationHandler();

@@ -1,48 +1,24 @@
-import { getAnchors, updateDOM } from './internal';
+import { updateDOM } from './internal';
 
 /**
- * Update the DOM and start the SPA redirect handling.
+ * Update the DOM.
+ * If our elements have not been added, wait 500 ms and try again.
  */
-async function start() {
-  await updateDOM();
-  // SPA redirect handling
-  let lastUrl = window.location.href;
-  const popsate = setInterval(async () => {
-    if (lastUrl !== window.location.href) {
-      lastUrl = window.location.href;
-      clearInterval(popsate);
-      await startInterval();
-    }
-  }, 1000);
-}
-
-/**
- * Check if the GitHub content is loaded.
- * If it is, start updating the DOM.
- *
- * @param timer - The interval timer
- */
-const checkGitHubContent = async (timer: Timer) => {
-  // Get the anchors for files
-  const anchors = getAnchors();
-  if (anchors?.length > 0) {
-    clearInterval(timer); // Stop the periodic checks
-    await start();
+function main() {
+  updateDOM();
+  const grsElements = document.getElementsByClassName('grs');
+  if (grsElements.length < 2) {
+    setTimeout(main, 500);
   }
-};
-
-/**
- * Start the interval that checks for GitHub content.
- */
-async function startInterval() {
-  const timer = setInterval(async () => await checkGitHubContent(timer), 1000);
 }
 
 /**
- * The main function. This is the entry point of the extension.
+ * Listen for messages from the background script. If the message is
+ * 'grs-update', update the DOM. We add a delay to increase that the
+ * likelyhood that the DOM has been changed before we try to update it.
  */
-async function main() {
-  await startInterval();
-}
-
-main();
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+  if (request.event === 'grs-update') {
+    setTimeout(main, 750);
+  }
+});

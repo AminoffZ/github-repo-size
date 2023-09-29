@@ -21,7 +21,7 @@
   "action": {
     "default_popup": "index.html"
   },
-  "permissions": ["storage", "tabs"],
+  "permissions": ["storage", "tabs", "webNavigation"],
   "background": {
     "service_worker": "background.js"
   },
