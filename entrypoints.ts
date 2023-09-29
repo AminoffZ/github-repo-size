@@ -9,13 +9,18 @@ const sourceDir = './src/scripts';
  * @param dir Directory path to scan
  * @returns {Promise<string[]>} The entrypoints
  */
-async function getFiles(dir: string, deep: boolean = false): Promise<string[]> {
+async function getFiles(options?: {
+  root?: string;
+  deep?: boolean;
+}): Promise<string[]> {
+  const dir = options?.root ?? sourceDir;
+  const deep = options?.deep ?? true;
   const dirents = await readdir(dir, { withFileTypes: true });
   const files = await Promise.all(
     dirents.map((dirent) => {
       const res = join(dir, dirent.name);
       if (dirent.isDirectory() && deep) {
-        return getFiles(res);
+        return getFiles({ ...options, root: res });
       } else {
         return Promise.resolve(res);
       }
@@ -33,6 +38,9 @@ async function getFiles(dir: string, deep: boolean = false): Promise<string[]> {
  *
  * @returns {Promise<string[]>} The entrypoints
  */
-export default async function entryPoints(): Promise<string[]> {
-  return getFiles(sourceDir);
+export default async function entryPoints(options?: {
+  root?: string;
+  deep?: boolean;
+}): Promise<string[]> {
+  return await getFiles(options);
 }
