@@ -105,3 +105,28 @@ export function getThead() {
 export function getTotalSizeSpan(totalSizeButton: HTMLElement) {
   return totalSizeButton.querySelector('span');
 }
+
+/**
+ * Gets the top element in GitHubs file browser.
+ * This is the element used to navigate up in the file tree.
+ *
+ * @returns The top element
+ * @example
+ * ```ts
+ * getNavigateUpElement();
+ * // <td colspan="3" ...>
+ * //   <h3 ...></h3>
+ * //   <a href="/owner/repo/tree/branch" ...>
+ * //     <div ...>
+ * //       <svg ...>
+ * //         <path ...></path>
+ * //       </svg>
+ * //       ..
+ * //     </div>
+ * //   </a>
+ * // </td>
+ * ```
+ */
+export function getNavigateUpElement() {
+  return document.getElementById('folder-row-0')?.firstElementChild;
+}

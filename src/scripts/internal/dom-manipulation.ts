@@ -4,6 +4,7 @@ import {
   formatBytes,
   getAnchors,
   getNavButtons,
+  getNavigateUpElement,
   getPathObject,
   getRepoInfo,
   getSize,
@@ -22,16 +23,23 @@ import type { GRSUpdate, GitHubTree } from './types';
  * @param headRow - The head row element
  * @param th - The size label element
  */
-function insertSizeLabel(
-  headRow: ChildNode | null | undefined,
-  th: HTMLTableCellElement
-) {
+function insertSizeLabel(headRow: ChildNode, th: HTMLTableCellElement) {
   if (headRow) {
-    headRow?.insertBefore(
-      th,
-      headRow.childNodes[headRow.childNodes.length - 1]
-    );
+    headRow.insertBefore(th, headRow.childNodes[headRow.childNodes.length - 1]);
   }
+}
+
+/**
+ * Expand the navigate up element to span the entire table.
+ * This is the element that is shown at the top of the GitHub file browser
+ * and is used to navigate up in the file tree.
+ */
+function expandNavigateUpElement() {
+  const navigateUpElement = getNavigateUpElement();
+  if (!navigateUpElement) {
+    return;
+  }
+  navigateUpElement.setAttribute('colspan', '4');
 }
 
 /**
@@ -44,8 +52,14 @@ function insertSizeColumn() {
   }
 
   const thead = getThead();
-  const th = createSizeLabel();
   const headRow = thead?.firstChild;
+  if (!headRow) {
+    return;
+  }
+
+  expandNavigateUpElement();
+
+  const th = createSizeLabel();
   insertSizeLabel(headRow, th);
 }
 

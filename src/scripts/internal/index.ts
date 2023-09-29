@@ -9,6 +9,7 @@ export {
   getSizeLabel,
   getThead,
   getTotalSizeSpan,
+  getNavigateUpElement,
 } from './selectors';
 export { createSizeLabel, createTotalSizeButton } from './element-factory';
 export { updateDOM } from './dom-manipulation';
