@@ -15,6 +15,13 @@ import {
 } from '.';
 import type { GRSUpdate, GitHubTree } from './types';
 
+/**
+ * Insert the size label element into the table head.
+ * This is the element that is shown at the top of the size column in the GitHub file browser.
+ *
+ * @param headRow - The head row element
+ * @param th - The size label element
+ */
 function insertSizeLabel(
   headRow: ChildNode | null | undefined,
   th: HTMLTableCellElement
@@ -27,6 +34,10 @@ function insertSizeLabel(
   }
 }
 
+/**
+ * Insert the size column into the table on the GitHub file browser.
+ * This is the column that displays the size of each file.
+ */
 function insertSizeColumn() {
   if (getSizeLabel()) {
     return;
@@ -38,6 +49,12 @@ function insertSizeColumn() {
   insertSizeLabel(headRow, th);
 }
 
+/**
+ * Insert when in the GitHub file browser.
+ *
+ * @param anchor - The anchor element as reference
+ * @param span - The span element to insert
+ */
 function insertToFileExplorer(
   anchor: HTMLAnchorElement,
   span: HTMLSpanElement
@@ -57,6 +74,12 @@ function insertToFileExplorer(
   row.insertBefore(td, row.childNodes[row.childNodes.length - 1]);
 }
 
+/**
+ * Insert when on the GitHub home page.
+ *
+ * @param anchor - The anchor element as reference
+ * @param span - The span element to insert
+ */
 function insertToHome(anchor: HTMLAnchorElement, span: HTMLSpanElement) {
   const row = anchor.closest('[role="row"]');
   if (!row) {
@@ -73,6 +96,12 @@ function insertToHome(anchor: HTMLAnchorElement, span: HTMLSpanElement) {
   row.insertBefore(div, row.childNodes[row.childNodes.length - 2]);
 }
 
+/**
+ * Set the total size of the files in the repository.
+ * This concerns the element shown in the navigation bar next to Settings.
+ *
+ * @param repoInfo - The repo info
+ */
 function setTotalSize(repoInfo: GitHubTree) {
   let navButtons = getNavButtons();
   if (!navButtons) {
@@ -105,6 +134,10 @@ function setTotalSize(repoInfo: GitHubTree) {
   span.innerText = formatBytes(totalSize);
 }
 
+/**
+ * Update the DOM.
+ * This is the main function that is called when the DOM should be updated.
+ */
 export async function updateDOM() {
   const anchors = getAnchors();
   if (!anchors || anchors.length === 0) {

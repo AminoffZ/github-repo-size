@@ -1,3 +1,13 @@
+/**
+ * Create a table header element for the size column.
+ *
+ * @returns The table header element
+ * @example
+ * ```ts
+ * createSizeLabel();
+ * // <th class="grs grs-size"><span>Size</span></th>
+ * ```
+ */
 export function createSizeLabel() {
   const th = document.createElement('th');
   const span = document.createElement('span');
@@ -7,6 +17,19 @@ export function createSizeLabel() {
   return th;
 }
 
+/**
+ * Create an element to display the total size of the files in the repository.
+ *
+ * @param navButtons - The navigation buttons element
+ * @returns The total size element
+ * @example
+ * ```ts
+ * createTotalSizeButton(navButtons);
+ * // <a class="UnderlineNav-item grs-total-size..."...>
+ * //   <span>...</span>
+ * // </a>
+ * ```
+ */
 export function createTotalSizeButton(navButtons: ChildNode) {
   const totalSizeButton = navButtons?.lastChild?.cloneNode(true);
   if (!(totalSizeButton instanceof HTMLElement)) {

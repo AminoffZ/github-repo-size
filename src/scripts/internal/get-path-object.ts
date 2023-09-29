@@ -1,5 +1,22 @@
 import type { PathObject } from './types';
 
+/**
+ * Get the path object from a path string
+ *
+ * @param path - The path string
+ * @returns PathObject
+ * @example
+ * ```ts
+ * getPathObject('/owner/repo/tree/branch/path/to/file');
+ * // {
+ * //   owner: 'owner',
+ * //   repo: 'repo',
+ * //   type: 'tree',
+ * //   branch: 'branch',
+ * //   path: 'path/to/file',
+ * // }
+ * ```
+ */
 export const getPathObject = (path?: string) => {
   path = path ?? window.location.pathname;
   const pathObject = {};
