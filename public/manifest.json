@@ -19,11 +19,16 @@
     }
   ],
   "action": {
-    "default_icon": "favicon.png",
     "default_popup": "index.html"
   },
   "permissions": ["storage", "tabs"],
   "background": {
     "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "32": "images/icon32.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
   }
 }
