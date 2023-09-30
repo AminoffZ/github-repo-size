@@ -1,0 +1,3071 @@
+{
+	"id": 0,
+	"name": "popup",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"children": [
+		{
+			"id": 81,
+			"name": "background",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "background.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/background.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 80,
+			"name": "content",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "content.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/content.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 79,
+			"name": "internal",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 97,
+					"name": "createSizeLabel",
+					"variant": "reference",
+					"kind": 4194304,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/index.ts",
+							"line": 14,
+							"character": 9,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/index.ts#L14"
+						}
+					],
+					"target": 2
+				},
+				{
+					"id": 98,
+					"name": "createTotalSizeButton",
+					"variant": "reference",
+					"kind": 4194304,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/index.ts",
+							"line": 14,
+							"character": 26,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/index.ts#L14"
+						}
+					],
+					"target": 4
+				},
+				{
+					"id": 88,
+					"name": "formatBytes",
+					"variant": "reference",
+					"kind": 4194304,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/index.ts",
+							"line": 3,
+							"character": 9,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/index.ts#L3"
+						}
+					],
+					"target": 12
+				},
+				{
+					"id": 91,
+					"name": "getAnchors",
+					"variant": "reference",
+					"kind": 4194304,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/index.ts",
+							"line": 7,
+							"character": 2,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/index.ts#L7"
+						}
+					],
+					"target": 60
+				},
+				{
+					"id": 90,
+					"name": "getNavButtons",
+					"variant": "reference",
+					"kind": 4194304,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/index.ts",
+							"line": 6,
+							"character": 25,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/index.ts#L6"
+						}
+					],
+					"target": 58
+				},
+				{
+					"id": 96,
+					"name": "getNavigateUpElement",
+					"variant": "reference",
+					"kind": 4194304,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/index.ts",
+							"line": 12,
+							"character": 2,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/index.ts#L12"
+						}
+					],
+					"target": 71
+				},
+				{
+					"id": 86,
+					"name": "getPathObject",
+					"variant": "reference",
+					"kind": 4194304,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/index.ts",
+							"line": 1,
+							"character": 9,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/index.ts#L1"
+						}
+					],
+					"target": 8
+				},
+				{
+					"id": 87,
+					"name": "getRepoInfo",
+					"variant": "reference",
+					"kind": 4194304,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/index.ts",
+							"line": 2,
+							"character": 9,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/index.ts#L2"
+						}
+					],
+					"target": 74
+				},
+				{
+					"id": 100,
+					"name": "getSize",
+					"variant": "reference",
+					"kind": 4194304,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/index.ts",
+							"line": 16,
+							"character": 9,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/index.ts#L16"
+						}
+					],
+					"target": 17
+				},
+				{
+					"id": 93,
+					"name": "getSizeLabel",
+					"variant": "reference",
+					"kind": 4194304,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/index.ts",
+							"line": 9,
+							"character": 2,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/index.ts#L9"
+						}
+					],
+					"target": 64
+				},
+				{
+					"id": 94,
+					"name": "getThead",
+					"variant": "reference",
+					"kind": 4194304,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/index.ts",
+							"line": 10,
+							"character": 2,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/index.ts#L10"
+						}
+					],
+					"target": 66
+				},
+				{
+					"id": 92,
+					"name": "getTotalSizeButton",
+					"variant": "reference",
+					"kind": 4194304,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/index.ts",
+							"line": 8,
+							"character": 2,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/index.ts#L8"
+						}
+					],
+					"target": 62
+				},
+				{
+					"id": 95,
+					"name": "getTotalSizeSpan",
+					"variant": "reference",
+					"kind": 4194304,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/index.ts",
+							"line": 11,
+							"character": 2,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/index.ts#L11"
+						}
+					],
+					"target": 68
+				},
+				{
+					"id": 89,
+					"name": "hashClass",
+					"variant": "reference",
+					"kind": 4194304,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/index.ts",
+							"line": 4,
+							"character": 9,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/index.ts#L4"
+						}
+					],
+					"target": 22
+				},
+				{
+					"id": 99,
+					"name": "updateDOM",
+					"variant": "reference",
+					"kind": 4194304,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/index.ts",
+							"line": 15,
+							"character": 9,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/index.ts#L15"
+						}
+					],
+					"target": 27
+				}
+			],
+			"groups": [
+				{
+					"title": "References",
+					"children": [
+						97,
+						98,
+						88,
+						91,
+						90,
+						96,
+						86,
+						87,
+						100,
+						93,
+						94,
+						92,
+						95,
+						89,
+						99
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "internal/index.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/index.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 73,
+			"name": "internal/api",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 74,
+					"name": "getRepoInfo",
+					"variant": "declaration",
+					"kind": 64,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/api.ts",
+							"line": 104,
+							"character": 22,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/api.ts#L104"
+						}
+					],
+					"signatures": [
+						{
+							"id": 75,
+							"name": "getRepoInfo",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Get the repo info from the GitHub API using the repo name and branch name.\nIf the request fails, assume that the branch name is incorrect and try again.\nIf the default branch name is not found, the function will return undefined."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "The repo info"
+											}
+										]
+									},
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\ngetRepoInfo('AminoffZ/github-repo-size');\n// {\n//   sha: '...',\n//   url: '...',\n//   tree: [\n//     {\n//       path: '...',\n//       mode: '...',\n//       type: '...',\n//       sha: '...',\n//       size: 0,\n//       url: '...',\n//     },\n//     ...\n//   ],\n//   truncated: false,\n// }"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "internal/api.ts",
+									"line": 104,
+									"character": 22,
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/api.ts#L104"
+								}
+							],
+							"parameters": [
+								{
+									"id": 76,
+									"name": "repo",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The repo name"
+											}
+										]
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 77,
+									"name": "branch",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "(Optional) The branch name (default: 'main')"
+											}
+										]
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									},
+									"defaultValue": "'main'"
+								},
+								{
+									"id": 78,
+									"name": "attempts",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The number of attempts"
+											}
+										]
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									},
+									"defaultValue": "0"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "node_modules/typescript/lib/lib.es5.d.ts",
+									"qualifiedName": "Promise"
+								},
+								"typeArguments": [
+									{
+										"type": "union",
+										"types": [
+											{
+												"type": "reference",
+												"target": 45,
+												"name": "GitHubTree",
+												"package": "popup"
+											},
+											{
+												"type": "intrinsic",
+												"name": "undefined"
+											}
+										]
+									}
+								],
+								"name": "Promise",
+								"package": "typescript"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"children": [
+						74
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "internal/api.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/api.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 21,
+			"name": "internal/crypto",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 22,
+					"name": "hashClass",
+					"variant": "declaration",
+					"kind": 64,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/crypto.ts",
+							"line": 33,
+							"character": 16,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/crypto.ts#L33"
+						}
+					],
+					"signatures": [
+						{
+							"id": 23,
+							"name": "hashClass",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Hash a string to a class name."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "The class name"
+											}
+										]
+									},
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nhashClass('💩', 'grs');\n// 'grs-7743179'\n```"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "internal/crypto.ts",
+									"line": 33,
+									"character": 16,
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/crypto.ts#L33"
+								}
+							],
+							"parameters": [
+								{
+									"id": 24,
+									"name": "toHash",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The string to hash"
+											}
+										]
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 25,
+									"name": "prefix",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The prefix of the class name"
+											}
+										]
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									},
+									"defaultValue": "'grs'"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"children": [
+						22
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "internal/crypto.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/crypto.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 26,
+			"name": "internal/dom-manipulation",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 27,
+					"name": "updateDOM",
+					"variant": "declaration",
+					"kind": 64,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/dom-manipulation.ts",
+							"line": 155,
+							"character": 22,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/dom-manipulation.ts#L155"
+						}
+					],
+					"signatures": [
+						{
+							"id": 28,
+							"name": "updateDOM",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Update the DOM.\nThis is the main function that is called when the DOM should be updated."
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "internal/dom-manipulation.ts",
+									"line": 155,
+									"character": 22,
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/dom-manipulation.ts#L155"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "node_modules/typescript/lib/lib.es5.d.ts",
+									"qualifiedName": "Promise"
+								},
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "void"
+									}
+								],
+								"name": "Promise",
+								"package": "typescript"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"children": [
+						27
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "internal/dom-manipulation.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/dom-manipulation.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 1,
+			"name": "internal/element-factory",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 2,
+					"name": "createSizeLabel",
+					"variant": "declaration",
+					"kind": 64,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/element-factory.ts",
+							"line": 11,
+							"character": 16,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/element-factory.ts#L11"
+						}
+					],
+					"signatures": [
+						{
+							"id": 3,
+							"name": "createSizeLabel",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Create a table header element for the size column."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "The table header element"
+											}
+										]
+									},
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\ncreateSizeLabel();\n// <th class=\"grs grs-size\"><span>Size</span></th>\n```"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "internal/element-factory.ts",
+									"line": 11,
+									"character": 16,
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/element-factory.ts#L11"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "node_modules/typescript/lib/lib.dom.d.ts",
+									"qualifiedName": "HTMLTableCellElement"
+								},
+								"name": "HTMLTableCellElement",
+								"package": "typescript"
+							}
+						}
+					]
+				},
+				{
+					"id": 4,
+					"name": "createTotalSizeButton",
+					"variant": "declaration",
+					"kind": 64,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/element-factory.ts",
+							"line": 33,
+							"character": 16,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/element-factory.ts#L33"
+						}
+					],
+					"signatures": [
+						{
+							"id": 5,
+							"name": "createTotalSizeButton",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Create an element to display the total size of the files in the repository."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "The total size element"
+											}
+										]
+									},
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\ncreateTotalSizeButton(navButtons);\n// <a class=\"UnderlineNav-item grs-total-size...\"...>\n//   <span>...</span>\n// </a>\n```"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "internal/element-factory.ts",
+									"line": 33,
+									"character": 16,
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/element-factory.ts#L33"
+								}
+							],
+							"parameters": [
+								{
+									"id": 6,
+									"name": "navButtons",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The navigation buttons element"
+											}
+										]
+									},
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/typescript/lib/lib.dom.d.ts",
+											"qualifiedName": "ChildNode"
+										},
+										"name": "ChildNode",
+										"package": "typescript"
+									}
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/typescript/lib/lib.dom.d.ts",
+											"qualifiedName": "HTMLElement"
+										},
+										"name": "HTMLElement",
+										"package": "typescript"
+									}
+								]
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"children": [
+						2,
+						4
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "internal/element-factory.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/element-factory.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 11,
+			"name": "internal/format",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 12,
+					"name": "formatBytes",
+					"variant": "declaration",
+					"kind": 64,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/format.ts",
+							"line": 18,
+							"character": 16,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/format.ts#L18"
+						}
+					],
+					"signatures": [
+						{
+							"id": 13,
+							"name": "formatBytes",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Formats a number to a string with a given amount of decimals."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "The formatted string"
+											}
+										]
+									},
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nformatBytes(1024);\n// '1 KB'\n```"
+											}
+										]
+									},
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nformatBytes(1024, 2);\n// '1.00 KB'\n```"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "internal/format.ts",
+									"line": 18,
+									"character": 16,
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/format.ts#L18"
+								}
+							],
+							"parameters": [
+								{
+									"id": 14,
+									"name": "bytes",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The number to format"
+											}
+										]
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								},
+								{
+									"id": 15,
+									"name": "decimals",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The number of decimals"
+											}
+										]
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									},
+									"defaultValue": "2"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"children": [
+						12
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "internal/format.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/format.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 7,
+			"name": "internal/get-path-object",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 8,
+					"name": "getPathObject",
+					"variant": "declaration",
+					"kind": 64,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/get-path-object.ts",
+							"line": 20,
+							"character": 13,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/get-path-object.ts#L20"
+						}
+					],
+					"signatures": [
+						{
+							"id": 9,
+							"name": "getPathObject",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Get the path object from a path string"
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "PathObject"
+											}
+										]
+									},
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\ngetPathObject('/owner/repo/tree/branch/path/to/file');\n// {\n//   owner: 'owner',\n//   repo: 'repo',\n//   type: 'tree',\n//   branch: 'branch',\n//   path: 'path/to/file',\n// }\n```"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "internal/get-path-object.ts",
+									"line": 20,
+									"character": 29,
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/get-path-object.ts#L20"
+								}
+							],
+							"parameters": [
+								{
+									"id": 10,
+									"name": "path",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {
+										"isOptional": true
+									},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The path string"
+											}
+										]
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": 30,
+								"name": "PathObject",
+								"package": "popup"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"children": [
+						8
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "internal/get-path-object.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/get-path-object.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 16,
+			"name": "internal/get-size",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 17,
+					"name": "getSize",
+					"variant": "declaration",
+					"kind": 64,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/get-size.ts",
+							"line": 21,
+							"character": 16,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/get-size.ts#L21"
+						}
+					],
+					"signatures": [
+						{
+							"id": 18,
+							"name": "getSize",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Get the size of a path object."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "The size of the path object"
+											}
+										]
+									},
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\ngetSize({\n owner: 'AminoffZ',\n repo: 'github-repo-size',\n type: 'blob',\n branch: 'main',\n path: '.prettierrc',\n }, tree);\n// 85\n```"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "internal/get-size.ts",
+									"line": 21,
+									"character": 16,
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/get-size.ts#L21"
+								}
+							],
+							"parameters": [
+								{
+									"id": 19,
+									"name": "anchorPath",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The path object"
+											}
+										]
+									},
+									"type": {
+										"type": "reference",
+										"target": 30,
+										"name": "PathObject",
+										"package": "popup"
+									}
+								},
+								{
+									"id": 20,
+									"name": "tree",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The tree"
+											}
+										]
+									},
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"target": 37,
+											"name": "GitHubTreeItem",
+											"package": "popup"
+										}
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"children": [
+						17
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "internal/get-size.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/get-size.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 57,
+			"name": "internal/selectors",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 60,
+					"name": "getAnchors",
+					"variant": "declaration",
+					"kind": 64,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/selectors.ts",
+							"line": 39,
+							"character": 16,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/selectors.ts#L39"
+						}
+					],
+					"signatures": [
+						{
+							"id": 61,
+							"name": "getAnchors",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Get the filename anchor elements."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "The filename anchor elements"
+											}
+										]
+									},
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\ngetAnchors();\n// {\n//  \"0\": {},\n//  \"1\": {},\n//  \"2\": {},\n//  ...\n// }\n```"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "internal/selectors.ts",
+									"line": 39,
+									"character": 16,
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/selectors.ts#L39"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "node_modules/typescript/lib/lib.dom.d.ts",
+									"qualifiedName": "NodeListOf"
+								},
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/typescript/lib/lib.dom.d.ts",
+											"qualifiedName": "HTMLAnchorElement"
+										},
+										"name": "HTMLAnchorElement",
+										"package": "typescript"
+									}
+								],
+								"name": "NodeListOf",
+								"package": "typescript"
+							}
+						}
+					]
+				},
+				{
+					"id": 71,
+					"name": "getNavigateUpElement",
+					"variant": "declaration",
+					"kind": 64,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/selectors.ts",
+							"line": 130,
+							"character": 16,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/selectors.ts#L130"
+						}
+					],
+					"signatures": [
+						{
+							"id": 72,
+							"name": "getNavigateUpElement",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Gets the top element in GitHubs file browser.\nThis is the element used to navigate up in the file tree."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "The top element"
+											}
+										]
+									},
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\ngetNavigateUpElement();\n// <td colspan=\"3\" ...>\n//   <h3 ...></h3>\n//   <a href=\"/owner/repo/tree/branch\" ...>\n//     <div ...>\n//       <svg ...>\n//         <path ...></path>\n//       </svg>\n//       ..\n//     </div>\n//   </a>\n// </td>\n```"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "internal/selectors.ts",
+									"line": 130,
+									"character": 16,
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/selectors.ts#L130"
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/typescript/lib/lib.dom.d.ts",
+											"qualifiedName": "Element"
+										},
+										"name": "Element",
+										"package": "typescript"
+									}
+								]
+							}
+						}
+					]
+				},
+				{
+					"id": 58,
+					"name": "getSettingsListItem",
+					"variant": "declaration",
+					"kind": 64,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/selectors.ts",
+							"line": 19,
+							"character": 16,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/selectors.ts#L19"
+						}
+					],
+					"signatures": [
+						{
+							"id": 59,
+							"name": "getSettingsListItem",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Get the settings list item from the navigation bar."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "The settings list item"
+											}
+										]
+									},
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\ngetSettingsListItem();\n// <li data-view-component=\"true\" class=\"d-inline-flex\">\n//   <a id=\"settings-tab\" href=\"/owner/repo/settings\" ...>\n//     <svg ...>\n//       <path ...></path>\n//     </svg>\n//     <span ...>Settings</span>\n//     <span ...></span>\n//   </a>\n// </li>\n```"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "internal/selectors.ts",
+									"line": 19,
+									"character": 16,
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/selectors.ts#L19"
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/typescript/lib/lib.dom.d.ts",
+											"qualifiedName": "Element"
+										},
+										"name": "Element",
+										"package": "typescript"
+									}
+								]
+							}
+						}
+					]
+				},
+				{
+					"id": 64,
+					"name": "getSizeLabel",
+					"variant": "declaration",
+					"kind": 64,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/selectors.ts",
+							"line": 71,
+							"character": 16,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/selectors.ts#L71"
+						}
+					],
+					"signatures": [
+						{
+							"id": 65,
+							"name": "getSizeLabel",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Get the size label element. This is the element that is shown at the top\nof the size column in the GitHub file browser."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "The size label element"
+											}
+										]
+									},
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\ngetSizeLabel();\n// <th class=\"grs grs-size\"><span>Size</span></th>\n```"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "internal/selectors.ts",
+									"line": 71,
+									"character": 16,
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/selectors.ts#L71"
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/typescript/lib/lib.dom.d.ts",
+											"qualifiedName": "HTMLElement"
+										},
+										"name": "HTMLElement",
+										"package": "typescript"
+									}
+								]
+							}
+						}
+					]
+				},
+				{
+					"id": 66,
+					"name": "getThead",
+					"variant": "declaration",
+					"kind": 64,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/selectors.ts",
+							"line": 85,
+							"character": 16,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/selectors.ts#L85"
+						}
+					],
+					"signatures": [
+						{
+							"id": 67,
+							"name": "getThead",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Get the head of the table in GitHub's file browser."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "The table head element"
+											}
+										]
+									},
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\ngetThead();\n// <thead>...</thead>\n```"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "internal/selectors.ts",
+									"line": 85,
+									"character": 16,
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/selectors.ts#L85"
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/typescript/lib/lib.dom.d.ts",
+											"qualifiedName": "HTMLTableSectionElement"
+										},
+										"name": "HTMLTableSectionElement",
+										"package": "typescript"
+									}
+								]
+							}
+						}
+					]
+				},
+				{
+					"id": 62,
+					"name": "getTotalSizeButton",
+					"variant": "declaration",
+					"kind": 64,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/selectors.ts",
+							"line": 56,
+							"character": 16,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/selectors.ts#L56"
+						}
+					],
+					"signatures": [
+						{
+							"id": 63,
+							"name": "getTotalSizeButton",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Get the total size element."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "The total size element"
+											}
+										]
+									},
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\ngetTotalSizeButton();\n// <a class=\"UnderlineNav-item grs-total-size...\"...>\n//   <span>...</span>\n// </a>\n```"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "internal/selectors.ts",
+									"line": 56,
+									"character": 16,
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/selectors.ts#L56"
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/typescript/lib/lib.dom.d.ts",
+											"qualifiedName": "HTMLElement"
+										},
+										"name": "HTMLElement",
+										"package": "typescript"
+									}
+								]
+							}
+						}
+					]
+				},
+				{
+					"id": 68,
+					"name": "getTotalSizeSpan",
+					"variant": "declaration",
+					"kind": 64,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/selectors.ts",
+							"line": 105,
+							"character": 16,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/selectors.ts#L105"
+						}
+					],
+					"signatures": [
+						{
+							"id": 69,
+							"name": "getTotalSizeSpan",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Get the span element that displays the total size of the files in the repository."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "The span element"
+											}
+										]
+									},
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\ngetTotalSizeSpan(totalSizeButton);\n// <span>...</span>\n```"
+											}
+										]
+									},
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\ngetTotalSizeSpan(totalSizeButton);\n// <span>806.07 KB</span>\n```"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "internal/selectors.ts",
+									"line": 105,
+									"character": 16,
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/selectors.ts#L105"
+								}
+							],
+							"parameters": [
+								{
+									"id": 70,
+									"name": "totalSizeButton",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The total size element"
+											}
+										]
+									},
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/typescript/lib/lib.dom.d.ts",
+											"qualifiedName": "HTMLElement"
+										},
+										"name": "HTMLElement",
+										"package": "typescript"
+									}
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/typescript/lib/lib.dom.d.ts",
+											"qualifiedName": "HTMLSpanElement"
+										},
+										"name": "HTMLSpanElement",
+										"package": "typescript"
+									}
+								]
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"children": [
+						60,
+						71,
+						58,
+						64,
+						66,
+						62,
+						68
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "internal/selectors.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/selectors.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 56,
+			"name": "internal/types",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 85,
+					"name": "GRSUpdate",
+					"variant": "reference",
+					"kind": 4194304,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/types/index.ts",
+							"line": 5,
+							"character": 2,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/index.ts#L5"
+						}
+					],
+					"target": 51
+				},
+				{
+					"id": 83,
+					"name": "GitHubTree",
+					"variant": "reference",
+					"kind": 4194304,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/types/index.ts",
+							"line": 3,
+							"character": 2,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/index.ts#L3"
+						}
+					],
+					"target": 45
+				},
+				{
+					"id": 84,
+					"name": "GitHubTreeItem",
+					"variant": "reference",
+					"kind": 4194304,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/types/index.ts",
+							"line": 4,
+							"character": 2,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/index.ts#L4"
+						}
+					],
+					"target": 37
+				},
+				{
+					"id": 82,
+					"name": "PathObject",
+					"variant": "reference",
+					"kind": 4194304,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/types/index.ts",
+							"line": 2,
+							"character": 2,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/index.ts#L2"
+						}
+					],
+					"target": 30
+				}
+			],
+			"groups": [
+				{
+					"title": "References",
+					"children": [
+						85,
+						83,
+						84,
+						82
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "internal/types/index.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/index.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 29,
+			"name": "internal/types/types",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 51,
+					"name": "GRSUpdate",
+					"variant": "declaration",
+					"kind": 2097152,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/types/types.ts",
+							"line": 25,
+							"character": 12,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L25"
+						}
+					],
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "reflection",
+							"declaration": {
+								"id": 52,
+								"name": "__type",
+								"variant": "declaration",
+								"kind": 65536,
+								"flags": {},
+								"children": [
+									{
+										"id": 53,
+										"name": "anchor",
+										"variant": "declaration",
+										"kind": 1024,
+										"flags": {},
+										"sources": [
+											{
+												"fileName": "internal/types/types.ts",
+												"line": 26,
+												"character": 2,
+												"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L26"
+											}
+										],
+										"type": {
+											"type": "reference",
+											"target": {
+												"sourceFileName": "node_modules/typescript/lib/lib.dom.d.ts",
+												"qualifiedName": "HTMLAnchorElement"
+											},
+											"name": "HTMLAnchorElement",
+											"package": "typescript"
+										}
+									},
+									{
+										"id": 55,
+										"name": "index",
+										"variant": "declaration",
+										"kind": 1024,
+										"flags": {},
+										"sources": [
+											{
+												"fileName": "internal/types/types.ts",
+												"line": 28,
+												"character": 2,
+												"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L28"
+											}
+										],
+										"type": {
+											"type": "intrinsic",
+											"name": "number"
+										}
+									},
+									{
+										"id": 54,
+										"name": "span",
+										"variant": "declaration",
+										"kind": 1024,
+										"flags": {},
+										"sources": [
+											{
+												"fileName": "internal/types/types.ts",
+												"line": 27,
+												"character": 2,
+												"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L27"
+											}
+										],
+										"type": {
+											"type": "reference",
+											"target": {
+												"sourceFileName": "node_modules/typescript/lib/lib.dom.d.ts",
+												"qualifiedName": "HTMLSpanElement"
+											},
+											"name": "HTMLSpanElement",
+											"package": "typescript"
+										}
+									}
+								],
+								"groups": [
+									{
+										"title": "Properties",
+										"children": [
+											53,
+											55,
+											54
+										]
+									}
+								],
+								"sources": [
+									{
+										"fileName": "internal/types/types.ts",
+										"line": 25,
+										"character": 30,
+										"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L25"
+									}
+								]
+							}
+						}
+					}
+				},
+				{
+					"id": 45,
+					"name": "GitHubTree",
+					"variant": "declaration",
+					"kind": 2097152,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/types/types.ts",
+							"line": 18,
+							"character": 12,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L18"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 46,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"children": [
+								{
+									"id": 47,
+									"name": "sha",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "internal/types/types.ts",
+											"line": 19,
+											"character": 2,
+											"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L19"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 49,
+									"name": "tree",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "internal/types/types.ts",
+											"line": 21,
+											"character": 2,
+											"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L21"
+										}
+									],
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"target": 37,
+											"name": "GitHubTreeItem",
+											"package": "popup"
+										}
+									}
+								},
+								{
+									"id": 50,
+									"name": "truncated",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "internal/types/types.ts",
+											"line": 22,
+											"character": 2,
+											"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L22"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									}
+								},
+								{
+									"id": 48,
+									"name": "url",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "internal/types/types.ts",
+											"line": 20,
+											"character": 2,
+											"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L20"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"children": [
+										47,
+										49,
+										50,
+										48
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "internal/types/types.ts",
+									"line": 18,
+									"character": 25,
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L18"
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 37,
+					"name": "GitHubTreeItem",
+					"variant": "declaration",
+					"kind": 2097152,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/types/types.ts",
+							"line": 9,
+							"character": 12,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L9"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 38,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"children": [
+								{
+									"id": 40,
+									"name": "mode",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "internal/types/types.ts",
+											"line": 11,
+											"character": 2,
+											"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L11"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 39,
+									"name": "path",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "internal/types/types.ts",
+											"line": 10,
+											"character": 2,
+											"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L10"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 42,
+									"name": "sha",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "internal/types/types.ts",
+											"line": 13,
+											"character": 2,
+											"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L13"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 43,
+									"name": "size",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isOptional": true
+									},
+									"sources": [
+										{
+											"fileName": "internal/types/types.ts",
+											"line": 14,
+											"character": 2,
+											"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L14"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								},
+								{
+									"id": 41,
+									"name": "type",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "internal/types/types.ts",
+											"line": 12,
+											"character": 2,
+											"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L12"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 44,
+									"name": "url",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "internal/types/types.ts",
+											"line": 15,
+											"character": 2,
+											"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L15"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"children": [
+										40,
+										39,
+										42,
+										43,
+										41,
+										44
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "internal/types/types.ts",
+									"line": 9,
+									"character": 29,
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L9"
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 30,
+					"name": "PathObject",
+					"variant": "declaration",
+					"kind": 2097152,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "internal/types/types.ts",
+							"line": 1,
+							"character": 12,
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L1"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 31,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"children": [
+								{
+									"id": 35,
+									"name": "branch",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isOptional": true
+									},
+									"sources": [
+										{
+											"fileName": "internal/types/types.ts",
+											"line": 5,
+											"character": 2,
+											"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L5"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 32,
+									"name": "owner",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "internal/types/types.ts",
+											"line": 2,
+											"character": 2,
+											"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L2"
+										}
+									],
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "intrinsic",
+												"name": "string"
+											},
+											{
+												"type": "intrinsic",
+												"name": "undefined"
+											}
+										]
+									}
+								},
+								{
+									"id": 36,
+									"name": "path",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isOptional": true
+									},
+									"sources": [
+										{
+											"fileName": "internal/types/types.ts",
+											"line": 6,
+											"character": 2,
+											"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L6"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 33,
+									"name": "repo",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "internal/types/types.ts",
+											"line": 3,
+											"character": 2,
+											"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L3"
+										}
+									],
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "intrinsic",
+												"name": "string"
+											},
+											{
+												"type": "intrinsic",
+												"name": "undefined"
+											}
+										]
+									}
+								},
+								{
+									"id": 34,
+									"name": "type",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isOptional": true
+									},
+									"sources": [
+										{
+											"fileName": "internal/types/types.ts",
+											"line": 4,
+											"character": 2,
+											"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L4"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"children": [
+										35,
+										32,
+										36,
+										33,
+										34
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "internal/types/types.ts",
+									"line": 1,
+									"character": 25,
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L1"
+								}
+							]
+						}
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Type Aliases",
+					"children": [
+						51,
+						45,
+						37,
+						30
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "internal/types/types.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L1"
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Modules",
+			"children": [
+				81,
+				80,
+				79,
+				73,
+				21,
+				26,
+				1,
+				11,
+				7,
+				16,
+				57,
+				56,
+				29
+			]
+		}
+	],
+	"packageName": "popup",
+	"readme": [
+		{
+			"kind": "text",
+			"text": "[![Google Chrome](https://img.shields.io/chrome-web-store/v/jpdmfnflpdgefbfkafcikmhipofhanfl?label=Get%20GRS%20for%20Chrome&logo=Google%20Chrome)](https://chrome.google.com/webstore/detail/github-repo-size/jpdmfnflpdgefbfkafcikmhipofhanfl)\n\n<img src=\"/assets/github-repo-size-icon256.png\" align=\"right\"  />\n\n# GitHub Repo Size\n\nAn extension to display the size of GitHub repositories.\nInspired by [github-repo-size](https://github.com/harshjv/github-repo-size).\n\n## Features\n\nView summary of file sizes in repositories.\n\n<img src=\"/assets/github-repo-size-screenshot.png\" />\n\nIt's also possible to view private repository size summaries by adding a personal access token.[^1]\n\n<img src=\"/assets/github-repo-size-popup.png\" />\n\nGitHubs API has a limit of 50 (at time of writing) requests per hour for unauthenticated requests. By clicking Authenticate and signing in with OAuth, you can make up to 5000 requests per hour.[^2]\n\n[^1]: [Managing your personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)\n[^2]: [Rate limiting](https://docs.github.com/en/rest/overview/resources-in-the-rest-api?apiVersion=2022-11-28#rate-limits)\n\n## Requirements\n\nChromium based browser.\n\n## Updates\n\nNotice something that doesn't work the way you expected? Do you have your own suggestions for how to make the user experience better? Submit an [Issue](https://github.com/AminoffZ/github-repo-size/issues) and explain your concern.\n\n## Contributing\n\nBecause this project uses [Bun](https://bun.sh/docs), you can use either "
+		},
+		{
+			"kind": "code",
+			"text": "`bun`"
+		},
+		{
+			"kind": "text",
+			"text": " or "
+		},
+		{
+			"kind": "code",
+			"text": "`npm`"
+		},
+		{
+			"kind": "text",
+			"text": " for the commands listed bellow.\n\nInstall dependencies\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```bash\nbun install\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\nBuild the project\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```bash\nbun run build\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\nPlease format the project before creating a PR.\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```bash\nbun run format\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\nMost of the business logic for this extension happens inside the [src/scripts/](https://github.com/AminoffZ/github-repo-size/tree/main/src/scripts) folder. If you are looking to make changes, this is most likely the place to start.\n\nThank you all and happy coding!\n\n---\n\nMIT License\n\nCopyright (c) 2023 AminoffZ\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+		}
+	],
+	"symbolIdMap": {
+		"1": {
+			"sourceFileName": "../src/scripts/internal/element-factory.ts",
+			"qualifiedName": ""
+		},
+		"2": {
+			"sourceFileName": "../src/scripts/internal/element-factory.ts",
+			"qualifiedName": "createSizeLabel"
+		},
+		"3": {
+			"sourceFileName": "../src/scripts/internal/element-factory.ts",
+			"qualifiedName": "createSizeLabel"
+		},
+		"4": {
+			"sourceFileName": "../src/scripts/internal/element-factory.ts",
+			"qualifiedName": "createTotalSizeButton"
+		},
+		"5": {
+			"sourceFileName": "../src/scripts/internal/element-factory.ts",
+			"qualifiedName": "createTotalSizeButton"
+		},
+		"6": {
+			"sourceFileName": "../src/scripts/internal/element-factory.ts",
+			"qualifiedName": "navButtons"
+		},
+		"7": {
+			"sourceFileName": "../src/scripts/internal/get-path-object.ts",
+			"qualifiedName": ""
+		},
+		"8": {
+			"sourceFileName": "../src/scripts/internal/get-path-object.ts",
+			"qualifiedName": "getPathObject"
+		},
+		"9": {
+			"sourceFileName": "../src/scripts/internal/get-path-object.ts",
+			"qualifiedName": "getPathObject"
+		},
+		"10": {
+			"sourceFileName": "../src/scripts/internal/get-path-object.ts",
+			"qualifiedName": "path"
+		},
+		"11": {
+			"sourceFileName": "../src/scripts/internal/format.ts",
+			"qualifiedName": ""
+		},
+		"12": {
+			"sourceFileName": "../src/scripts/internal/format.ts",
+			"qualifiedName": "formatBytes"
+		},
+		"13": {
+			"sourceFileName": "../src/scripts/internal/format.ts",
+			"qualifiedName": "formatBytes"
+		},
+		"14": {
+			"sourceFileName": "../src/scripts/internal/format.ts",
+			"qualifiedName": "bytes"
+		},
+		"15": {
+			"sourceFileName": "../src/scripts/internal/format.ts",
+			"qualifiedName": "decimals"
+		},
+		"16": {
+			"sourceFileName": "../src/scripts/internal/get-size.ts",
+			"qualifiedName": ""
+		},
+		"17": {
+			"sourceFileName": "../src/scripts/internal/get-size.ts",
+			"qualifiedName": "getSize"
+		},
+		"18": {
+			"sourceFileName": "../src/scripts/internal/get-size.ts",
+			"qualifiedName": "getSize"
+		},
+		"19": {
+			"sourceFileName": "../src/scripts/internal/get-size.ts",
+			"qualifiedName": "anchorPath"
+		},
+		"20": {
+			"sourceFileName": "../src/scripts/internal/get-size.ts",
+			"qualifiedName": "tree"
+		},
+		"21": {
+			"sourceFileName": "../src/scripts/internal/crypto.ts",
+			"qualifiedName": ""
+		},
+		"22": {
+			"sourceFileName": "../src/scripts/internal/crypto.ts",
+			"qualifiedName": "hashClass"
+		},
+		"23": {
+			"sourceFileName": "../src/scripts/internal/crypto.ts",
+			"qualifiedName": "hashClass"
+		},
+		"24": {
+			"sourceFileName": "../src/scripts/internal/crypto.ts",
+			"qualifiedName": "toHash"
+		},
+		"25": {
+			"sourceFileName": "../src/scripts/internal/crypto.ts",
+			"qualifiedName": "prefix"
+		},
+		"26": {
+			"sourceFileName": "../src/scripts/internal/dom-manipulation.ts",
+			"qualifiedName": ""
+		},
+		"27": {
+			"sourceFileName": "../src/scripts/internal/dom-manipulation.ts",
+			"qualifiedName": "updateDOM"
+		},
+		"28": {
+			"sourceFileName": "../src/scripts/internal/dom-manipulation.ts",
+			"qualifiedName": "updateDOM"
+		},
+		"29": {
+			"sourceFileName": "../src/scripts/internal/types/types.ts",
+			"qualifiedName": ""
+		},
+		"30": {
+			"sourceFileName": "../src/scripts/internal/types/types.ts",
+			"qualifiedName": "PathObject"
+		},
+		"31": {
+			"sourceFileName": "../src/scripts/internal/types/types.ts",
+			"qualifiedName": "__type"
+		},
+		"32": {
+			"sourceFileName": "../src/scripts/internal/types/types.ts",
+			"qualifiedName": "__type.owner"
+		},
+		"33": {
+			"sourceFileName": "../src/scripts/internal/types/types.ts",
+			"qualifiedName": "__type.repo"
+		},
+		"34": {
+			"sourceFileName": "../src/scripts/internal/types/types.ts",
+			"qualifiedName": "__type.type"
+		},
+		"35": {
+			"sourceFileName": "../src/scripts/internal/types/types.ts",
+			"qualifiedName": "__type.branch"
+		},
+		"36": {
+			"sourceFileName": "../src/scripts/internal/types/types.ts",
+			"qualifiedName": "__type.path"
+		},
+		"37": {
+			"sourceFileName": "../src/scripts/internal/types/types.ts",
+			"qualifiedName": "GitHubTreeItem"
+		},
+		"38": {
+			"sourceFileName": "../src/scripts/internal/types/types.ts",
+			"qualifiedName": "__type"
+		},
+		"39": {
+			"sourceFileName": "../src/scripts/internal/types/types.ts",
+			"qualifiedName": "__type.path"
+		},
+		"40": {
+			"sourceFileName": "../src/scripts/internal/types/types.ts",
+			"qualifiedName": "__type.mode"
+		},
+		"41": {
+			"sourceFileName": "../src/scripts/internal/types/types.ts",
+			"qualifiedName": "__type.type"
+		},
+		"42": {
+			"sourceFileName": "../src/scripts/internal/types/types.ts",
+			"qualifiedName": "__type.sha"
+		},
+		"43": {
+			"sourceFileName": "../src/scripts/internal/types/types.ts",
+			"qualifiedName": "__type.size"
+		},
+		"44": {
+			"sourceFileName": "../src/scripts/internal/types/types.ts",
+			"qualifiedName": "__type.url"
+		},
+		"45": {
+			"sourceFileName": "../src/scripts/internal/types/types.ts",
+			"qualifiedName": "GitHubTree"
+		},
+		"46": {
+			"sourceFileName": "../src/scripts/internal/types/types.ts",
+			"qualifiedName": "__type"
+		},
+		"47": {
+			"sourceFileName": "../src/scripts/internal/types/types.ts",
+			"qualifiedName": "__type.sha"
+		},
+		"48": {
+			"sourceFileName": "../src/scripts/internal/types/types.ts",
+			"qualifiedName": "__type.url"
+		},
+		"49": {
+			"sourceFileName": "../src/scripts/internal/types/types.ts",
+			"qualifiedName": "__type.tree"
+		},
+		"50": {
+			"sourceFileName": "../src/scripts/internal/types/types.ts",
+			"qualifiedName": "__type.truncated"
+		},
+		"51": {
+			"sourceFileName": "../src/scripts/internal/types/types.ts",
+			"qualifiedName": "GRSUpdate"
+		},
+		"52": {
+			"sourceFileName": "../src/scripts/internal/types/types.ts",
+			"qualifiedName": "__type"
+		},
+		"53": {
+			"sourceFileName": "../src/scripts/internal/types/types.ts",
+			"qualifiedName": "__type.anchor"
+		},
+		"54": {
+			"sourceFileName": "../src/scripts/internal/types/types.ts",
+			"qualifiedName": "__type.span"
+		},
+		"55": {
+			"sourceFileName": "../src/scripts/internal/types/types.ts",
+			"qualifiedName": "__type.index"
+		},
+		"56": {
+			"sourceFileName": "../src/scripts/internal/types/index.ts",
+			"qualifiedName": ""
+		},
+		"57": {
+			"sourceFileName": "../src/scripts/internal/selectors.ts",
+			"qualifiedName": ""
+		},
+		"58": {
+			"sourceFileName": "../src/scripts/internal/selectors.ts",
+			"qualifiedName": "getSettingsListItem"
+		},
+		"59": {
+			"sourceFileName": "../src/scripts/internal/selectors.ts",
+			"qualifiedName": "getSettingsListItem"
+		},
+		"60": {
+			"sourceFileName": "../src/scripts/internal/selectors.ts",
+			"qualifiedName": "getAnchors"
+		},
+		"61": {
+			"sourceFileName": "../src/scripts/internal/selectors.ts",
+			"qualifiedName": "getAnchors"
+		},
+		"62": {
+			"sourceFileName": "../src/scripts/internal/selectors.ts",
+			"qualifiedName": "getTotalSizeButton"
+		},
+		"63": {
+			"sourceFileName": "../src/scripts/internal/selectors.ts",
+			"qualifiedName": "getTotalSizeButton"
+		},
+		"64": {
+			"sourceFileName": "../src/scripts/internal/selectors.ts",
+			"qualifiedName": "getSizeLabel"
+		},
+		"65": {
+			"sourceFileName": "../src/scripts/internal/selectors.ts",
+			"qualifiedName": "getSizeLabel"
+		},
+		"66": {
+			"sourceFileName": "../src/scripts/internal/selectors.ts",
+			"qualifiedName": "getThead"
+		},
+		"67": {
+			"sourceFileName": "../src/scripts/internal/selectors.ts",
+			"qualifiedName": "getThead"
+		},
+		"68": {
+			"sourceFileName": "../src/scripts/internal/selectors.ts",
+			"qualifiedName": "getTotalSizeSpan"
+		},
+		"69": {
+			"sourceFileName": "../src/scripts/internal/selectors.ts",
+			"qualifiedName": "getTotalSizeSpan"
+		},
+		"70": {
+			"sourceFileName": "../src/scripts/internal/selectors.ts",
+			"qualifiedName": "totalSizeButton"
+		},
+		"71": {
+			"sourceFileName": "../src/scripts/internal/selectors.ts",
+			"qualifiedName": "getNavigateUpElement"
+		},
+		"72": {
+			"sourceFileName": "../src/scripts/internal/selectors.ts",
+			"qualifiedName": "getNavigateUpElement"
+		},
+		"73": {
+			"sourceFileName": "../src/scripts/internal/api.ts",
+			"qualifiedName": ""
+		},
+		"74": {
+			"sourceFileName": "../src/scripts/internal/api.ts",
+			"qualifiedName": "getRepoInfo"
+		},
+		"75": {
+			"sourceFileName": "../src/scripts/internal/api.ts",
+			"qualifiedName": "getRepoInfo"
+		},
+		"76": {
+			"sourceFileName": "../src/scripts/internal/api.ts",
+			"qualifiedName": "repo"
+		},
+		"77": {
+			"sourceFileName": "../src/scripts/internal/api.ts",
+			"qualifiedName": "branch"
+		},
+		"78": {
+			"sourceFileName": "../src/scripts/internal/api.ts",
+			"qualifiedName": "attempts"
+		},
+		"79": {
+			"sourceFileName": "../src/scripts/internal/index.ts",
+			"qualifiedName": ""
+		},
+		"80": {
+			"sourceFileName": "../src/scripts/content.ts",
+			"qualifiedName": ""
+		},
+		"81": {
+			"sourceFileName": "../src/scripts/background.ts",
+			"qualifiedName": ""
+		},
+		"82": {
+			"sourceFileName": "../src/scripts/internal/types/index.ts",
+			"qualifiedName": "PathObject"
+		},
+		"83": {
+			"sourceFileName": "../src/scripts/internal/types/index.ts",
+			"qualifiedName": "GitHubTree"
+		},
+		"84": {
+			"sourceFileName": "../src/scripts/internal/types/index.ts",
+			"qualifiedName": "GitHubTreeItem"
+		},
+		"85": {
+			"sourceFileName": "../src/scripts/internal/types/index.ts",
+			"qualifiedName": "GRSUpdate"
+		},
+		"86": {
+			"sourceFileName": "../src/scripts/internal/index.ts",
+			"qualifiedName": "getPathObject"
+		},
+		"87": {
+			"sourceFileName": "../src/scripts/internal/index.ts",
+			"qualifiedName": "getRepoInfo"
+		},
+		"88": {
+			"sourceFileName": "../src/scripts/internal/index.ts",
+			"qualifiedName": "formatBytes"
+		},
+		"89": {
+			"sourceFileName": "../src/scripts/internal/index.ts",
+			"qualifiedName": "hashClass"
+		},
+		"90": {
+			"sourceFileName": "../src/scripts/internal/index.ts",
+			"qualifiedName": "getNavButtons"
+		},
+		"91": {
+			"sourceFileName": "../src/scripts/internal/index.ts",
+			"qualifiedName": "getAnchors"
+		},
+		"92": {
+			"sourceFileName": "../src/scripts/internal/index.ts",
+			"qualifiedName": "getTotalSizeButton"
+		},
+		"93": {
+			"sourceFileName": "../src/scripts/internal/index.ts",
+			"qualifiedName": "getSizeLabel"
+		},
+		"94": {
+			"sourceFileName": "../src/scripts/internal/index.ts",
+			"qualifiedName": "getThead"
+		},
+		"95": {
+			"sourceFileName": "../src/scripts/internal/index.ts",
+			"qualifiedName": "getTotalSizeSpan"
+		},
+		"96": {
+			"sourceFileName": "../src/scripts/internal/index.ts",
+			"qualifiedName": "getNavigateUpElement"
+		},
+		"97": {
+			"sourceFileName": "../src/scripts/internal/index.ts",
+			"qualifiedName": "createSizeLabel"
+		},
+		"98": {
+			"sourceFileName": "../src/scripts/internal/index.ts",
+			"qualifiedName": "createTotalSizeButton"
+		},
+		"99": {
+			"sourceFileName": "../src/scripts/internal/index.ts",
+			"qualifiedName": "updateDOM"
+		},
+		"100": {
+			"sourceFileName": "../src/scripts/internal/index.ts",
+			"qualifiedName": "getSize"
+		}
+	}
+}
