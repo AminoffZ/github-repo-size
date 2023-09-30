@@ -11,6 +11,10 @@ export {
   getTotalSizeSpan,
   getNavigateUpElement,
 } from './selectors';
-export { createSizeLabel, createTotalSizeButton } from './element-factory';
+export {
+  createSizeLabel,
+  createTotalSizeButton,
+  createSizeSpan,
+} from './element-factory';
 export { updateDOM } from './dom-manipulation';
 export { getSize } from './get-size';

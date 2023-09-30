@@ -14,7 +14,7 @@ async function getFiles(options?: {
   deep?: boolean;
 }): Promise<string[]> {
   const dir = options?.root ?? sourceDir;
-  const deep = options?.deep ?? true;
+  const deep = options?.deep ?? false;
   const dirents = await readdir(dir, { withFileTypes: true });
   const files = await Promise.all(
     dirents.map((dirent) => {

@@ -1,3 +1,5 @@
+import { formatBytes, hashClass } from '.';
+
 /**
  * Create a table header element for the size column.
  *
@@ -65,4 +67,30 @@ export function createTotalSizeButton(navButtons: ChildNode) {
   );
   span.innerText = '...';
   return totalSizeButton;
+}
+
+/**
+ * Create a span element to display the size of a file or directory.
+ *
+ * @param anchorPath - The path of the anchor element used as reference
+ * @param size - The size of the file or directory
+ * @returns The size span element
+ * @example
+ * ```ts
+ * createSizeSpan(anchorPath, size);
+ * // <span class="grs grs-...">...</span>
+ * ```
+ */
+export function createSizeSpan(anchorPath: string, size: number) {
+  const sizeString = formatBytes(size);
+  const span = document.createElement('span');
+  const spanClass = hashClass(anchorPath);
+  span.classList.add('grs', spanClass);
+
+  if (document.querySelector(`span.${spanClass}`)) {
+    return;
+  }
+
+  span.innerText = sizeString;
+  return span;
 }
