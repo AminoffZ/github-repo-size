@@ -8,7 +8,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "deploy": "bun run build && gh-pages -d dist"
+    "docs": "bun typedoc.ts",
+    "deploy": "bun run build && bun run docs && gh-pages -d dist"
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.0.0",
@@ -19,6 +20,7 @@
   "devDependencies": {
     "@catppuccin/tailwindcss": "^0.1.6",
     "@types/marked": "^5.0.1",
-    "gh-pages": "^6.0.0"
+    "gh-pages": "^6.0.0",
+    "typedoc": "^0.25.1"
   }
 }

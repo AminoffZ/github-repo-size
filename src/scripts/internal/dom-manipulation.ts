@@ -1,5 +1,6 @@
 import {
   createSizeLabel,
+  createSizeSpan,
   createTotalSizeButton,
   formatBytes,
   getAnchors,
@@ -12,7 +13,6 @@ import {
   getThead,
   getTotalSizeButton,
   getTotalSizeSpan,
-  hashClass,
 } from '.';
 import type { GRSUpdate, GitHubTree } from './types';
 
@@ -173,8 +173,15 @@ export async function updateDOM() {
     pathObject.owner + '/' + pathObject.repo,
     branch
   );
-  if (!repoInfo) {
-    return;
+  if (!repoInfo || !repoInfo.tree) {
+    const warnMessage = `
+    Could not get repo info, aborting...\n 
+    Click the extension button to see remaining requests.\n 
+    If you see 0 remaining requests, you have exceeded the rate limit.\n 
+    Use OAuth or a personal access token to increase the rate limit.
+    `;
+    console.warn(warnMessage);
+    return false;
   }
 
   const updates: GRSUpdate = [];
@@ -191,16 +198,11 @@ export async function updateDOM() {
     }
 
     const size = getSize(anchorPathObject, repoInfo.tree);
-    const sizeString = formatBytes(size);
-    const span = document.createElement('span');
-    const spanClass = hashClass(anchorPath);
-    span.className = spanClass;
+    const span = createSizeSpan(anchorPath, size);
 
-    if (document.querySelector(`span.${spanClass}`)) {
+    if (!span) {
       return;
     }
-
-    span.innerText = sizeString;
 
     updates.push({ anchor, span, index });
   });

@@ -3,9 +3,10 @@ import { updateDOM } from './internal';
 /**
  * Update the DOM.
  * If our elements have not been added, wait 500 ms and try again.
+ * This refetching is fine since we use cached data.
  */
-function main() {
-  updateDOM();
+async function main() {
+  await updateDOM();
   const grsElements = document.getElementsByClassName('grs');
   if (grsElements.length < 2) {
     setTimeout(main, 500);
