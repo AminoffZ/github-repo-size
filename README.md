@@ -32,7 +32,7 @@ Notice something that doesn't work the way you expected? Do you have your own su
 
 ## Contributing
 
-Because this project uses [Bun](https://bun.sh/docs), you can use either `bun` or `npm` for the commands in this project. Note that you may need to change the package.json to work when using `npm`.
+This project uses [Bun](https://bun.sh/docs)! If you are on Windows, please refer to [this post](https://github.com/oven-sh/bun/issues/43) on how to make it work on your machine.
 
 Install dependencies
 
