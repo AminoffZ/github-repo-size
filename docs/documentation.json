@@ -7,37 +7,37 @@
 	"children": [
 		{
 			"id": 85,
-			"name": "background",
+			"name": "../home/momos/github-repo-size/src/scripts/background",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "background.ts",
+					"fileName": "../home/momos/github-repo-size/src/scripts/background.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/background.ts#L1"
+					"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/background.ts#L1"
 				}
 			]
 		},
 		{
 			"id": 84,
-			"name": "content",
+			"name": "../home/momos/github-repo-size/src/scripts/content",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "content.ts",
+					"fileName": "../home/momos/github-repo-size/src/scripts/content.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/content.ts#L1"
+					"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/content.ts#L1"
 				}
 			]
 		},
 		{
 			"id": 83,
-			"name": "internal",
+			"name": "../home/momos/github-repo-size/src/scripts/internal",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
@@ -50,10 +50,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/index.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/index.ts",
 							"line": 15,
 							"character": 2,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/index.ts#L15"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/index.ts#L15"
 						}
 					],
 					"target": 2
@@ -66,10 +66,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/index.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/index.ts",
 							"line": 17,
 							"character": 2,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/index.ts#L17"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/index.ts#L17"
 						}
 					],
 					"target": 7
@@ -82,10 +82,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/index.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/index.ts",
 							"line": 16,
 							"character": 2,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/index.ts#L16"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/index.ts#L16"
 						}
 					],
 					"target": 4
@@ -98,10 +98,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/index.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/index.ts",
 							"line": 3,
 							"character": 9,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/index.ts#L3"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/index.ts#L3"
 						}
 					],
 					"target": 16
@@ -114,10 +114,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/index.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/index.ts",
 							"line": 7,
 							"character": 2,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/index.ts#L7"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/index.ts#L7"
 						}
 					],
 					"target": 64
@@ -130,10 +130,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/index.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/index.ts",
 							"line": 6,
 							"character": 25,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/index.ts#L6"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/index.ts#L6"
 						}
 					],
 					"target": 62
@@ -146,10 +146,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/index.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/index.ts",
 							"line": 12,
 							"character": 2,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/index.ts#L12"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/index.ts#L12"
 						}
 					],
 					"target": 75
@@ -162,10 +162,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/index.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/index.ts",
 							"line": 1,
 							"character": 9,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/index.ts#L1"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/index.ts#L1"
 						}
 					],
 					"target": 12
@@ -178,10 +178,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/index.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/index.ts",
 							"line": 2,
 							"character": 9,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/index.ts#L2"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/index.ts#L2"
 						}
 					],
 					"target": 78
@@ -194,10 +194,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/index.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/index.ts",
 							"line": 20,
 							"character": 9,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/index.ts#L20"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/index.ts#L20"
 						}
 					],
 					"target": 21
@@ -210,10 +210,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/index.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/index.ts",
 							"line": 9,
 							"character": 2,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/index.ts#L9"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/index.ts#L9"
 						}
 					],
 					"target": 68
@@ -226,10 +226,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/index.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/index.ts",
 							"line": 10,
 							"character": 2,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/index.ts#L10"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/index.ts#L10"
 						}
 					],
 					"target": 70
@@ -242,10 +242,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/index.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/index.ts",
 							"line": 8,
 							"character": 2,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/index.ts#L8"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/index.ts#L8"
 						}
 					],
 					"target": 66
@@ -258,10 +258,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/index.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/index.ts",
 							"line": 11,
 							"character": 2,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/index.ts#L11"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/index.ts#L11"
 						}
 					],
 					"target": 72
@@ -274,10 +274,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/index.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/index.ts",
 							"line": 4,
 							"character": 9,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/index.ts#L4"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/index.ts#L4"
 						}
 					],
 					"target": 26
@@ -290,10 +290,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/index.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/index.ts",
 							"line": 19,
 							"character": 9,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/index.ts#L19"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/index.ts#L19"
 						}
 					],
 					"target": 31
@@ -324,16 +324,16 @@
 			],
 			"sources": [
 				{
-					"fileName": "internal/index.ts",
+					"fileName": "../home/momos/github-repo-size/src/scripts/internal/index.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/index.ts#L1"
+					"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/index.ts#L1"
 				}
 			]
 		},
 		{
 			"id": 77,
-			"name": "internal/api",
+			"name": "../home/momos/github-repo-size/src/scripts/internal/api",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
@@ -346,10 +346,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/api.ts",
-							"line": 104,
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/api.ts",
+							"line": 115,
 							"character": 22,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/api.ts#L104"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/api.ts#L115"
 						}
 					],
 					"signatures": [
@@ -363,7 +363,7 @@
 								"summary": [
 									{
 										"kind": "text",
-										"text": "Get the repo info from the GitHub API using the repo name and branch name.\nIf the request fails, assume that the branch name is incorrect and try again.\nIf the default branch name is not found, the function will return undefined."
+										"text": "Get the repo info from the GitHub API using the repo name and branch name.\r\nIf the request fails, assume that the branch name is incorrect and try again.\r\nIf the default branch name is not found, the function will return undefined."
 									}
 								],
 								"blockTags": [
@@ -381,7 +381,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\ngetRepoInfo('AminoffZ/github-repo-size');\n// {\n//   sha: '...',\n//   url: '...',\n//   tree: [\n//     {\n//       path: '...',\n//       mode: '...',\n//       type: '...',\n//       sha: '...',\n//       size: 0,\n//       url: '...',\n//     },\n//     ...\n//   ],\n//   truncated: false,\n// }"
+												"text": "```ts\r\ngetRepoInfo('AminoffZ/github-repo-size');\r\n// {\r\n//   sha: '...',\r\n//   url: '...',\r\n//   tree: [\r\n//     {\r\n//       path: '...',\r\n//       mode: '...',\r\n//       type: '...',\r\n//       sha: '...',\r\n//       size: 0,\r\n//       url: '...',\r\n//     },\r\n//     ...\r\n//   ],\r\n//   truncated: false,\r\n// }"
 											}
 										]
 									}
@@ -389,10 +389,10 @@
 							},
 							"sources": [
 								{
-									"fileName": "internal/api.ts",
-									"line": 104,
+									"fileName": "../home/momos/github-repo-size/src/scripts/internal/api.ts",
+									"line": 115,
 									"character": 22,
-									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/api.ts#L104"
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/api.ts#L115"
 								}
 							],
 							"parameters": [
@@ -496,16 +496,16 @@
 			],
 			"sources": [
 				{
-					"fileName": "internal/api.ts",
+					"fileName": "../home/momos/github-repo-size/src/scripts/internal/api.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/api.ts#L1"
+					"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/api.ts#L1"
 				}
 			]
 		},
 		{
 			"id": 25,
-			"name": "internal/crypto",
+			"name": "../home/momos/github-repo-size/src/scripts/internal/crypto",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
@@ -518,10 +518,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/crypto.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/crypto.ts",
 							"line": 33,
 							"character": 16,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/crypto.ts#L33"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/crypto.ts#L33"
 						}
 					],
 					"signatures": [
@@ -561,10 +561,10 @@
 							},
 							"sources": [
 								{
-									"fileName": "internal/crypto.ts",
+									"fileName": "../home/momos/github-repo-size/src/scripts/internal/crypto.ts",
 									"line": 33,
 									"character": 16,
-									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/crypto.ts#L33"
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/crypto.ts#L33"
 								}
 							],
 							"parameters": [
@@ -626,16 +626,16 @@
 			],
 			"sources": [
 				{
-					"fileName": "internal/crypto.ts",
+					"fileName": "../home/momos/github-repo-size/src/scripts/internal/crypto.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/crypto.ts#L1"
+					"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/crypto.ts#L1"
 				}
 			]
 		},
 		{
 			"id": 30,
-			"name": "internal/dom-manipulation",
+			"name": "../home/momos/github-repo-size/src/scripts/internal/dom-manipulation",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
@@ -648,10 +648,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/dom-manipulation.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/dom-manipulation.ts",
 							"line": 155,
 							"character": 22,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/dom-manipulation.ts#L155"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/dom-manipulation.ts#L155"
 						}
 					],
 					"signatures": [
@@ -671,10 +671,10 @@
 							},
 							"sources": [
 								{
-									"fileName": "internal/dom-manipulation.ts",
+									"fileName": "../home/momos/github-repo-size/src/scripts/internal/dom-manipulation.ts",
 									"line": 155,
 									"character": 22,
-									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/dom-manipulation.ts#L155"
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/dom-manipulation.ts#L155"
 								}
 							],
 							"type": {
@@ -715,16 +715,16 @@
 			],
 			"sources": [
 				{
-					"fileName": "internal/dom-manipulation.ts",
+					"fileName": "../home/momos/github-repo-size/src/scripts/internal/dom-manipulation.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/dom-manipulation.ts#L1"
+					"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/dom-manipulation.ts#L1"
 				}
 			]
 		},
 		{
 			"id": 1,
-			"name": "internal/element-factory",
+			"name": "../home/momos/github-repo-size/src/scripts/internal/element-factory",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
@@ -737,10 +737,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/element-factory.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/element-factory.ts",
 							"line": 13,
 							"character": 16,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/element-factory.ts#L13"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/element-factory.ts#L13"
 						}
 					],
 					"signatures": [
@@ -780,10 +780,10 @@
 							},
 							"sources": [
 								{
-									"fileName": "internal/element-factory.ts",
+									"fileName": "../home/momos/github-repo-size/src/scripts/internal/element-factory.ts",
 									"line": 13,
 									"character": 16,
-									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/element-factory.ts#L13"
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/element-factory.ts#L13"
 								}
 							],
 							"type": {
@@ -806,10 +806,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/element-factory.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/element-factory.ts",
 							"line": 84,
 							"character": 16,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/element-factory.ts#L84"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/element-factory.ts#L84"
 						}
 					],
 					"signatures": [
@@ -849,10 +849,10 @@
 							},
 							"sources": [
 								{
-									"fileName": "internal/element-factory.ts",
+									"fileName": "../home/momos/github-repo-size/src/scripts/internal/element-factory.ts",
 									"line": 84,
 									"character": 16,
-									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/element-factory.ts#L84"
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/element-factory.ts#L84"
 								}
 							],
 							"parameters": [
@@ -924,10 +924,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/element-factory.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/element-factory.ts",
 							"line": 35,
 							"character": 16,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/element-factory.ts#L35"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/element-factory.ts#L35"
 						}
 					],
 					"signatures": [
@@ -967,10 +967,10 @@
 							},
 							"sources": [
 								{
-									"fileName": "internal/element-factory.ts",
+									"fileName": "../home/momos/github-repo-size/src/scripts/internal/element-factory.ts",
 									"line": 35,
 									"character": 16,
-									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/element-factory.ts#L35"
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/element-factory.ts#L35"
 								}
 							],
 							"parameters": [
@@ -1033,16 +1033,16 @@
 			],
 			"sources": [
 				{
-					"fileName": "internal/element-factory.ts",
+					"fileName": "../home/momos/github-repo-size/src/scripts/internal/element-factory.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/element-factory.ts#L1"
+					"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/element-factory.ts#L1"
 				}
 			]
 		},
 		{
 			"id": 15,
-			"name": "internal/format",
+			"name": "../home/momos/github-repo-size/src/scripts/internal/format",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
@@ -1055,10 +1055,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/format.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/format.ts",
 							"line": 18,
 							"character": 16,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/format.ts#L18"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/format.ts#L18"
 						}
 					],
 					"signatures": [
@@ -1107,10 +1107,10 @@
 							},
 							"sources": [
 								{
-									"fileName": "internal/format.ts",
+									"fileName": "../home/momos/github-repo-size/src/scripts/internal/format.ts",
 									"line": 18,
 									"character": 16,
-									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/format.ts#L18"
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/format.ts#L18"
 								}
 							],
 							"parameters": [
@@ -1172,16 +1172,16 @@
 			],
 			"sources": [
 				{
-					"fileName": "internal/format.ts",
+					"fileName": "../home/momos/github-repo-size/src/scripts/internal/format.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/format.ts#L1"
+					"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/format.ts#L1"
 				}
 			]
 		},
 		{
 			"id": 11,
-			"name": "internal/get-path-object",
+			"name": "../home/momos/github-repo-size/src/scripts/internal/get-path-object",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
@@ -1194,10 +1194,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/get-path-object.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/get-path-object.ts",
 							"line": 20,
 							"character": 13,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/get-path-object.ts#L20"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/get-path-object.ts#L20"
 						}
 					],
 					"signatures": [
@@ -1237,10 +1237,10 @@
 							},
 							"sources": [
 								{
-									"fileName": "internal/get-path-object.ts",
+									"fileName": "../home/momos/github-repo-size/src/scripts/internal/get-path-object.ts",
 									"line": 20,
 									"character": 29,
-									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/get-path-object.ts#L20"
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/get-path-object.ts#L20"
 								}
 							],
 							"parameters": [
@@ -1286,16 +1286,16 @@
 			],
 			"sources": [
 				{
-					"fileName": "internal/get-path-object.ts",
+					"fileName": "../home/momos/github-repo-size/src/scripts/internal/get-path-object.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/get-path-object.ts#L1"
+					"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/get-path-object.ts#L1"
 				}
 			]
 		},
 		{
 			"id": 20,
-			"name": "internal/get-size",
+			"name": "../home/momos/github-repo-size/src/scripts/internal/get-size",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
@@ -1308,10 +1308,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/get-size.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/get-size.ts",
 							"line": 21,
 							"character": 16,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/get-size.ts#L21"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/get-size.ts#L21"
 						}
 					],
 					"signatures": [
@@ -1351,10 +1351,10 @@
 							},
 							"sources": [
 								{
-									"fileName": "internal/get-size.ts",
+									"fileName": "../home/momos/github-repo-size/src/scripts/internal/get-size.ts",
 									"line": 21,
 									"character": 16,
-									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/get-size.ts#L21"
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/get-size.ts#L21"
 								}
 							],
 							"parameters": [
@@ -1422,16 +1422,16 @@
 			],
 			"sources": [
 				{
-					"fileName": "internal/get-size.ts",
+					"fileName": "../home/momos/github-repo-size/src/scripts/internal/get-size.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/get-size.ts#L1"
+					"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/get-size.ts#L1"
 				}
 			]
 		},
 		{
 			"id": 61,
-			"name": "internal/selectors",
+			"name": "../home/momos/github-repo-size/src/scripts/internal/selectors",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
@@ -1444,10 +1444,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/selectors.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/selectors.ts",
 							"line": 39,
 							"character": 16,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/selectors.ts#L39"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/selectors.ts#L39"
 						}
 					],
 					"signatures": [
@@ -1487,10 +1487,10 @@
 							},
 							"sources": [
 								{
-									"fileName": "internal/selectors.ts",
+									"fileName": "../home/momos/github-repo-size/src/scripts/internal/selectors.ts",
 									"line": 39,
 									"character": 16,
-									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/selectors.ts#L39"
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/selectors.ts#L39"
 								}
 							],
 							"type": {
@@ -1524,10 +1524,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/selectors.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/selectors.ts",
 							"line": 130,
 							"character": 16,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/selectors.ts#L130"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/selectors.ts#L130"
 						}
 					],
 					"signatures": [
@@ -1567,10 +1567,10 @@
 							},
 							"sources": [
 								{
-									"fileName": "internal/selectors.ts",
+									"fileName": "../home/momos/github-repo-size/src/scripts/internal/selectors.ts",
 									"line": 130,
 									"character": 16,
-									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/selectors.ts#L130"
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/selectors.ts#L130"
 								}
 							],
 							"type": {
@@ -1606,10 +1606,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/selectors.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/selectors.ts",
 							"line": 19,
 							"character": 16,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/selectors.ts#L19"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/selectors.ts#L19"
 						}
 					],
 					"signatures": [
@@ -1649,10 +1649,10 @@
 							},
 							"sources": [
 								{
-									"fileName": "internal/selectors.ts",
+									"fileName": "../home/momos/github-repo-size/src/scripts/internal/selectors.ts",
 									"line": 19,
 									"character": 16,
-									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/selectors.ts#L19"
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/selectors.ts#L19"
 								}
 							],
 							"type": {
@@ -1688,10 +1688,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/selectors.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/selectors.ts",
 							"line": 71,
 							"character": 16,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/selectors.ts#L71"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/selectors.ts#L71"
 						}
 					],
 					"signatures": [
@@ -1731,10 +1731,10 @@
 							},
 							"sources": [
 								{
-									"fileName": "internal/selectors.ts",
+									"fileName": "../home/momos/github-repo-size/src/scripts/internal/selectors.ts",
 									"line": 71,
 									"character": 16,
-									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/selectors.ts#L71"
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/selectors.ts#L71"
 								}
 							],
 							"type": {
@@ -1766,10 +1766,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/selectors.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/selectors.ts",
 							"line": 85,
 							"character": 16,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/selectors.ts#L85"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/selectors.ts#L85"
 						}
 					],
 					"signatures": [
@@ -1809,10 +1809,10 @@
 							},
 							"sources": [
 								{
-									"fileName": "internal/selectors.ts",
+									"fileName": "../home/momos/github-repo-size/src/scripts/internal/selectors.ts",
 									"line": 85,
 									"character": 16,
-									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/selectors.ts#L85"
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/selectors.ts#L85"
 								}
 							],
 							"type": {
@@ -1844,10 +1844,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/selectors.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/selectors.ts",
 							"line": 56,
 							"character": 16,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/selectors.ts#L56"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/selectors.ts#L56"
 						}
 					],
 					"signatures": [
@@ -1887,10 +1887,10 @@
 							},
 							"sources": [
 								{
-									"fileName": "internal/selectors.ts",
+									"fileName": "../home/momos/github-repo-size/src/scripts/internal/selectors.ts",
 									"line": 56,
 									"character": 16,
-									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/selectors.ts#L56"
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/selectors.ts#L56"
 								}
 							],
 							"type": {
@@ -1922,10 +1922,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/selectors.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/selectors.ts",
 							"line": 105,
 							"character": 16,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/selectors.ts#L105"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/selectors.ts#L105"
 						}
 					],
 					"signatures": [
@@ -1974,10 +1974,10 @@
 							},
 							"sources": [
 								{
-									"fileName": "internal/selectors.ts",
+									"fileName": "../home/momos/github-repo-size/src/scripts/internal/selectors.ts",
 									"line": 105,
 									"character": 16,
-									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/selectors.ts#L105"
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/selectors.ts#L105"
 								}
 							],
 							"parameters": [
@@ -2044,16 +2044,16 @@
 			],
 			"sources": [
 				{
-					"fileName": "internal/selectors.ts",
+					"fileName": "../home/momos/github-repo-size/src/scripts/internal/selectors.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/selectors.ts#L1"
+					"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/selectors.ts#L1"
 				}
 			]
 		},
 		{
 			"id": 60,
-			"name": "internal/types",
+			"name": "../home/momos/github-repo-size/src/scripts/internal/types",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
@@ -2066,10 +2066,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/types/index.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/types/index.ts",
 							"line": 5,
 							"character": 2,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/index.ts#L5"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/types/index.ts#L5"
 						}
 					],
 					"target": 55
@@ -2082,10 +2082,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/types/index.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/types/index.ts",
 							"line": 3,
 							"character": 2,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/index.ts#L3"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/types/index.ts#L3"
 						}
 					],
 					"target": 49
@@ -2098,10 +2098,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/types/index.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/types/index.ts",
 							"line": 4,
 							"character": 2,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/index.ts#L4"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/types/index.ts#L4"
 						}
 					],
 					"target": 41
@@ -2114,10 +2114,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/types/index.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/types/index.ts",
 							"line": 2,
 							"character": 2,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/index.ts#L2"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/types/index.ts#L2"
 						}
 					],
 					"target": 34
@@ -2136,16 +2136,16 @@
 			],
 			"sources": [
 				{
-					"fileName": "internal/types/index.ts",
+					"fileName": "../home/momos/github-repo-size/src/scripts/internal/types/index.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/index.ts#L1"
+					"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/types/index.ts#L1"
 				}
 			]
 		},
 		{
 			"id": 33,
-			"name": "internal/types/types",
+			"name": "../home/momos/github-repo-size/src/scripts/internal/types/types",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
@@ -2158,10 +2158,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/types/types.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/types/types.ts",
 							"line": 25,
 							"character": 12,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L25"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/types/types.ts#L25"
 						}
 					],
 					"type": {
@@ -2183,10 +2183,10 @@
 										"flags": {},
 										"sources": [
 											{
-												"fileName": "internal/types/types.ts",
+												"fileName": "../home/momos/github-repo-size/src/scripts/internal/types/types.ts",
 												"line": 26,
 												"character": 2,
-												"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L26"
+												"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/types/types.ts#L26"
 											}
 										],
 										"type": {
@@ -2207,10 +2207,10 @@
 										"flags": {},
 										"sources": [
 											{
-												"fileName": "internal/types/types.ts",
+												"fileName": "../home/momos/github-repo-size/src/scripts/internal/types/types.ts",
 												"line": 28,
 												"character": 2,
-												"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L28"
+												"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/types/types.ts#L28"
 											}
 										],
 										"type": {
@@ -2226,10 +2226,10 @@
 										"flags": {},
 										"sources": [
 											{
-												"fileName": "internal/types/types.ts",
+												"fileName": "../home/momos/github-repo-size/src/scripts/internal/types/types.ts",
 												"line": 27,
 												"character": 2,
-												"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L27"
+												"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/types/types.ts#L27"
 											}
 										],
 										"type": {
@@ -2255,10 +2255,10 @@
 								],
 								"sources": [
 									{
-										"fileName": "internal/types/types.ts",
+										"fileName": "../home/momos/github-repo-size/src/scripts/internal/types/types.ts",
 										"line": 25,
 										"character": 30,
-										"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L25"
+										"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/types/types.ts#L25"
 									}
 								]
 							}
@@ -2273,10 +2273,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/types/types.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/types/types.ts",
 							"line": 18,
 							"character": 12,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L18"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/types/types.ts#L18"
 						}
 					],
 					"type": {
@@ -2296,10 +2296,10 @@
 									"flags": {},
 									"sources": [
 										{
-											"fileName": "internal/types/types.ts",
+											"fileName": "../home/momos/github-repo-size/src/scripts/internal/types/types.ts",
 											"line": 19,
 											"character": 2,
-											"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L19"
+											"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/types/types.ts#L19"
 										}
 									],
 									"type": {
@@ -2315,10 +2315,10 @@
 									"flags": {},
 									"sources": [
 										{
-											"fileName": "internal/types/types.ts",
+											"fileName": "../home/momos/github-repo-size/src/scripts/internal/types/types.ts",
 											"line": 21,
 											"character": 2,
-											"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L21"
+											"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/types/types.ts#L21"
 										}
 									],
 									"type": {
@@ -2339,10 +2339,10 @@
 									"flags": {},
 									"sources": [
 										{
-											"fileName": "internal/types/types.ts",
+											"fileName": "../home/momos/github-repo-size/src/scripts/internal/types/types.ts",
 											"line": 22,
 											"character": 2,
-											"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L22"
+											"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/types/types.ts#L22"
 										}
 									],
 									"type": {
@@ -2358,10 +2358,10 @@
 									"flags": {},
 									"sources": [
 										{
-											"fileName": "internal/types/types.ts",
+											"fileName": "../home/momos/github-repo-size/src/scripts/internal/types/types.ts",
 											"line": 20,
 											"character": 2,
-											"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L20"
+											"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/types/types.ts#L20"
 										}
 									],
 									"type": {
@@ -2383,10 +2383,10 @@
 							],
 							"sources": [
 								{
-									"fileName": "internal/types/types.ts",
+									"fileName": "../home/momos/github-repo-size/src/scripts/internal/types/types.ts",
 									"line": 18,
 									"character": 25,
-									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L18"
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/types/types.ts#L18"
 								}
 							]
 						}
@@ -2400,10 +2400,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/types/types.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/types/types.ts",
 							"line": 9,
 							"character": 12,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L9"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/types/types.ts#L9"
 						}
 					],
 					"type": {
@@ -2423,10 +2423,10 @@
 									"flags": {},
 									"sources": [
 										{
-											"fileName": "internal/types/types.ts",
+											"fileName": "../home/momos/github-repo-size/src/scripts/internal/types/types.ts",
 											"line": 11,
 											"character": 2,
-											"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L11"
+											"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/types/types.ts#L11"
 										}
 									],
 									"type": {
@@ -2442,10 +2442,10 @@
 									"flags": {},
 									"sources": [
 										{
-											"fileName": "internal/types/types.ts",
+											"fileName": "../home/momos/github-repo-size/src/scripts/internal/types/types.ts",
 											"line": 10,
 											"character": 2,
-											"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L10"
+											"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/types/types.ts#L10"
 										}
 									],
 									"type": {
@@ -2461,10 +2461,10 @@
 									"flags": {},
 									"sources": [
 										{
-											"fileName": "internal/types/types.ts",
+											"fileName": "../home/momos/github-repo-size/src/scripts/internal/types/types.ts",
 											"line": 13,
 											"character": 2,
-											"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L13"
+											"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/types/types.ts#L13"
 										}
 									],
 									"type": {
@@ -2482,10 +2482,10 @@
 									},
 									"sources": [
 										{
-											"fileName": "internal/types/types.ts",
+											"fileName": "../home/momos/github-repo-size/src/scripts/internal/types/types.ts",
 											"line": 14,
 											"character": 2,
-											"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L14"
+											"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/types/types.ts#L14"
 										}
 									],
 									"type": {
@@ -2501,10 +2501,10 @@
 									"flags": {},
 									"sources": [
 										{
-											"fileName": "internal/types/types.ts",
+											"fileName": "../home/momos/github-repo-size/src/scripts/internal/types/types.ts",
 											"line": 12,
 											"character": 2,
-											"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L12"
+											"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/types/types.ts#L12"
 										}
 									],
 									"type": {
@@ -2520,10 +2520,10 @@
 									"flags": {},
 									"sources": [
 										{
-											"fileName": "internal/types/types.ts",
+											"fileName": "../home/momos/github-repo-size/src/scripts/internal/types/types.ts",
 											"line": 15,
 											"character": 2,
-											"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L15"
+											"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/types/types.ts#L15"
 										}
 									],
 									"type": {
@@ -2547,10 +2547,10 @@
 							],
 							"sources": [
 								{
-									"fileName": "internal/types/types.ts",
+									"fileName": "../home/momos/github-repo-size/src/scripts/internal/types/types.ts",
 									"line": 9,
 									"character": 29,
-									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L9"
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/types/types.ts#L9"
 								}
 							]
 						}
@@ -2564,10 +2564,10 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "internal/types/types.ts",
+							"fileName": "../home/momos/github-repo-size/src/scripts/internal/types/types.ts",
 							"line": 1,
 							"character": 12,
-							"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L1"
+							"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/types/types.ts#L1"
 						}
 					],
 					"type": {
@@ -2589,10 +2589,10 @@
 									},
 									"sources": [
 										{
-											"fileName": "internal/types/types.ts",
+											"fileName": "../home/momos/github-repo-size/src/scripts/internal/types/types.ts",
 											"line": 5,
 											"character": 2,
-											"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L5"
+											"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/types/types.ts#L5"
 										}
 									],
 									"type": {
@@ -2608,10 +2608,10 @@
 									"flags": {},
 									"sources": [
 										{
-											"fileName": "internal/types/types.ts",
+											"fileName": "../home/momos/github-repo-size/src/scripts/internal/types/types.ts",
 											"line": 2,
 											"character": 2,
-											"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L2"
+											"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/types/types.ts#L2"
 										}
 									],
 									"type": {
@@ -2638,10 +2638,10 @@
 									},
 									"sources": [
 										{
-											"fileName": "internal/types/types.ts",
+											"fileName": "../home/momos/github-repo-size/src/scripts/internal/types/types.ts",
 											"line": 6,
 											"character": 2,
-											"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L6"
+											"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/types/types.ts#L6"
 										}
 									],
 									"type": {
@@ -2657,10 +2657,10 @@
 									"flags": {},
 									"sources": [
 										{
-											"fileName": "internal/types/types.ts",
+											"fileName": "../home/momos/github-repo-size/src/scripts/internal/types/types.ts",
 											"line": 3,
 											"character": 2,
-											"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L3"
+											"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/types/types.ts#L3"
 										}
 									],
 									"type": {
@@ -2687,10 +2687,10 @@
 									},
 									"sources": [
 										{
-											"fileName": "internal/types/types.ts",
+											"fileName": "../home/momos/github-repo-size/src/scripts/internal/types/types.ts",
 											"line": 4,
 											"character": 2,
-											"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L4"
+											"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/types/types.ts#L4"
 										}
 									],
 									"type": {
@@ -2713,10 +2713,10 @@
 							],
 							"sources": [
 								{
-									"fileName": "internal/types/types.ts",
+									"fileName": "../home/momos/github-repo-size/src/scripts/internal/types/types.ts",
 									"line": 1,
 									"character": 25,
-									"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L1"
+									"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/types/types.ts#L1"
 								}
 							]
 						}
@@ -2736,10 +2736,10 @@
 			],
 			"sources": [
 				{
-					"fileName": "internal/types/types.ts",
+					"fileName": "../home/momos/github-repo-size/src/scripts/internal/types/types.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/AminoffZ/github-repo-size/blob/8b21951/src/scripts/internal/types/types.ts#L1"
+					"url": "https://github.com/AminoffZ/github-repo-size/blob/e45151d/src/scripts/internal/types/types.ts#L1"
 				}
 			]
 		}
@@ -2768,47 +2768,7 @@
 	"readme": [
 		{
 			"kind": "text",
-			"text": "[![Google Chrome](https://img.shields.io/chrome-web-store/v/jpdmfnflpdgefbfkafcikmhipofhanfl?label=Get%20GRS%20for%20Chrome&logo=Google%20Chrome)](https://chrome.google.com/webstore/detail/github-repo-size/jpdmfnflpdgefbfkafcikmhipofhanfl)\n\n<img src=\"/assets/github-repo-size-icon256.png\" align=\"right\"  />\n\n# GitHub Repo Size\n\nAn extension to display the size of GitHub repositories.\nInspired by [github-repo-size](https://github.com/harshjv/github-repo-size).\n\n## Features\n\nView summary of file sizes in repositories.\n\n<img src=\"/assets/github-repo-size-screenshot.png\" />\n\nIt's also possible to view private repository size summaries by adding a personal access token.[^1]\n\n<img src=\"/assets/github-repo-size-popup.png\" />\n\nGitHubs API has a limit of 50 (at time of writing) requests per hour for unauthenticated requests. By clicking Authenticate and signing in with OAuth, you can make up to 5000 requests per hour.[^2]\n\n[^1]: [Managing your personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)\n[^2]: [Rate limiting](https://docs.github.com/en/rest/overview/resources-in-the-rest-api?apiVersion=2022-11-28#rate-limits)\n\n## Requirements\n\nChromium based browser.\n\n## Updates\n\nNotice something that doesn't work the way you expected? Do you have your own suggestions for how to make the user experience better? Submit an [Issue](https://github.com/AminoffZ/github-repo-size/issues) and explain your concern.\n\n## Contributing\n\nBecause this project uses [Bun](https://bun.sh/docs), you can use either "
-		},
-		{
-			"kind": "code",
-			"text": "`bun`"
-		},
-		{
-			"kind": "text",
-			"text": " or "
-		},
-		{
-			"kind": "code",
-			"text": "`npm`"
-		},
-		{
-			"kind": "text",
-			"text": " for the commands listed bellow.\n\nInstall dependencies\n\n"
-		},
-		{
-			"kind": "code",
-			"text": "```bash\nbun install\n```"
-		},
-		{
-			"kind": "text",
-			"text": "\n\nBuild the project\n\n"
-		},
-		{
-			"kind": "code",
-			"text": "```bash\nbun run build\n```"
-		},
-		{
-			"kind": "text",
-			"text": "\n\nPlease format the project before creating a PR.\n\n"
-		},
-		{
-			"kind": "code",
-			"text": "```bash\nbun run format\n```"
-		},
-		{
-			"kind": "text",
-			"text": "\n\nMost of the business logic for this extension happens inside the [src/scripts/](https://github.com/AminoffZ/github-repo-size/tree/main/src/scripts) folder. If you are looking to make changes, this is most likely the place to start.\n\nThank you all and happy coding!\n\n---\n\nMIT License\n\nCopyright (c) 2023 AminoffZ\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+			"text": "[![Google Chrome](https://img.shields.io/chrome-web-store/v/jpdmfnflpdgefbfkafcikmhipofhanfl?label=Get%20GRS%20for%20Chrome&logo=Google%20Chrome)](https://chrome.google.com/webstore/detail/github-repo-size/jpdmfnflpdgefbfkafcikmhipofhanfl)\n\n<img src=\"/assets/github-repo-size-icon256.png\" align=\"right\"  />\n\n# GitHub Repo Size\n\nAn extension to display the size of GitHub repositories.\nInspired by [github-repo-size](https://github.com/harshjv/github-repo-size).\n\n## Features\n\nView summary of file sizes in repositories.\n\n<img src=\"/assets/github-repo-size-screenshot.png\" />\n\nIt's also possible to view private repository size summaries by adding a personal access token.[^1]\n\n<img src=\"/assets/github-repo-size-popup.png\" />\n\nGitHubs API has a limit of 50 (at time of writing) requests per hour for unauthenticated requests. By clicking Authenticate and signing in with OAuth, you can make up to 5000 requests per hour.[^2]\n\n[^1]: [Managing your personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)\n[^2]: [Rate limiting](https://docs.github.com/en/rest/overview/resources-in-the-rest-api?apiVersion=2022-11-28#rate-limits)\n\n## Requirements\n\nChromium based browser.\n\n## Updates\n\nNotice something that doesn't work the way you expected? Do you have your own suggestions for how to make the user experience better? Submit an [Issue](https://github.com/AminoffZ/github-repo-size/issues) and explain your concern.\n\n## [Contributing](/CONTRIBUTING.md)\n\nThank you all and happy coding!\n\n---\n\nMIT License\n\nCopyright (c) 2023 AminoffZ\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
 		}
 	],
 	"symbolIdMap": {
