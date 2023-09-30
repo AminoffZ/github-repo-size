@@ -32,7 +32,7 @@ Notice something that doesn't work the way you expected? Do you have your own su
 
 ## Contributing
 
-Because this project uses [Bun](https://bun.sh/docs), you can use either `bun` or `npm` for the commands listed bellow.
+Because this project uses [Bun](https://bun.sh/docs), you can use either `bun` or `npm` for the commands in this project. Note that you may need to change the package.json to work when using `npm`.
 
 Install dependencies
 
@@ -53,6 +53,10 @@ bun run format
 ```
 
 Most of the business logic for this extension happens inside the [src/scripts/](https://github.com/AminoffZ/github-repo-size/tree/main/src/scripts) folder. If you are looking to make changes, this is most likely the place to start.
+
+### Docs
+
+Visit the [docs page](https://aminoffz.github.io/github-repo-size/docs) for information about specific functions. There are even a few [examples](https://aminoffz.github.io/github-repo-size/docs/functions/internal_crypto.hashClass.html). 
 
 Thank you all and happy coding!
 
