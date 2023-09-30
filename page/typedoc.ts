@@ -8,6 +8,11 @@ async function main() {
   const entrypoints = await entryPoints({ root: '../src/scripts', deep: true });
   const app = await TypeDoc.Application.bootstrapWithPlugins({
     entryPoints: entrypoints,
+    plugin: ['typedoc-plugin-extras'],
+    name: 'GitHub Repo Size',
+    // @ts-ignore
+    favicon:
+      'https://raw.githubusercontent.com/AminoffZ/github-repo-size/main/assets/github-repo-size-icon256.png',
   });
 
   const project = await app.convert();

@@ -21,6 +21,7 @@
     "@catppuccin/tailwindcss": "^0.1.6",
     "@types/marked": "^5.0.1",
     "gh-pages": "^6.0.0",
-    "typedoc": "^0.25.1"
+    "typedoc": "^0.25.1",
+    "typedoc-plugin-extras": "^3.0.0"
   }
 }
