@@ -1,6 +1,6 @@
 [![Google Chrome](https://img.shields.io/chrome-web-store/v/jpdmfnflpdgefbfkafcikmhipofhanfl?label=Get%20GRS%20for%20Chrome&logo=Google%20Chrome)](https://chrome.google.com/webstore/detail/github-repo-size/jpdmfnflpdgefbfkafcikmhipofhanfl)
 
-<img src="/assets/github-repo-size-icon256.png" align="right"  />
+<img src="https://raw.githubusercontent.com/AminoffZ/github-repo-size/main/assets/github-repo-size-icon256.png" align="right"  />
 
 # GitHub Repo Size
 
@@ -11,11 +11,11 @@ Inspired by [github-repo-size](https://github.com/harshjv/github-repo-size).
 
 View summary of file sizes in repositories.
 
-<img src="/assets/github-repo-size-screenshot.png" />
+<img src="https://raw.githubusercontent.com/AminoffZ/github-repo-size/main/assets/github-repo-size-screenshot.png" />
 
 It's also possible to view private repository size summaries by adding a personal access token.[^1]
 
-<img src="/assets/github-repo-size-popup.png" />
+<img src="https://raw.githubusercontent.com/AminoffZ/github-repo-size/main/assets/github-repo-size-popup.png" />
 
 GitHubs API has a limit of 50 (at time of writing) requests per hour for unauthenticated requests. By clicking Authenticate and signing in with OAuth, you can make up to 5000 requests per hour.[^2]
 
@@ -30,7 +30,7 @@ Chromium based browser.
 
 Notice something that doesn't work the way you expected? Do you have your own suggestions for how to make the user experience better? Submit an [Issue](https://github.com/AminoffZ/github-repo-size/issues) and explain your concern.
 
-## [Contributing](/CONTRIBUTING.md)
+## [Contributing](https://github.com/AminoffZ/github-repo-size/blob/main/CONTRIBUTING.md)
 
 Thank you all and happy coding!
 
