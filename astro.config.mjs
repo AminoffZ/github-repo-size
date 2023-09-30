@@ -11,7 +11,7 @@ export default defineConfig({
     tailwind(),
     purgecss({
       safelist: {
-        deep: [/^table/, /grs/],
+        deep: [/grs/],
       },
     }),
   ],

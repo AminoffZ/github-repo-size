@@ -1,4 +1,4 @@
-import { getToken } from '../../shared';
+import { getToken, setDefaultBranch } from '../../shared';
 import type { GitHubTree } from './types';
 
 /**
@@ -68,7 +68,18 @@ async function getDefaultBranch(repo: string) {
   return branch;
 }
 
-async function validateResponse(res: Response) {
+/**
+ * Check if the response has errors.
+ *
+ * @param res - The response
+ * @returns True if the response has errors
+ * @example
+ * ```ts
+ * hasErrors(res);
+ * // false
+ * ```
+ */
+async function hasErrors(res: Response) {
   return !res.ok && res.status === 404 && res.type === 'cors';
 }
 
@@ -106,15 +117,18 @@ export async function getRepoInfo(
   branch: string = 'main',
   attempts: number = 0
 ): Promise<GitHubTree | undefined> {
-  const request = await createTreeRequest(repo, branch);
+  const branchName = (await getDefaultBranch(repo)) || branch;
+  const request = await createTreeRequest(repo, branchName);
   const response = await fetch(request).then(async (res) => {
-    if (await validateResponse(res)) {
+    if (await hasErrors(res)) {
       if (attempts < 1) {
         const defaultBranch = await getDefaultBranch(repo);
         return getRepoInfo(repo, defaultBranch, attempts + 1);
       }
     }
-
+    if (attempts > 0) {
+      await setDefaultBranch(repo, branch);
+    }
     const data = await res.json();
     return data as GitHubTree;
   });
