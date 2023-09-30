@@ -18,7 +18,7 @@ function setupNavigationHandler() {
     if (url.hostname !== 'github.com') {
       return;
     }
-    redirects[url.href] = redirects[url.href] + 1;
+    redirects[url.href] = (redirects[url.href] || 0) + 1;
     if ((redirects[url.href] + 1) % 2 == 0) {
       return;
     }
@@ -27,8 +27,40 @@ function setupNavigationHandler() {
       if (!activeTab) {
         return;
       }
-      chrome.tabs.sendMessage(activeTab.id!, { event: 'grs-update' });
+      sendMessageWithRetry(activeTab.id!, { event: 'grs-update' });
     });
+  });
+}
+
+/**
+ * Send a message to the content script. If the message fails to send,
+ * retry sending the message a few times.
+ *
+ * @param tabId - The ID of the tab to send the message to
+ * @param message - The message to send
+ * @param attemptsLeft - The number of attempts left to send the message
+ * @see https://developer.chrome.com/docs/extensions/mv3/messaging/#sending-messages
+ */
+function sendMessageWithRetry(
+  tabId: number,
+  message: { event: string },
+  attemptsLeft = 3
+) {
+  chrome.tabs.sendMessage(tabId, message, async function (response) {
+    // If an error occurs and there are attempts left, retry sending the message
+    if (chrome.runtime.lastError || !response) {
+      console.error(chrome.runtime.lastError);
+      if (attemptsLeft > 0) {
+        console.info(`Retrying... Attempts left: ${attemptsLeft}`);
+        setTimeout(() => {
+          sendMessageWithRetry(tabId, message, attemptsLeft - 1);
+        }, 1000); // Wait 1 second before retrying
+      } else {
+        console.error('Failed to send message after all attempts');
+      }
+    } else {
+      console.info('Message sent successfully', response);
+    }
   });
 }
 
