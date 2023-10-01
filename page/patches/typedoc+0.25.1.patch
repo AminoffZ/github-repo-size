@@ -1,0 +1,16 @@
+diff --git a/node_modules/typedoc/dist/lib/utils/loggers.js b/node_modules/typedoc/dist/lib/utils/loggers.js
+index 727254d..16b2932 100644
+--- a/node_modules/typedoc/dist/lib/utils/loggers.js
++++ b/node_modules/typedoc/dist/lib/utils/loggers.js
+@@ -5,10 +5,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
+ Object.defineProperty(exports, "__esModule", { value: true });
+ exports.ConsoleLogger = exports.Logger = exports.LogLevel = void 0;
+ const typescript_1 = __importDefault(require("typescript"));
+-const inspector_1 = require("inspector");
+ const path_1 = require("path");
+ const paths_1 = require("./paths");
+-const isDebugging = () => !!(0, inspector_1.url)();
++const isDebugging = () => false;
+ /**
+  * List of known log levels. Used to specify the urgency of a log message.
+  */
