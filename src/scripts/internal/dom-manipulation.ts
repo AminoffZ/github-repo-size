@@ -116,6 +116,7 @@ function insertToHome(anchor: HTMLAnchorElement, span: HTMLSpanElement) {
  *
  * @param repoInfo - The repo info
  */
+
 function setTotalSize(repoInfo: GitHubTree) {
   let navButtons = getNavButtons();
   if (!navButtons) {
@@ -123,16 +124,20 @@ function setTotalSize(repoInfo: GitHubTree) {
   }
 
   let totalSizeButton = getTotalSizeButton();
+
+  // Check if total size button already exists
   if (!totalSizeButton) {
     totalSizeButton = createTotalSizeButton(navButtons);
+
+    // If creating the button fails, exit the function
     if (!totalSizeButton) {
       return;
     }
   }
 
-  navButtons.appendChild(totalSizeButton);
-  if (!totalSizeButton) {
-    return;
+  const existingCounterSpan = totalSizeButton.querySelector('span.Counter');
+  if (existingCounterSpan) {
+    existingCounterSpan.remove();
   }
 
   const span = getTotalSizeSpan(totalSizeButton);
@@ -146,6 +151,23 @@ function setTotalSize(repoInfo: GitHubTree) {
   });
 
   span.innerText = formatBytes(totalSize);
+
+  // unique class to identify the new <li> element
+  const newLiClass = 'sizeLi';
+
+  const existingLiElement = document.querySelector(
+    `.js-repo-nav li.${newLiClass}`
+  );
+
+  if (!existingLiElement) {
+    const newLiElement = document.createElement('li');
+    newLiElement.classList.add('d-flex', newLiClass);
+    newLiElement.setAttribute('data-view-component', 'true');
+    newLiElement.appendChild(totalSizeButton);
+
+    // Append the new <li> element after the last <li class="d-flex"> within .js-repo-nav
+    navButtons.parentNode?.appendChild(newLiElement);
+  }
 }
 
 /**
@@ -175,9 +197,9 @@ export async function updateDOM() {
   );
   if (!repoInfo || !repoInfo.tree) {
     const warnMessage = `
-    Could not get repo info, aborting...\n 
-    Click the extension button to see remaining requests.\n 
-    If you see 0 remaining requests, you have exceeded the rate limit.\n 
+    Could not get repo info, aborting...\n
+    Click the extension button to see remaining requests.\n
+    If you see 0 remaining requests, you have exceeded the rate limit.\n
     Use OAuth or a personal access token to increase the rate limit.
     `;
     console.warn(warnMessage);
