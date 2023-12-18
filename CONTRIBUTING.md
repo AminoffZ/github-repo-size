@@ -2,25 +2,25 @@
 
 This project uses [Bun](https://bun.sh/docs)! If you are on Windows, please refer to [this post](https://github.com/oven-sh/bun/issues/43) on how to make it work on your machine.
 
-Install dependencies
+#### Install dependencies
 
 ```bash
 bun install
 ```
 
-Build the project
+#### Build the project
 
 ```bash
 bun run build
 ```
 
-Manual Installation:
+#### Manual Installation:
 
 - Open your Chrome browser and navigate to [chrome://extensions/](chrome://extensions/).
 - Enable "Developer mode" in the top right corner.
 - Click on "Load unpacked" and select the <b>dist</b> folder inside the github-repo-size directory (generated after running bun run build).
 
-Please format the project before creating a PR.
+<b> Please format the project before creating a PR.</b>
 
 ```bash
 bun run format

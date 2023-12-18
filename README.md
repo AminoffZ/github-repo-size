@@ -26,7 +26,7 @@ GitHubs API has a limit of 50 (at time of writing) requests per hour for unauthe
 
 Chromium based browser.
 
-# Contributing
+## Contributing
 
 Whether you've found a bug, have a suggestion, or want to add a new feature, your contributions are valuable to us. To ensure a smooth collaboration, please take a moment to read our [Contributing Guide](https://github.com/AminoffZ/github-repo-size/blob/main/CONTRIBUTING.md).
 
