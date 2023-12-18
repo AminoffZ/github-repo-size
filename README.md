@@ -26,34 +26,20 @@ GitHubs API has a limit of 50 (at time of writing) requests per hour for unauthe
 
 Chromium based browser.
 
-## Updates
+# Contributing
 
-Notice something that doesn't work the way you expected? Do you have your own suggestions for how to make the user experience better? Submit an [Issue](https://github.com/AminoffZ/github-repo-size/issues) and explain your concern.
+Whether you've found a bug, have a suggestion, or want to add a new feature, your contributions are valuable to us. To ensure a smooth collaboration, please take a moment to read our [Contributing Guide](https://github.com/AminoffZ/github-repo-size/blob/main/CONTRIBUTING.md).
 
-## [Contributing](https://github.com/AminoffZ/github-repo-size/blob/main/CONTRIBUTING.md)
+**Code of Conduct:**
+Please note that we have a [Code of Conduct](https://github.com/AminoffZ/github-repo-size/blob/main/CODE_OF_CONDUCT.md) in place. We expect all contributors to adhere to it. It outlines the standards of behavior that everyone involved in this project should follow. Be kind and respectful.
 
+**How to Contribute:**
+1. If you've spotted a bug or have a feature request, feel free to submit an [Issue](https://github.com/AminoffZ/github-repo-size/issues) and explain your concern.
+2. Interested in fixing issues or adding new features? Check out our [Contributing Guide](https://github.com/AminoffZ/github-repo-size/blob/main/CONTRIBUTING.md) for a detailed walkthrough.
+
+We're thrilled to have you on board, and your contributions will make GitHub Repo Size even better for everyone.
 Thank you all and happy coding!
 
----
+## LICENSE
 
-MIT License
-
-Copyright (c) 2023 AminoffZ
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Github Repo Size is under [MIT License](LICENSE).

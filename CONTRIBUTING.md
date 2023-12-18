@@ -14,6 +14,12 @@ Build the project
 bun run build
 ```
 
+Manual Installation:
+
+- Open your Chrome browser and navigate to [chrome://extensions/](chrome://extensions/).
+- Enable "Developer mode" in the top right corner.
+- Click on "Load unpacked" and select the <b>dist</b> folder inside the github-repo-size directory (generated after running bun run build).
+
 Please format the project before creating a PR.
 
 ```bash
