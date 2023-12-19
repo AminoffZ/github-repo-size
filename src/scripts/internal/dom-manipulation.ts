@@ -152,6 +152,15 @@ function setTotalSize(repoInfo: GitHubTree) {
 
   span.innerText = formatBytes(totalSize);
 
+  const isSelected = totalSizeButton.classList.contains('selected');
+
+  // Update the style of .UnderlineNav-item.selected:after based on isSelected
+  if (isSelected) {
+    totalSizeButton.style.setProperty(
+      '--underlineNav-borderColor-active',
+      'transparent'
+    );
+  }
   // unique class to identify the new <li> element
   const newLiClass = 'sizeLi';
 
