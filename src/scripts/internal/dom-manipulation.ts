@@ -116,7 +116,6 @@ function insertToHome(anchor: HTMLAnchorElement, span: HTMLSpanElement) {
  *
  * @param repoInfo - The repo info
  */
-
 function setTotalSize(repoInfo: GitHubTree) {
   let navButtons = getNavButtons();
   if (!navButtons) {
@@ -152,6 +151,8 @@ function setTotalSize(repoInfo: GitHubTree) {
 
   span.innerText = formatBytes(totalSize);
 
+  totalSizeButton.style.background = 'none';
+
   const isSelected = totalSizeButton.classList.contains('selected');
 
   // Update the style of .UnderlineNav-item.selected:after based on isSelected
@@ -160,6 +161,10 @@ function setTotalSize(repoInfo: GitHubTree) {
       '--underlineNav-borderColor-active',
       'transparent'
     );
+    totalSizeButton.style.fontWeight =
+      getComputedStyle(document.documentElement).getPropertyValue(
+        '--base-text-weight'
+      ) || '400';
   }
   // unique class to identify the new <li> element
   const newLiClass = 'sizeLi';
