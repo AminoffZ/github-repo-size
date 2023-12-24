@@ -46,4 +46,4 @@ Thank you all and happy coding!
 
 ## LICENSE
 
-Github Repo Size is under [MIT License](LICENSE).
+Github Repo Size is under [MIT License](https://github.com/AminoffZ/github-repo-size/blob/main/README.md).
