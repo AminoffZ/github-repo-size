@@ -3,7 +3,7 @@ export { getRepoInfo } from './api';
 export { formatBytes } from './format';
 export { hashClass } from './crypto';
 export {
-  getSettingsListItem as getNavButtons,
+  getNavButtons,
   getAnchors,
   getTotalSizeButton,
   getSizeLabel,
@@ -13,7 +13,7 @@ export {
 } from './selectors';
 export {
   createSizeLabel,
-  createTotalSizeButton,
+  createTotalSizeElement,
   createSizeSpan,
 } from './element-factory';
 export { updateDOM } from './dom-manipulation';

@@ -1,7 +1,7 @@
 import {
   createSizeLabel,
   createSizeSpan,
-  createTotalSizeButton,
+  createTotalSizeElement,
   formatBytes,
   getAnchors,
   getNavButtons,
@@ -127,7 +127,7 @@ function setTotalSize(repoInfo: GitHubTree) {
 
   // Check if total size button already exists
   if (!totalSizeButton) {
-    totalSizeButton = createTotalSizeButton(navButtons);
+    totalSizeButton = createTotalSizeElement();
 
     // If creating the button fails, exit the function
     if (!totalSizeButton) {
@@ -152,31 +152,7 @@ function setTotalSize(repoInfo: GitHubTree) {
 
   span.innerText = formatBytes(totalSize);
 
-  const isSelected = totalSizeButton.classList.contains('selected');
-
-  // Update the style of .UnderlineNav-item.selected:after based on isSelected
-  if (isSelected) {
-    totalSizeButton.style.setProperty(
-      '--underlineNav-borderColor-active',
-      'transparent'
-    );
-  }
-  // unique class to identify the new <li> element
-  const newLiClass = 'sizeLi';
-
-  const existingLiElement = document.querySelector(
-    `.js-repo-nav li.${newLiClass}`
-  );
-
-  if (!existingLiElement) {
-    const newLiElement = document.createElement('li');
-    newLiElement.classList.add('d-flex', newLiClass);
-    newLiElement.setAttribute('data-view-component', 'true');
-    newLiElement.appendChild(totalSizeButton);
-
-    // Append the new <li> element after the last <li class="d-flex"> within .js-repo-nav
-    navButtons.parentNode?.appendChild(newLiElement);
-  }
+  navButtons.appendChild(totalSizeButton);
 }
 
 /**

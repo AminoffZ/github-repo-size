@@ -1,24 +1,10 @@
 /**
- * Get the settings list item from the navigation bar.
- *
- * @returns The settings list item
- * @example
- * ```ts
- * getSettingsListItem();
-// <li data-view-component="true" class="d-inline-flex">
-//   <a id="settings-tab" href="/owner/repo/settings" ...>
-//     <svg ...>
-//       <path ...></path>
-//     </svg>
-//     <span ...>Settings</span>
-//     <span ...></span>
-//   </a>
-// </li>
-* ```
-*/
-export function getSettingsListItem() {
-  return document.querySelector('.js-repo-nav')?.firstElementChild
-    ?.lastElementChild;
+ * Gets the nav button list.
+ * 
+ * @returns element containing the nav buttons
+ */
+export function getNavButtons() {
+  return document.querySelector('.js-repo-nav > ul') as HTMLUListElement | null;
 }
 
 /**
