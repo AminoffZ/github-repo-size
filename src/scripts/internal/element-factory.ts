@@ -20,42 +20,29 @@ export function createSizeLabel() {
 }
 
 /**
- * Create an element to display the total size of the files in the repository.
- *
- * @param navButtons - The navigation buttons element
+ * Create a total size element. The element is shown at the end of the navigation bar.
+ * It displays the total size of the repository.
+ * 
  * @returns The total size element
  * @example
  * ```ts
- * createTotalSizeButton(navButtons);
- * // <a class="UnderlineNav-item grs-total-size..."...>
+ * createTotalSizeElement();
+ * // <li style="align-items: center" class="grs-total-size d-inline-flex">
+ * //   <svg>database-icon</svg>
  * //   <span>...</span>
- * // </a>
+ * // </li>
  * ```
  */
-export function createTotalSizeButton(navButtons: ChildNode) {
-  const totalSizeButton = navButtons?.lastChild?.cloneNode(true);
-  if (!(totalSizeButton instanceof HTMLElement)) {
-    return;
-  }
-  totalSizeButton.classList.add('grs-total-size');
-  const navTotalSizeAnchor = totalSizeButton.closest('a');
-  if (!(navTotalSizeAnchor instanceof HTMLElement)) {
-    return;
-  }
-  if (navTotalSizeAnchor.getAttribute('href')) {
-    navTotalSizeAnchor.attributes.removeNamedItem('href');
-  }
-  const svg = navTotalSizeAnchor.firstElementChild;
-  if (!svg) {
-    return;
-  }
-  navTotalSizeAnchor.removeChild(svg);
-  const span = navTotalSizeAnchor.querySelector('span') as
-    | HTMLSpanElement
-    | undefined;
-  if (!(span instanceof HTMLSpanElement)) {
-    return;
-  }
+export function createTotalSizeElement() {
+  const totalSizeButton = document.createElement('li');
+  // unique identifier and GitHub's li style class
+  totalSizeButton.classList.add('grs-total-size', 'd-inline-flex');
+  // align the svg icon with the text
+  totalSizeButton.style.setProperty('align-items', 'center');
+  // create the span element that will contain the total size and append it to the button
+  const span = createTotalSizeSpan();
+  totalSizeButton.appendChild(span);
+  // add the 'database' icon
   span.insertAdjacentHTML(
     'beforebegin',
     `
@@ -65,8 +52,14 @@ export function createTotalSizeButton(navButtons: ChildNode) {
     </svg>
     `
   );
-  span.innerText = '...';
   return totalSizeButton;
+}
+
+function createTotalSizeSpan() {
+  const span = document.createElement('span');
+  // add loading dots to be replaced by the total size
+  span.innerText = '...';
+  return span;
 }
 
 /**

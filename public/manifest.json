@@ -3,7 +3,7 @@
   "name": "GitHub Repo Size",
   "author": "mouiylus@gmail.com",
   "description": "Show size summaries of GitHub repos",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "web_accessible_resources": [
     {
       "resources": ["script.js"],
