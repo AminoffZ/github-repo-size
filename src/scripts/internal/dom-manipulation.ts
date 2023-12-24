@@ -116,7 +116,6 @@ function insertToHome(anchor: HTMLAnchorElement, span: HTMLSpanElement) {
  *
  * @param repoInfo - The repo info
  */
-
 function setTotalSize(repoInfo: GitHubTree) {
   let navButtons = getNavButtons();
   if (!navButtons) {
