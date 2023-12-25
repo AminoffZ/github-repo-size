@@ -236,7 +236,7 @@ export async function updateDOM() {
 
   setTotalSize(repoInfo);
 
-  updates.map(({ anchor, span, index }) => {
+  updates.forEach(({ anchor, span, index }) => {
     // for some reason the rows have two td's with name of each file
     if (index % 2 === 1) {
       return insertToFileExplorer(anchor, span);

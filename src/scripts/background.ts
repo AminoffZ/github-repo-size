@@ -18,7 +18,7 @@ function setupNavigationHandler() {
     if (url.hostname !== 'github.com') {
       return;
     }
-    // I wish i remembered why i did this
+    // Only send the message every other time to avoid sending the message twice
     redirects[url.href] = (redirects[url.href] || 0) + 1;
     if ((redirects[url.href] + 1) % 2 == 0) {
       return;
