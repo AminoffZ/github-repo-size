@@ -1,30 +1,18 @@
 import { updateDOM } from './internal';
 
 /**
- * Update the DOM.
- * If our elements have not been added, wait 500 ms and try again.
- * If we have tried 5 times, give up.
- * @param attempts - The number of times we have tried to update the DOM
+ * Handle the update message from the background script.
+ *
+ * @param sendResponse - Responding with whether the update was successful
  */
-async function main(attempts: number) {
-  setTimeout(async () => await updateDOM(), 500);
-  const grsElements = document.getElementsByClassName('grs');
-  if (grsElements.length < 2) {
-    if (attempts >= 4) {
-      console.warn('GRS: Could not find any elements to update, stopping.');
-      return false;
-    }
-    setTimeout(async () => await main((attempts += 1)), 500);
-  } else {
-    return true;
-  }
-}
+const handleUpdate = async (sendResponse: (response: any) => void) => {
+  const updateSuccessful = await updateDOM();
+  sendResponse({ success: updateSuccessful });
+};
 
 /**
  * Listen for messages from the background script. If the message is
- * 'grs-update', update the DOM. We add a delay to increase that the
- * likelyhood that the DOM has been changed before we try to update it.
- * Resets the attempts counter. Send  a response to the background script.
+ * 'grs-update', update the DOM.
  *
  * @param request - The message from the background script
  * @param sender - The sender of the message
@@ -32,7 +20,7 @@ async function main(attempts: number) {
  */
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   if (request.event === 'grs-update') {
-    sendResponse(true);
-    setTimeout(async () => await main(0), 750);
+    handleUpdate(sendResponse);
   }
+  return true;
 });
