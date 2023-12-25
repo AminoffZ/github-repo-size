@@ -15,6 +15,9 @@ export function createSizeLabel() {
   const span = document.createElement('span');
   span.innerText = 'Size';
   th.className = 'grs grs-size';
+  th.style.setProperty('text-align', 'right');
+  th.style.setProperty('text-wrap', 'nowrap');
+  th.style.setProperty('overflow', 'hidden');
   th.appendChild(span);
   return th;
 }
@@ -22,7 +25,7 @@ export function createSizeLabel() {
 /**
  * Create a total size element. The element is shown at the end of the navigation bar.
  * It displays the total size of the repository.
- * 
+ *
  * @returns The total size element
  * @example
  * ```ts
@@ -81,6 +84,7 @@ export function createSizeSpan(anchorPath: string, size: number) {
   span.classList.add('grs', spanClass);
 
   if (document.querySelector(`span.${spanClass}`)) {
+    console.warn(`Duplicate span class: ${spanClass}`);
     return;
   }
 

@@ -38,6 +38,7 @@ Whether you've found a bug, have a suggestion, or want to add a new feature, you
 Please note that we have a [Code of Conduct](https://github.com/AminoffZ/github-repo-size/blob/main/CODE_OF_CONDUCT.md) in place. We expect all contributors to adhere to it. It outlines the standards of behavior that everyone involved in this project should follow. Be kind and respectful.
 
 **How to Contribute:**
+
 1. If you've spotted a bug or have a feature request, feel free to submit an [Issue](https://github.com/AminoffZ/github-repo-size/issues) and explain your concern.
 2. Interested in fixing issues or adding new features? Check out our [Contributing Guide](https://github.com/AminoffZ/github-repo-size/blob/main/CONTRIBUTING.md) for a detailed walkthrough.
 

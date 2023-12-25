@@ -1,6 +1,6 @@
 /**
  * Gets the nav button list.
- * 
+ *
  * @returns element containing the nav buttons
  */
 export function getNavButtons() {
@@ -10,10 +10,11 @@ export function getNavButtons() {
 /**
  * Get the filename anchor elements.
  *
+ * @param table - The table element
  * @returns The filename anchor elements
  * @example
  * ```ts
- * getAnchors();
+ * getFileAnchors(table);
  * // {
  * //  "0": {},
  * //  "1": {},
@@ -22,9 +23,10 @@ export function getNavButtons() {
  * // }
  * ```
  */
-export function getAnchors() {
-  const anchors = document.querySelectorAll('a.Link--primary');
-  return anchors as NodeListOf<HTMLAnchorElement>;
+export function getFileAnchors(table: HTMLTableElement) {
+  return table.querySelectorAll(
+    'a.Link--primary'
+  ) as NodeListOf<HTMLAnchorElement> | null;
 }
 
 /**
@@ -93,13 +95,12 @@ export function getTotalSizeSpan(totalSizeButton: HTMLElement) {
 }
 
 /**
- * Gets the top element in GitHubs file browser.
- * This is the element used to navigate up in the file tree.
+ * Gets the top td in GitHubs file browser.
  *
  * @returns The top element
  * @example
  * ```ts
- * getNavigateUpElement();
+ * getFirstTd();
  * // <td colspan="3" ...>
  * //   <h3 ...></h3>
  * //   <a href="/owner/repo/tree/branch" ...>
@@ -113,6 +114,25 @@ export function getTotalSizeSpan(totalSizeButton: HTMLElement) {
  * // </td>
  * ```
  */
-export function getNavigateUpElement() {
-  return document.getElementById('folder-row-0')?.firstElementChild;
+export function getFirstTd() {
+  return getTable()?.querySelector('td') as HTMLTableRowElement | null;
+}
+
+/**
+ * Gets the table in GitHubs file browser.
+ *
+ * @returns The table element
+ * @example
+ * ```ts
+ * getTable();
+ * // <table ...>
+ * //   <thead>...</thead>
+ * //   <tbody>...</tbody>
+ * // </table>
+ * ```
+ */
+export function getTable() {
+  return document.querySelector(
+    'table[aria-labelledby="folders-and-files"]'
+  ) as HTMLTableElement | null;
 }
