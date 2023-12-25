@@ -3,13 +3,14 @@ import {
   createSizeSpan,
   createTotalSizeElement,
   formatBytes,
-  getAnchors,
+  getFileAnchors,
+  getFirstTd,
   getNavButtons,
-  getNavigateUpElement,
   getPathObject,
   getRepoInfo,
   getSize,
   getSizeLabel,
+  getTable,
   getThead,
   getTotalSizeButton,
   getTotalSizeSpan,
@@ -34,12 +35,13 @@ function insertSizeLabel(headRow: ChildNode, th: HTMLTableCellElement) {
  * This is the element that is shown at the top of the GitHub file browser
  * and is used to navigate up in the file tree.
  */
-function expandNavigateUpElement() {
-  const navigateUpElement = getNavigateUpElement();
-  if (!navigateUpElement) {
+function expandFirstTd() {
+  const firstTd = getFirstTd();
+  if (!firstTd) {
+    console.warn('Could not find first td.');
     return;
   }
-  navigateUpElement.setAttribute('colspan', '4');
+  firstTd.setAttribute('colspan', '4');
 }
 
 /**
@@ -48,6 +50,7 @@ function expandNavigateUpElement() {
  */
 function insertSizeColumn() {
   if (getSizeLabel()) {
+    console.warn('Size label already exists.');
     return;
   }
 
@@ -57,7 +60,7 @@ function insertSizeColumn() {
     return;
   }
 
-  expandNavigateUpElement();
+  expandFirstTd();
 
   const th = createSizeLabel();
   insertSizeLabel(headRow, th);
@@ -84,6 +87,7 @@ function insertToFileExplorer(
   }
 
   td.classList.add('grs');
+  td.style.setProperty('text-wrap', 'nowrap');
   td.appendChild(span);
   row.insertBefore(td, row.childNodes[row.childNodes.length - 1]);
 }
@@ -159,13 +163,21 @@ function setTotalSize(repoInfo: GitHubTree) {
  * This is the main function that is called when the DOM should be updated.
  */
 export async function updateDOM() {
-  const anchors = getAnchors();
+  const table = getTable();
+  if (!table) {
+    console.warn('Could not find file table.');
+    return;
+  }
+
+  const anchors = getFileAnchors(table);
   if (!anchors || anchors.length === 0) {
+    console.warn('Could not find any file anchors.');
     return;
   }
 
   const pathObject = getPathObject();
   if (!pathObject || !pathObject.owner || !pathObject.repo) {
+    console.warn('Could not get path object.');
     return;
   }
 
@@ -192,14 +204,17 @@ export async function updateDOM() {
 
   const updates: GRSUpdate = [];
 
-  anchors.forEach((anchor, index) => {
+  for (let index = 0; index < anchors.length; index++) {
+    const anchor = anchors[index];
     const anchorPath = anchor.getAttribute('href');
     if (!anchorPath) {
+      console.warn('Could not get anchor path.');
       return;
     }
 
     const anchorPathObject = getPathObject(anchorPath);
     if (!repoInfo.tree.some((file) => file.path === anchorPathObject.path)) {
+      console.warn('Could not find file in repo info.');
       return;
     }
 
@@ -207,25 +222,21 @@ export async function updateDOM() {
     const span = createSizeSpan(anchorPath, size);
 
     if (!span) {
+      console.warn('Could not create size span.');
       return;
     }
 
     updates.push({ anchor, span, index });
-  });
-
-  if (pathObject.path) {
-    insertSizeColumn();
   }
 
+  insertSizeColumn();
+
   setTotalSize(repoInfo);
+
   updates.forEach(({ anchor, span, index }) => {
-    if (pathObject.path) {
-      // for some reason the rows have two td's with name of each file
-      if (index % 2 === 1) {
-        insertToFileExplorer(anchor, span);
-      }
-      return;
+    // for some reason the rows have two td's with name of each file
+    if (index % 2 === 1) {
+      insertToFileExplorer(anchor, span);
     }
-    insertToHome(anchor, span);
   });
 }
