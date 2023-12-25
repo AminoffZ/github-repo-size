@@ -18,6 +18,7 @@ function setupNavigationHandler() {
     if (url.hostname !== 'github.com') {
       return;
     }
+    // I wish i remembered why i did this
     redirects[url.href] = (redirects[url.href] || 0) + 1;
     if ((redirects[url.href] + 1) % 2 == 0) {
       return;
@@ -33,7 +34,7 @@ function setupNavigationHandler() {
 }
 
 /**
- * Send a message to the content script. If the message fails to send,
+ * Send a message to the content script to update the DOM. If the message fails to send,
  * retry sending the message a few times.
  *
  * @param tabId - The ID of the tab to send the message to
@@ -47,20 +48,23 @@ function sendMessageWithRetry(
   attemptsLeft = 3
 ) {
   chrome.tabs.sendMessage(tabId, message, async function (response) {
-    // If an error occurs and there are attempts left, retry sending the message
-    if (chrome.runtime.lastError || !response) {
-      console.error(chrome.runtime.lastError);
-      if (attemptsLeft > 0) {
-        console.info(`Retrying... Attempts left: ${attemptsLeft}`);
-        setTimeout(() => {
-          sendMessageWithRetry(tabId, message, attemptsLeft - 1);
-        }, 1000); // Wait 1 second before retrying
-      } else {
-        console.error('Failed to send message after all attempts');
-      }
-    } else {
-      console.info('Message sent successfully', response);
+    if (response?.success) {
+      console.info('Successfully updated DOM');
+      return;
     }
+    if (chrome.runtime.lastError) {
+      console.error(chrome.runtime.lastError.message);
+    }
+    console.warn('Failed to update DOM');
+    if (attemptsLeft > 0) {
+      console.info(`Retrying to update DOM... Attempts left: ${attemptsLeft}`);
+      setTimeout(() => {
+        sendMessageWithRetry(tabId, message, attemptsLeft - 1);
+      }, 1000);
+      return;
+    }
+    console.error('Failed to send message after all attempts');
+    return;
   });
 }
 

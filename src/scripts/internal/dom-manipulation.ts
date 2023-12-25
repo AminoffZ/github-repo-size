@@ -78,19 +78,22 @@ function insertToFileExplorer(
 ) {
   const row = anchor.closest('tr');
   if (!row) {
-    return;
+    console.warn('Could not find matching row.');
+    return false;
   }
 
   const td = row.childNodes[row.childNodes.length - 2].cloneNode(false);
   if (!(td instanceof HTMLElement)) {
-    return;
+    console.warn('Could not clone td to append size.');
+    return false;
   }
 
-  td.classList.add('grs');
+  td.classList.add('grs', 'grs-item');
   td.style.setProperty('text-wrap', 'nowrap');
   td.style.setProperty('text-align', 'right');
   td.appendChild(span);
   row.insertBefore(td, row.childNodes[row.childNodes.length - 1]);
+  return true;
 }
 
 /**
@@ -167,19 +170,19 @@ export async function updateDOM() {
   const table = getTable();
   if (!table) {
     console.warn('Could not find file table.');
-    return;
+    return false;
   }
 
   const anchors = getFileAnchors(table);
   if (!anchors || anchors.length === 0) {
     console.warn('Could not find any file anchors.');
-    return;
+    return false;
   }
 
   const pathObject = getPathObject();
   if (!pathObject || !pathObject.owner || !pathObject.repo) {
     console.warn('Could not get path object.');
-    return;
+    return false;
   }
 
   let type = pathObject.type;
@@ -200,7 +203,7 @@ export async function updateDOM() {
     Use OAuth or a personal access token to increase the rate limit.
     `;
     console.warn(warnMessage);
-    return false;
+    return true;
   }
 
   const updates: GRSUpdate = [];
@@ -210,34 +213,42 @@ export async function updateDOM() {
     const anchorPath = anchor.getAttribute('href');
     if (!anchorPath) {
       console.warn('Could not get anchor path.');
-      return;
+      return false;
     }
 
     const anchorPathObject = getPathObject(anchorPath);
     if (!repoInfo.tree.some((file) => file.path === anchorPathObject.path)) {
       console.warn('Could not find file in repo info.');
-      return;
+      return false;
     }
 
     const size = getSize(anchorPathObject, repoInfo.tree);
     const span = createSizeSpan(anchorPath, size);
 
+    // If creating the span fails, assume that the DOM has already been updated.
     if (!span) {
       console.warn('Could not create size span.');
-      return;
+      return true;
     }
 
     updates.push({ anchor, span, index });
   }
 
-  insertSizeColumn();
-
   setTotalSize(repoInfo);
 
-  updates.forEach(({ anchor, span, index }) => {
+  updates.map(({ anchor, span, index }) => {
     // for some reason the rows have two td's with name of each file
     if (index % 2 === 1) {
-      insertToFileExplorer(anchor, span);
+      return insertToFileExplorer(anchor, span);
     }
   });
+
+  // If there are no items, we have not updated the DOM.
+  if (document.querySelectorAll('.grs-item').length === 0) {
+    return false;
+  }
+
+  insertSizeColumn();
+
+  return true;
 }
