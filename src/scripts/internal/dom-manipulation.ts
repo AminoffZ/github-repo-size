@@ -88,6 +88,7 @@ function insertToFileExplorer(
 
   td.classList.add('grs');
   td.style.setProperty('text-wrap', 'nowrap');
+  td.style.setProperty('text-align', 'right');
   td.appendChild(span);
   row.insertBefore(td, row.childNodes[row.childNodes.length - 1]);
 }

@@ -15,6 +15,9 @@ export function createSizeLabel() {
   const span = document.createElement('span');
   span.innerText = 'Size';
   th.className = 'grs grs-size';
+  th.style.setProperty('text-align', 'right');
+  th.style.setProperty('text-wrap', 'nowrap');
+  th.style.setProperty('overflow', 'hidden');
   th.appendChild(span);
   return th;
 }
