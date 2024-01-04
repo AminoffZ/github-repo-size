@@ -103,7 +103,6 @@ export function createSizeSpan(anchorPath: string, size: number) {
  * // <span class="grs grs-...">...</span>
  * ```
  */
-
 export function createEmptySizeSpan(anchorPath: string) {
   const span = document.createElement('span');
   const spanClass = hashClass(anchorPath);
