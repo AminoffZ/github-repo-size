@@ -6,16 +6,16 @@ settings:
 
 dependencies:
   '@astrojs/svelte':
-    specifier: ^4.0.2
+    specifier: ^4.0.4
     version: 4.0.4(astro@3.6.4)(svelte@4.2.8)(typescript@5.3.3)(vite@4.5.1)
   '@astrojs/tailwind':
-    specifier: ^5.0.0
+    specifier: ^5.1.0
     version: 5.1.0(astro@3.6.4)(tailwindcss@3.4.0)
   astro:
-    specifier: ^3.1.2
+    specifier: ^3.6.4
     version: 3.6.4(typescript@5.3.3)
   svelte:
-    specifier: ^4.2.1
+    specifier: ^4.2.8
     version: 4.2.8
 
 devDependencies:
@@ -23,7 +23,7 @@ devDependencies:
     specifier: ^0.1.6
     version: 0.1.6(tailwindcss@3.4.0)
   '@tailwindcss/forms':
-    specifier: ^0.5.6
+    specifier: ^0.5.7
     version: 0.5.7(tailwindcss@3.4.0)
   '@types/chrome':
     specifier: ^0.0.246
@@ -38,13 +38,13 @@ devDependencies:
     specifier: latest
     version: 1.0.21
   prettier:
-    specifier: ^3.0.3
+    specifier: ^3.1.1
     version: 3.1.1
   purgecss:
     specifier: ^5.0.0
     version: 5.0.0
   tailwindcss:
-    specifier: ^3.0.24
+    specifier: ^3.4.0
     version: 3.4.0
   tiny-glob:
     specifier: ^0.2.9
@@ -1087,7 +1087,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.22.2
-      caniuse-lite: 1.0.30001572
+      caniuse-lite: 1.0.30001574
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -1164,8 +1164,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001572
-      electron-to-chromium: 1.4.618
+      caniuse-lite: 1.0.30001574
+      electron-to-chromium: 1.4.620
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.22.2)
 
@@ -1199,8 +1199,8 @@ packages:
     resolution: {integrity: sha512-xlx1yCK2Oc1APsPXDL2LdlNP6+uu8OCDdhOBSVT279M/S+y75O30C2VuD8T2ogdePBBl7PfPF4504tnLgX3zfw==}
     engines: {node: '>=14.16'}
 
-  /caniuse-lite@1.0.30001572:
-    resolution: {integrity: sha512-1Pbh5FLmn5y4+QhNyJE9j3/7dK44dGB83/ZMjv/qJk86TvDbjk0LosiZo0i0WB0Vx607qMX9jYrn1VLHCkN4rw==}
+  /caniuse-lite@1.0.30001574:
+    resolution: {integrity: sha512-BtYEK4r/iHt/txm81KBudCUcTy7t+s9emrIaHqjYurQ10x71zJ5VQ9x1dYPcz/b+pKSp4y/v1xSI67A+LzpNyg==}
 
   /ccount@2.0.1:
     resolution: {integrity: sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==}
@@ -1452,8 +1452,8 @@ packages:
   /eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
 
-  /electron-to-chromium@1.4.618:
-    resolution: {integrity: sha512-mTM2HieHLxs1RbD/R/ZoQLMsGI8lWIkP17G7cx32mJRBJt9wlNPkXwE3sYg/OnNb5GBkus98lXatSthoL8Y5Ag==}
+  /electron-to-chromium@1.4.620:
+    resolution: {integrity: sha512-a2fcSHOHrqBJsPNXtf6ZCEZpXrFCcbK1FBxfX3txoqWzNgtEDG1f3M59M98iwxhRW4iMKESnSjbJ310/rkrp0g==}
 
   /emoji-regex@10.3.0:
     resolution: {integrity: sha512-QpLs9D9v9kArv4lfDEgg1X/gN5XLnf/A6l9cs8SPZLRZR3ZkY9+kwIQTxm+fsSej5UMYGE8fdoaZVIBlqG0XTw==}
@@ -2651,8 +2651,8 @@ packages:
       tslib: 2.6.2
     dev: false
 
-  /node-abi@3.52.0:
-    resolution: {integrity: sha512-JJ98b02z16ILv7859irtXn4oUaFWADtvkzy2c0IAatNVX2Mc9Yoh8z6hZInn3QwvMEYhHuQloYi+TTQy67SIdQ==}
+  /node-abi@3.54.0:
+    resolution: {integrity: sha512-p7eGEiQil0YUV3ItH4/tBb781L5impVmmx2E9FRKF7d18XXzp4PGT2tdYMFY6wQqgxD0IwNZOiSJ0/K0fSi/OA==}
     engines: {node: '>=10'}
     requiresBuild: true
     dependencies:
@@ -2921,7 +2921,7 @@ packages:
       minimist: 1.2.8
       mkdirp-classic: 0.5.3
       napi-build-utils: 1.0.2
-      node-abi: 3.52.0
+      node-abi: 3.54.0
       pump: 3.0.0
       rc: 1.2.8
       simple-get: 4.0.1

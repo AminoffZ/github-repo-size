@@ -1,5 +1,5 @@
 {
-  "name": "popup",
+  "name": "github-repo-size",
   "type": "module",
   "version": "0.2.5",
   "scripts": {
@@ -12,21 +12,21 @@
     "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,md}' '!dist/**' '!node_modules/**'"
   },
   "dependencies": {
-    "@astrojs/svelte": "^4.0.2",
-    "@astrojs/tailwind": "^5.0.0",
-    "astro": "^3.1.2",
-    "svelte": "^4.2.1"
+    "@astrojs/svelte": "^4.0.4",
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^3.6.4",
+    "svelte": "^4.2.8"
   },
   "devDependencies": {
     "@catppuccin/tailwindcss": "^0.1.6",
-    "@tailwindcss/forms": "^0.5.6",
+    "@tailwindcss/forms": "^0.5.7",
     "@types/chrome": "^0.0.246",
     "@types/firefox-webext-browser": "^120.0.0",
     "astro-purgecss": "^3.2.1",
     "bun-types": "latest",
-    "prettier": "^3.0.3",
+    "prettier": "^3.1.1",
     "purgecss": "^5.0.0",
-    "tailwindcss": "^3.0.24",
+    "tailwindcss": "^3.4.0",
     "tiny-glob": "^0.2.9"
   }
 }
