@@ -1,6 +1,7 @@
 import {
   createSizeLabel,
   createSizeSpan,
+  createEmptySizeSpan,
   createTotalSizeElement,
   formatBytes,
   getFileAnchors,
@@ -214,13 +215,15 @@ export async function updateDOM() {
     }
 
     const anchorPathObject = getPathObject(anchorPath);
+    let size: number;
+    let span: HTMLSpanElement | undefined;
     if (!repoInfo.tree.some((file) => file.path === anchorPathObject.path)) {
       console.warn('Could not find file in repo info.');
-      return;
+      span = createEmptySizeSpan(anchorPath);
+    } else {
+      size = getSize(anchorPathObject, repoInfo.tree);
+      span = createSizeSpan(anchorPath, size);
     }
-
-    const size = getSize(anchorPathObject, repoInfo.tree);
-    const span = createSizeSpan(anchorPath, size);
 
     if (!span) {
       console.warn('Could not create size span.');

@@ -91,3 +91,28 @@ export function createSizeSpan(anchorPath: string, size: number) {
   span.innerText = sizeString;
   return span;
 }
+
+/**
+ * Create an empty size span element.
+ *
+ * @param anchorPath - The path of the anchor element used as reference
+ * @returns The empty size span element
+ * @example
+ * ```ts
+ * createEmptySizeSpan(anchorPath);
+ * // <span class="grs grs-...">...</span>
+ * ```
+ */
+export function createEmptySizeSpan(anchorPath: string) {
+  const span = document.createElement('span');
+  const spanClass = hashClass(anchorPath);
+  span.classList.add('grs', spanClass);
+
+  if (document.querySelector(`span.${spanClass}`)) {
+    console.warn(`Duplicate span class: ${spanClass}`);
+    return;
+  }
+
+  span.innerText = '...';
+  return span;
+}
