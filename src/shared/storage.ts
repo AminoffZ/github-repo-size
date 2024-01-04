@@ -1,7 +1,10 @@
+import activeBrowser from './browserWrapper';
 let storage;
 
-if (typeof chrome !== 'undefined') {
-  storage = chrome.storage.sync || chrome.storage.local;
+if (typeof activeBrowser !== 'undefined') {
+  storage = activeBrowser.storage.sync || activeBrowser.storage.local;
 }
 
-export default storage! as chrome.storage.SyncStorageArea;
+export default storage as
+  | chrome.storage.SyncStorageArea
+  | browser.storage.StorageAreaSync;

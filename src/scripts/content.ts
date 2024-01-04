@@ -1,3 +1,4 @@
+import activeBrowser from '../shared/browserWrapper';
 import { updateDOM } from './internal';
 
 /**
@@ -18,9 +19,11 @@ const handleUpdate = async (sendResponse: (response: any) => void) => {
  * @param sender - The sender of the message
  * @param sendResponse - The function to call when we are done
  */
-chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-  if (request.event === 'grs-update') {
-    handleUpdate(sendResponse);
+activeBrowser.runtime.onMessage.addListener(
+  function (request, sender, sendResponse) {
+    if (request.event === 'grs-update') {
+      handleUpdate(sendResponse);
+    }
+    return true;
   }
-  return true;
-});
+);
