@@ -1,5 +1,5 @@
 {
-  "name": "popup",
+  "name": "github-repo-size",
   "type": "module",
   "version": "0.2.6",
   "scripts": {

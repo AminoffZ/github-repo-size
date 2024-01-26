@@ -4,6 +4,10 @@ build
 dist/
 .astro/
 dist.zip
+github-repo-size-extension/
+github-repo-size-extension.zip
+*.crx
+*.pem
 
 # Logs
 logs
