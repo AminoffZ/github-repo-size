@@ -28,7 +28,7 @@ bun run build
 
 ```json
 "background": {
-    "background": ["background.js"]
+    "scripts": ["background.js"]
   },
   "browser_specific_settings": {
     "gecko": {
