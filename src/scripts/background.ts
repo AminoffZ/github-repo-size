@@ -1,5 +1,5 @@
 import { storage } from '../shared';
-
+import activeBrowser from '../shared/browserWrapper';
 /**
  * Listen for navigation events and send a message to the content script
  * to update the DOM. This is needed because GitHub uses pushState to
@@ -13,23 +13,28 @@ import { storage } from '../shared';
 function setupNavigationHandler() {
   let redirects: { [url: string]: number } = {};
 
-  chrome.webNavigation.onHistoryStateUpdated.addListener(function (details) {
-    const url = new URL(details.url);
-    if (url.hostname !== 'github.com') {
-      return;
-    }
-    redirects[url.href] = (redirects[url.href] || 0) + 1;
-    if ((redirects[url.href] + 1) % 2 == 0) {
-      return;
-    }
-    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-      const activeTab = tabs[0];
-      if (!activeTab) {
+  activeBrowser.webNavigation.onHistoryStateUpdated.addListener(
+    function (details) {
+      const url = new URL(details.url);
+      if (url.hostname !== 'github.com') {
         return;
       }
-      sendMessageWithRetry(activeTab.id!, { event: 'grs-update' });
-    });
-  });
+      redirects[url.href] = (redirects[url.href] || 0) + 1;
+      if ((redirects[url.href] + 1) % 2 == 0) {
+        return;
+      }
+      activeBrowser.tabs.query(
+        { active: true, currentWindow: true },
+        function (tabs) {
+          const activeTab = tabs[0];
+          if (!activeTab) {
+            return;
+          }
+          sendMessageWithRetry(activeTab.id!, { event: 'grs-update' });
+        }
+      );
+    }
+  );
 }
 
 /**
@@ -46,10 +51,10 @@ function sendMessageWithRetry(
   message: { event: string },
   attemptsLeft = 3
 ) {
-  chrome.tabs.sendMessage(tabId, message, async function (response) {
+  activeBrowser.tabs.sendMessage(tabId, message, async function (response) {
     // If an error occurs and there are attempts left, retry sending the message
-    if (chrome.runtime.lastError || !response) {
-      console.error(chrome.runtime.lastError);
+    if (activeBrowser.runtime.lastError || !response) {
+      console.error(activeBrowser.runtime.lastError);
       if (attemptsLeft > 0) {
         console.info(`Retrying... Attempts left: ${attemptsLeft}`);
         setTimeout(() => {
@@ -73,7 +78,7 @@ function sendMessageWithRetry(
 storage.get('grs-installed', (result) => {
   if (result && result['grs-installed'] === true) {
   } else {
-    chrome.tabs.create({
+    activeBrowser.tabs.create({
       url: 'https://aminoffz.github.io/github-repo-size',
     });
     storage.set({
@@ -85,7 +90,7 @@ storage.get('grs-installed', (result) => {
 /* Listen for updates to the tabs. If the URL is the authentication page,
  * extract the token from the URL and store it in the storage.
  */
-chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+activeBrowser.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   if (
     tab.url &&
     tab.url.startsWith(
@@ -110,9 +115,9 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 /* Listen for messages from the popup. If the message is 'authenticate', open the
  * authentication page in a new tab using the URL from the message payload.
  */
-chrome.runtime.onMessage.addListener((request) => {
+activeBrowser.runtime.onMessage.addListener((request) => {
   if (request.action === 'grs-authenticate') {
-    chrome.tabs.create({
+    activeBrowser.tabs.create({
       url: request.data,
     });
   }

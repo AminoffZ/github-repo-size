@@ -4,7 +4,8 @@
     "types": [
       "bun-types", // add Bun type definitions
       "./types.d.ts", // add your own type definitions
-      "@types/chrome"
+      "@types/chrome",
+      "@types/firefox-webext-browser",
     ],
 
     // enable latest features
@@ -27,6 +28,6 @@
     // best practices
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true
-  }
+    "skipLibCheck": true,
+  },
 }

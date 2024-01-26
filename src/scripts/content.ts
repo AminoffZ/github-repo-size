@@ -1,3 +1,4 @@
+import activeBrowser from '../shared/browserWrapper';
 import { updateDOM } from './internal';
 
 /**
@@ -30,9 +31,11 @@ async function main(attempts: number) {
  * @param sender - The sender of the message
  * @param sendResponse - The function to call when we are done
  */
-chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-  if (request.event === 'grs-update') {
-    sendResponse(true);
-    setTimeout(async () => await main(0), 750);
+activeBrowser.runtime.onMessage.addListener(
+  function (request, sender, sendResponse) {
+    if (request.event === 'grs-update') {
+      sendResponse(true);
+      setTimeout(async () => await main(0), 750);
+    }
   }
-});
+);
