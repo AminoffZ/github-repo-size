@@ -16,9 +16,27 @@ bun run build
 
 #### Manual Installation:
 
+##### Chrome
+
 - Open your Chrome browser and navigate to [chrome://extensions/](chrome://extensions/).
 - Enable "Developer mode" in the top right corner.
 - Click on "Load unpacked" and select the <b>dist</b> folder inside the github-repo-size directory (generated after running bun run build).
+
+##### Firefox
+
+- Add this to manifest.json
+
+```json
+"background": {
+    "background": ["background.js"]
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "AminoffZEmail@goesHere.com",
+      "strict_min_version": "121.0.1"
+    }
+  },
+```
 
 <b> Please format the project before creating a PR.</b>
 

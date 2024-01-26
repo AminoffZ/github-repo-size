@@ -1,7 +1,7 @@
 {
   "name": "github-repo-size",
   "type": "module",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
