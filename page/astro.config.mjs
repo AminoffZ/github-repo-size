@@ -10,4 +10,5 @@ export default defineConfig({
   build: {
     assets: 'app',
   },
+  outDir:'github-repo-size',
 });
