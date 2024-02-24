@@ -10,7 +10,9 @@
     "astro": "astro",
     "csp": "bun -b extract-inline.mjs",
     "versionCTRL": "bun -b update-version.ts",
-    "format": "prettier --write '**/*.{js,jsx,mjs,cjs,ts,tsx,json,md,yml,yaml}' '!github-repo-size-extension/**' '!node_modules/**'"
+    "format": "prettier --write '**/*.{js,jsx,json,mjs,cjs,ts,tsx,json,md,yml,yaml}' '!github-repo-size-extension/**' '!node_modules/**'",
+    "checkFormat": "bunx prettier --check '**/*.{js,jsx,json,mjs,cjs,ts,tsx,json,md,yml,yaml}' '!github-repo-size-extension/**' '!node_modules/**' --config ./.prettierrc",
+    "lint": "bunx eslint  '**/*.{js,jsx,json,mjs,cjs,ts,tsx,json,md,yml,yaml}' '!github-repo-size-extension/**' '!node_modules/**'"
   },
   "dependencies": {
     "@astrojs/svelte": "^4.0.2",

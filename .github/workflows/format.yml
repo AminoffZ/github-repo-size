@@ -20,4 +20,4 @@ jobs:
           bun-version: latest
 
       - name: Check code formatting
-        run: bunx prettier --check . --config ./.prettierrc
+        run: bun run checkFormat
