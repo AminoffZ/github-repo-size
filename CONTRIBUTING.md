@@ -26,7 +26,7 @@ bun run build:firefox
 
 - Open your Chrome browser and navigate to [chrome://extensions/](chrome://extensions/).
 - Enable "Developer mode" in the top right corner.
-- Click on "Load unpacked" and select the <b>github-repo-size-extension</b> folder inside the github-repo-size directory (generated after running bun run build).
+- Click on "Load unpacked" and select the <b>github-repo-size-extension</b> folder inside the github-repo-size directory (generated after running bun run build:firefox).
 
 ##### Firefox
 
