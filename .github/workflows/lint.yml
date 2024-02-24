@@ -1,4 +1,4 @@
-name: Extension CI
+name: Extension Lint CI
 
 on:
   push:

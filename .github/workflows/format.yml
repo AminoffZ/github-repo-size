@@ -1,4 +1,4 @@
-name: Extension CI
+name: Extension Format CI
 
 on:
   push:
