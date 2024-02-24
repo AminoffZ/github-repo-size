@@ -9,7 +9,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "csp": "bun extract-inline.cjs",
-    "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,md}' '!dist/**' '!node_modules/**'"
+    "versionCTRL": "bun update-version.ts",
+    "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,md}' '!github-repo-size-extension/**' '!node_modules/**'"
   },
   "dependencies": {
     "@astrojs/svelte": "^4.0.2",

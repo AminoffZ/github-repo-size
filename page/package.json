@@ -9,7 +9,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "docs": "bun typedoc.ts",
-    "deploy": "bun run build && bun run docs && gh-pages -d dist",
+    "deploy": "bun run build && bun run docs && gh-pages -d github-repo-size-extension",
     "postinstall": "patch-package"
   },
   "dependencies": {

@@ -16,9 +16,30 @@ bun run build
 
 #### Manual Installation:
 
+##### Chrome
+
 - Open your Chrome browser and navigate to [chrome://extensions/](chrome://extensions/).
 - Enable "Developer mode" in the top right corner.
-- Click on "Load unpacked" and select the <b>dist</b> folder inside the github-repo-size directory (generated after running bun run build).
+- Click on "Load unpacked" and select the <b>github-repo-size-extension</b> folder inside the github-repo-size directory (generated after running bun run build).
+
+##### Firefox
+
+- Add this to manifest.json
+
+```json
+"background": {
+    "scripts": ["background.js"]
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "mouiylus@gmail.com",
+      "strict_min_version": "121.0.1"
+    }
+  },
+```
+
+- Open your Firefox browser and navigate to [about:debugging#/runtime/this-firefox](about:debugging#/runtime/this-firefox).
+- Click on "Load Temporary Add-on…" and select the <b>github-repo-size-extension</b> folder inside the github-repo-size directory (generated after running bun run build).
 
 <b> Please format the project before creating a PR.</b>
 

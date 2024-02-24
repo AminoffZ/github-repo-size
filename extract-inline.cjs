@@ -59,4 +59,4 @@ async function removeInlineScriptAndStyle(directory) {
   }
 }
 
-removeInlineScriptAndStyle(path.resolve(__dirname, 'dist'));
+removeInlineScriptAndStyle(path.resolve(import.meta.dir, 'github-repo-size-extension'));
