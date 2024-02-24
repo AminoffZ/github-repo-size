@@ -44,6 +44,7 @@ async function updateManifestVersion() {
     );
   } catch (error: any) {
     console.error(chalk.red('Error updating version: ' + error.message));
+    process.exit(1);
   }
 }
 
