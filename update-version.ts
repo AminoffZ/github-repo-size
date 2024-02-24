@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-var-requires */
 const fs = require('fs').promises;
 const path = require('path');
 const chalk = require('chalk');
