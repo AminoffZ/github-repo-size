@@ -1,11 +1,12 @@
 {
-  "name": "popup",
+  "name": "github-repo-size-extension",
   "type": "module",
   "version": "0.2.6",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "bun run versionCTRL && bun run astro build && bun run csp && bun bundler.ts",
+    "build:firefox": "bun run versionCTRL firefox && bun run astro build && bun run csp && bun bundler.ts",
     "preview": "astro preview",
     "astro": "astro",
     "csp": "bun -b extract-inline.mjs",

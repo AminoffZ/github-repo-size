@@ -6,6 +6,7 @@ async function updateManifestVersion() {
   try {
     const arg = process.argv[2];
     const browser = arg && arg === 'firefox' ? 'firefox' : 'chrome';
+
     const packageJsonPath = path.join(import.meta.dir, 'package.json');
     const { version } = await import(packageJsonPath);
 
@@ -15,7 +16,7 @@ async function updateManifestVersion() {
 
     manifest.version = version;
 
-    if (arg && arg === 'firefox') {
+    if (browser && browser === 'firefox') {
       manifest.background = {
         scripts: ['background.js'],
       };
