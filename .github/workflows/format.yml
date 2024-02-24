@@ -19,10 +19,5 @@ jobs:
         with:
           bun-version: latest
 
-      - name: Install dependencies
-        run: |
-          bun install
-
-      - name: Build extension
-        run: |
-          bun run build
+      - name: Check code formatting
+        run: bunx prettier --check . --config ./.prettierrc 
