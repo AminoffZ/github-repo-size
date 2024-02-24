@@ -5,14 +5,14 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "bun run versionCTRL && bun run build && bun run csp && bun bundler.ts",
+    "build": "bun run versionCTRL && bun run astro build && bun run csp && bun bundler.ts",
     "preview": "astro preview",
     "astro": "astro",
     "csp": "bun -b extract-inline.mjs",
     "versionCTRL": "bun -b update-version.ts",
     "format": "prettier --write '**/*.{js,jsx,json,mjs,cjs,ts,tsx,json,md,yml,yaml}' '!github-repo-size-extension/**' '!node_modules/**' --config ./.prettierrc",
     "checkFormat": "prettier --check '**/*.{js,jsx,json,mjs,cjs,ts,tsx,json,md,yml,yaml}' '!github-repo-size-extension/**' '!node_modules/**' --config ./.prettierrc",
-    "lint": "eslint '**/*.{js,jsx,json,mjs,cjs,ts,tsx,json,md,yml,yaml}' '!./github-repo-size-extension/**' '!./node_modules/**'"
+    "lint": "eslint '**/*.{js,jsx,json,mjs,cjs,ts,tsx,json}' "
   },
   "dependencies": {
     "@astrojs/svelte": "^4.0.2",
@@ -28,6 +28,7 @@
     "@typescript-eslint/parser": "^7.0.2",
     "astro-purgecss": "^3.2.1",
     "bun-types": "latest",
+    "chalk": "4.1.2",
     "eslint": "^8.57.0",
     "prettier": "^3.0.3",
     "purgecss": "^5.0.0",

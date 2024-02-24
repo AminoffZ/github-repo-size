@@ -19,5 +19,6 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['@typescript-eslint'],
+  ignorePatterns: ['node_modules/', 'github-repo-extension/'],
   rules: {},
 };
