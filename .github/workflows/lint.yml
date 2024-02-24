@@ -7,7 +7,7 @@ on:
     branches: main
 
 jobs:
-  format:
+  lint:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,5 +19,8 @@ jobs:
         with:
           bun-version: latest
 
-      - name: Check code formatting
-        run: bunx prettier --check . --config ./.prettierrc
+      - name: Install dependencies
+        run: bun install
+
+      - name: Check code linting
+        run: bunx eslint

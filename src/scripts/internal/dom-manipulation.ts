@@ -123,7 +123,7 @@ function insertToHome(anchor: HTMLAnchorElement, span: HTMLSpanElement) {
  * @param repoInfo - The repo info
  */
 function setTotalSize(repoInfo: GitHubTree) {
-  let navButtons = getNavButtons();
+  const navButtons = getNavButtons();
   if (!navButtons) {
     return;
   }
@@ -183,7 +183,7 @@ export async function updateDOM() {
     return;
   }
 
-  let type = pathObject.type;
+  const type = pathObject.type;
   let branch = pathObject.branch;
   if (type !== 'tree' && type !== 'blob') {
     branch = 'main';

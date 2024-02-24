@@ -5,12 +5,12 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build && bun run csp && bun bundler.ts",
+    "build": "bun run versionCTRL && bun run build && bun run csp && bun bundler.ts",
     "preview": "astro preview",
     "astro": "astro",
-    "csp": "bun extract-inline.cjs",
-    "versionCTRL": "bun update-version.ts",
-    "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,md}' '!github-repo-size-extension/**' '!node_modules/**'"
+    "csp": "bun -b extract-inline.mjs",
+    "versionCTRL": "bun -b update-version.ts",
+    "format": "prettier --write '**/*.{js,jsx,mjs,cjs,ts,tsx,json,md,yml,yaml}' '!github-repo-size-extension/**' '!node_modules/**'"
   },
   "dependencies": {
     "@astrojs/svelte": "^4.0.2",
@@ -22,8 +22,11 @@
     "@catppuccin/tailwindcss": "^0.1.6",
     "@tailwindcss/forms": "^0.5.6",
     "@types/chrome": "^0.0.246",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
     "astro-purgecss": "^3.2.1",
     "bun-types": "latest",
+    "eslint": "^8.57.0",
     "prettier": "^3.0.3",
     "purgecss": "^5.0.0",
     "tailwindcss": "^3.0.24",

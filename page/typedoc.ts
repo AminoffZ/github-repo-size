@@ -10,7 +10,7 @@ async function main() {
     entryPoints: entrypoints,
     plugin: ['typedoc-plugin-extras'],
     name: 'GitHub Repo Size',
-    // @ts-ignore
+    // @ts-expect-error
     favicon:
       'https://raw.githubusercontent.com/AminoffZ/github-repo-size/main/assets/github-repo-size-icon256.png',
   });

@@ -1,3 +1,5 @@
+#!/usr/bin/env bun
+/* eslint-disable @typescript-eslint/no-var-requires */
 const fs = require('fs').promises;
 const path = require('path');
 const chalk = require('chalk');

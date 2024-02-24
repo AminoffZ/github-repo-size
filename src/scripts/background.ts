@@ -11,7 +11,7 @@ import { storage } from '../shared';
  * @see https://developer.chrome.com/docs/extensions/reference/webNavigation/#event-order
  */
 function setupNavigationHandler() {
-  let redirects: { [url: string]: number } = {};
+  const redirects: { [url: string]: number } = {};
 
   chrome.webNavigation.onHistoryStateUpdated.addListener(function (details) {
     const url = new URL(details.url);
