@@ -59,7 +59,12 @@ async function createTreeRequest(repo: string, branch: string) {
  */
 async function getDefaultBranch(repo: string) {
   let branch = '';
-  await fetch(`https://api.github.com/repos/${repo}`)
+  const headers = new Headers();
+  const token = await getToken();
+  if (token) {
+    headers.append('Authorization', `Bearer ${token}`);
+  }
+  await fetch(`https://api.github.com/repos/${repo}`, {headers})
     .then(async (res) => {
       const data = await res.json();
       branch = data.default_branch;
