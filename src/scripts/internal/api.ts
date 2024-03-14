@@ -18,6 +18,28 @@ function API(repo: string, branch: string) {
 }
 
 /**
+ * Generate the headers for the request, includes the token if it exists.
+ * @returns The headers object
+ * @example
+ * ```ts
+ * createHeaders();
+ * // Headers {
+ * //   'User-Agent': 'AminoffZ/github-repo-size',
+ * //   'Authorization': 'Bearer ...'
+ * // }
+ * ```
+ */
+async function createHeaders() {
+  const headers = new Headers();
+  headers.append('User-Agent', 'AminoffZ/github-repo-size');
+  const token = await getToken();
+  if (token) {
+    headers.append('Authorization', `Bearer ${token}`);
+  }
+  return headers;
+}
+
+/**
  * Create a tree request object.
  *
  * @param repo - The repo name
@@ -35,12 +57,7 @@ function API(repo: string, branch: string) {
  * ```
  */
 async function createTreeRequest(repo: string, branch: string) {
-  const headers = new Headers();
-  headers.append('User-Agent', 'AminoffZ/github-repo-size');
-  const token = await getToken();
-  if (token) {
-    headers.append('Authorization', `Bearer ${token}`);
-  }
+  const headers = await createHeaders();
   const request = new Request(API(repo, branch), {
     headers,
   });
@@ -59,7 +76,8 @@ async function createTreeRequest(repo: string, branch: string) {
  */
 async function getDefaultBranch(repo: string) {
   let branch = '';
-  await fetch(`https://api.github.com/repos/${repo}`)
+  const headers = await createHeaders();
+  await fetch(`https://api.github.com/repos/${repo}`, { headers })
     .then(async (res) => {
       const data = await res.json();
       branch = data.default_branch;
