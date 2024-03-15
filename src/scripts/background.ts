@@ -71,8 +71,7 @@ function sendMessageWithRetry(
  * This key is set to true when the page is opened.
  */
 storage.get('grs-installed', (result) => {
-  if (result && result['grs-installed'] === true) {
-  } else {
+  if (!(result && result['grs-installed'] === true)) {
     chrome.tabs.create({
       url: 'https://aminoffz.github.io/github-repo-size',
     });

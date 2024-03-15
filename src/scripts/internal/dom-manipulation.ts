@@ -95,28 +95,6 @@ function insertToFileExplorer(
 }
 
 /**
- * Insert when on the GitHub home page.
- *
- * @param anchor - The anchor element as reference
- * @param span - The span element to insert
- */
-function insertToHome(anchor: HTMLAnchorElement, span: HTMLSpanElement) {
-  const row = anchor.closest('[role="row"]');
-  if (!row) {
-    return;
-  }
-
-  const div = row?.childNodes[row.childNodes.length - 2].cloneNode(false);
-  if (!div) {
-    return;
-  }
-
-  span.style.marginRight = '0.5rem';
-  div.appendChild(span);
-  row.insertBefore(div, row.childNodes[row.childNodes.length - 2]);
-}
-
-/**
  * Set the total size of the files in the repository.
  * This concerns the element shown in the navigation bar next to Settings.
  *
