@@ -1,9 +1,7 @@
 # Based on https://raw.githubusercontent.com/github/gitignore/main/Node.gitignore
 
 build
-dist/
 .astro/
-dist.zip
 github-repo-size-extension/
 github-repo-size-extension.zip
 *.pem
