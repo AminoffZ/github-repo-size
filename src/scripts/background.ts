@@ -11,7 +11,7 @@ import { storage } from '../shared';
  * @see https://developer.chrome.com/docs/extensions/reference/webNavigation/#event-order
  */
 function setupNavigationHandler() {
-  let redirects: { [url: string]: number } = {};
+  const redirects: { [url: string]: number } = {};
 
   chrome.webNavigation.onHistoryStateUpdated.addListener(function (details) {
     const url = new URL(details.url);
@@ -71,8 +71,7 @@ function sendMessageWithRetry(
  * This key is set to true when the page is opened.
  */
 storage.get('grs-installed', (result) => {
-  if (result && result['grs-installed'] === true) {
-  } else {
+  if (!(result && result['grs-installed'] === true)) {
     chrome.tabs.create({
       url: 'https://aminoffz.github.io/github-repo-size',
     });

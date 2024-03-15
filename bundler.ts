@@ -4,6 +4,6 @@ const entrypoints = await entryPoints();
 
 await Bun.build({
   entrypoints: entrypoints,
-  outdir: './dist',
+  outdir: './github-repo-size-extension',
   minify: true,
 });

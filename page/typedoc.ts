@@ -10,7 +10,7 @@ async function main() {
     entryPoints: entrypoints,
     plugin: ['typedoc-plugin-extras'],
     name: 'GitHub Repo Size',
-    // @ts-ignore
+    // @ts-expect-error: This favicon URL is necessary for GitHub Repo Size extension.
     favicon:
       'https://raw.githubusercontent.com/AminoffZ/github-repo-size/main/assets/github-repo-size-icon256.png',
   });
@@ -19,7 +19,7 @@ async function main() {
 
   if (project) {
     // Project may not have converted correctly
-    const outputDir = './dist/docs';
+    const outputDir = './github-repo-size-extension/docs';
 
     // Rendered docs
     await app.generateDocs(project, outputDir);

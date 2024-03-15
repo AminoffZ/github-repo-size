@@ -14,11 +14,24 @@ bun install
 bun run build
 ```
 
+OR
+
+```bash
+bun run build:firefox
+```
+
 #### Manual Installation:
+
+##### Chrome
 
 - Open your Chrome browser and navigate to [chrome://extensions/](chrome://extensions/).
 - Enable "Developer mode" in the top right corner.
-- Click on "Load unpacked" and select the <b>dist</b> folder inside the github-repo-size directory (generated after running bun run build).
+- Click on "Load unpacked" and select the <b>github-repo-size-extension</b> folder inside the github-repo-size directory (generated after running bun run build:firefox).
+
+##### Firefox
+
+- Open your Firefox browser and navigate to [about:debugging#/runtime/this-firefox](about:debugging#/runtime/this-firefox).
+- Click on "Load Temporary Add-on…" and select the <b>github-repo-size-extension</b> folder inside the github-repo-size directory (generated after running bun run build).
 
 <b> Please format the project before creating a PR.</b>
 

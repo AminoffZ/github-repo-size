@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const glob = require('tiny-glob');
 const path = require('path');
 const fs = require('fs');
@@ -59,4 +60,6 @@ async function removeInlineScriptAndStyle(directory) {
   }
 }
 
-removeInlineScriptAndStyle(path.resolve(__dirname, 'dist'));
+removeInlineScriptAndStyle(
+  path.resolve(import.meta.dir, 'github-repo-size-extension')
+);
