@@ -1,17 +1,17 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-const fs = require('fs').promises;
-const path = require('path');
-const chalk = require('chalk');
+import { join } from 'path';
+import { readFile, writeFile } from 'fs/promises';
+import chalk from 'chalk';
+
 async function updateManifestVersion() {
   try {
     const arg = process.argv[2];
     const browser = arg && arg === 'firefox' ? 'firefox' : 'chrome';
 
-    const packageJsonPath = path.join(import.meta.dir, 'package.json');
+    const packageJsonPath = join(import.meta.dir, 'package.json');
     const { version } = await import(packageJsonPath);
 
-    const manifestPath = path.join(import.meta.dir, 'public', 'manifest.json');
-    const manifestData = await fs.readFile(manifestPath, 'utf-8');
+    const manifestPath = join(import.meta.dir, 'public', 'manifest.json');
+    const manifestData = await readFile(manifestPath, 'utf-8');
     const manifest = JSON.parse(manifestData);
 
     manifest.version = version;
@@ -33,7 +33,7 @@ async function updateManifestVersion() {
       };
       delete manifest.browser_specific_settings;
     }
-    await fs.writeFile(manifestPath, JSON.stringify(manifest, null, 2));
+    await writeFile(manifestPath, JSON.stringify(manifest, null, 2));
 
     console.log(
       chalk.green(
@@ -42,7 +42,7 @@ async function updateManifestVersion() {
           ' Browser!'
       )
     );
-  } catch (error: unknown) {
+  } catch (error: any) {
     console.error(chalk.red('Error updating version: ' + error.message));
     process.exit(1);
   }
