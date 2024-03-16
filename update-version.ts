@@ -42,8 +42,8 @@ async function updateManifestVersion() {
           ' Browser!'
       )
     );
-  } catch (error: any) {
-    console.error(chalk.red('Error updating version: ' + error.message));
+  } catch (error) {
+    console.error(chalk.red('Error updating version: ' + error));
     process.exit(1);
   }
 }
