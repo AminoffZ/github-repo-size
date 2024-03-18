@@ -39,7 +39,7 @@ devDependencies:
     version: 3.2.1(astro@3.6.4)(purgecss@5.0.0)
   bun-types:
     specifier: latest
-    version: 1.0.25
+    version: 1.0.33
   chalk:
     specifier: 4.1.2
     version: 4.1.2
@@ -1462,12 +1462,11 @@ packages:
       base64-js: 1.5.1
       ieee754: 1.2.1
 
-  /bun-types@1.0.25:
-    resolution: {integrity: sha512-9lxeUR/OJsvlZH4GOWteiAdx7ikrSxCUX7Rr0JJux+DrR3LejouVLxIZnTeQ3UPAZovvSgKivWeHPJ2wlo7/Kg==}
+  /bun-types@1.0.33:
+    resolution: {integrity: sha512-L5tBIf9g6rBBkvshqysi5NoLQ9NnhSPU1pfJ9FzqoSfofYdyac3WLUnOIuQ+M5za/sooVUOP2ko+E6Tco0OLIA==}
     dependencies:
       '@types/node': 20.11.7
       '@types/ws': 8.5.10
-      undici-types: 5.28.2
     dev: true
 
   /callsites@3.1.0:
@@ -4186,10 +4185,6 @@ packages:
 
   /undici-types@5.26.5:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
-    dev: true
-
-  /undici-types@5.28.2:
-    resolution: {integrity: sha512-W71OLwDqzIO0d3k07qg1xc7d4cX8SsSwuCO4bQ4V7ITwduXXie/lcImofabP5VV+NvuvSe8ovKvHVJcizVc1JA==}
     dev: true
 
   /unherit@3.0.1:
