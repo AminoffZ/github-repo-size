@@ -23,8 +23,8 @@ async function updateManifestVersion() {
 
       manifest.browser_specific_settings = {
         gecko: {
-          id: 'mouiylus@gmail.com',
-          strict_min_version: '121.0.1',
+          id: 'github-repo-size@gmail.com',
+          strict_min_version: '42.0',
         },
       };
     } else {
