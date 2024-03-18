@@ -23,3 +23,32 @@ export function formatBytes(bytes: number, decimals: number = 2): string {
   const i = Math.floor(Math.log(bytes) / Math.log(k));
   return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
 }
+
+/**
+ * Formats a number in kilobytes to a string with a given amount of decimals.
+ *
+ * @param kilobytes - The number in kilobytes to format
+ * @param decimals - The number of decimals
+ * @returns The formatted string
+ * @example
+ * ```ts
+ * formatKilobytes(1024);
+ * // '1 KB'
+ * ```
+ * @example
+ * ```ts
+ * formatKilobytes(1024, 2);
+ * // '1.00 KB'
+ * ```
+ */
+export function formatKilobytes(
+  kilobytes: number,
+  decimals: number = 2
+): string {
+  if (kilobytes === 0) return '0 KB';
+  const k = 1000;
+  const dm = decimals < 0 ? 0 : decimals;
+  const sizes = ['KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+  const i = Math.floor(Math.log(kilobytes) / Math.log(k));
+  return parseFloat((kilobytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
+}

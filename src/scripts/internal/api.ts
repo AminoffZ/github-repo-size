@@ -152,3 +152,40 @@ export async function getRepoInfo(
   });
   return response;
 }
+
+/**
+ * Get the size of the repository in the specified branch.
+ * @param repo - The repository name in the format 'owner/repo'
+ * @param branch - The branch name
+ * @returns The size of the repository in KB
+ */
+export async function getRepoSize(
+  username: string | undefined,
+  reponame: string | undefined
+): Promise<number> {
+  const token = await getToken();
+  const headers = new Headers({
+    'User-Agent': 'Your-User-Agent', // Replace with your user agent
+    Accept: 'application/vnd.github.v3+json',
+    ...(token && { Authorization: `Bearer ${token}` }),
+  });
+
+  try {
+    const response = await fetch(
+      `https://api.github.com/repos/${username}/${reponame}`,
+      { headers }
+    );
+    if (!response.ok) {
+      throw new Error(
+        `Failed to fetch repo details: ${response.status} ${response.statusText}`
+      );
+    }
+
+    const data = await response.json();
+    const size = data.size;
+    return size;
+  } catch (error) {
+    console.error('Error fetching repository size for branch:', error);
+    return -1;
+  }
+}
