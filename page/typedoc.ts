@@ -19,7 +19,7 @@ async function main() {
 
   if (project) {
     // Project may not have converted correctly
-    const outputDir = './github-repo-size-extension/docs';
+    const outputDir = './dist/docs';
 
     // Rendered docs
     await app.generateDocs(project, outputDir);
