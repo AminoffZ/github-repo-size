@@ -1,5 +1,5 @@
 [![Google Chrome](https://img.shields.io/chrome-web-store/v/jpdmfnflpdgefbfkafcikmhipofhanfl?label=Get%20GRS%20for%20Chrome&logo=Google%20Chrome)](https://chrome.google.com/webstore/detail/github-repo-size/jpdmfnflpdgefbfkafcikmhipofhanfl)
-[![Mozilla Add-on Version](https://img.shields.io/amo/v/github-repo-size-extension?label=Get%20GRS%20for%20Firefox)](https://addons.mozilla.org/en-US/firefox/addon/github-repo-size-extension/)
+[![Mozilla Add-on Version](https://img.shields.io/amo/v/github-repo-size-extension?label=Get%20GRS%20for%20Firefox&logo=Firefox)](https://addons.mozilla.org/en-US/firefox/addon/github-repo-size-extension/)
 <img src="https://raw.githubusercontent.com/AminoffZ/github-repo-size/main/assets/github-repo-size-icon256.png" align="right"  />
 
 # GitHub Repo Size
