@@ -28,7 +28,13 @@ GitHubs API has a limit of 50 (at time of writing) requests per hour for unauthe
 
 ## Requirements
 
-Chromium based browser.
+Chromium or Firefox based browser.
+
+## Installation
+
+For Chrome, install the extension from the [Chrome Web Store](https://chrome.google.com/webstore/detail/github-repo-size/jpdmfnflpdgefbfkafcikmhipofhanfl).
+
+For Firefox, install the extension from the [Firefox Add-on Store](https://addons.mozilla.org/en-US/firefox/addon/github-repo-size-extension/).
 
 ## Contributing
 

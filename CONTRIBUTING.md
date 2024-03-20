@@ -33,10 +33,14 @@ bun run build:firefox
 - Open your Firefox browser and navigate to [about:debugging#/runtime/this-firefox](about:debugging#/runtime/this-firefox).
 - Click on "Load Temporary Add-on…" and select the <b>github-repo-size-extension</b> folder inside the github-repo-size directory (generated after running bun run build).
 
-<b> Please format the project before creating a PR.</b>
+<b> Please format and fix any linting problems in the project before creating a PR.</b>
 
 ```bash
 bun run format
+```
+
+```bash
+bun run lint
 ```
 
 Most of the business logic for this extension happens inside the [src/scripts/](https://github.com/AminoffZ/github-repo-size/tree/main/src/scripts) folder. If you are looking to make changes, this is most likely the place to start.
