@@ -3,7 +3,6 @@ import {
   createSizeSpan,
   createEmptySizeSpan,
   createTotalSizeElement,
-  formatBytes,
   getFileAnchors,
   getFirstTd,
   getNavButtons,
@@ -11,12 +10,14 @@ import {
   getRepoInfo,
   getSize,
   getSizeLabel,
+  getRepoSize,
   getTable,
   getThead,
   getTotalSizeButton,
   getTotalSizeSpan,
+  formatKilobytes,
 } from '.';
-import type { GRSUpdate, GitHubTree } from './types';
+import type { GRSUpdate, PathObject } from './types';
 
 /**
  * Insert the size label element into the table head.
@@ -100,7 +101,7 @@ function insertToFileExplorer(
  *
  * @param repoInfo - The repo info
  */
-function setTotalSize(repoInfo: GitHubTree) {
+async function setTotalSize(pathObject: PathObject) {
   const navButtons = getNavButtons();
   if (!navButtons) {
     return;
@@ -128,12 +129,9 @@ function setTotalSize(repoInfo: GitHubTree) {
     return;
   }
 
-  let totalSize = 0;
-  repoInfo.tree.forEach((item) => {
-    totalSize += item.size ?? 0;
-  });
+  const totalSize = await getRepoSize(pathObject.owner, pathObject.repo);
 
-  span.innerText = formatBytes(totalSize);
+  span.innerText = formatKilobytes(totalSize);
 
   navButtons.appendChild(totalSizeButton);
 }
@@ -213,7 +211,7 @@ export async function updateDOM() {
 
   insertSizeColumn();
 
-  setTotalSize(repoInfo);
+  setTotalSize(pathObject);
 
   updates.forEach(({ anchor, span, index }) => {
     // for some reason the rows have two td's with name of each file
