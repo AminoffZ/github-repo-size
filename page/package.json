@@ -9,7 +9,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "docs": "bun typedoc.ts",
-    "deploy": "bun run build && bun run docs && gh-pages -d github-repo-size-extension",
+    "deploy": "bun run build && bun run docs && gh-pages -d dist",
     "postinstall": "patch-package"
   },
   "dependencies": {
@@ -22,8 +22,6 @@
     "@catppuccin/tailwindcss": "^0.1.6",
     "@types/marked": "^5.0.1",
     "gh-pages": "^6.1.1",
-    "patch-package": "^8.0.0",
-    "typedoc": "^0.25.12",
-    "typedoc-plugin-extras": "^3.0.0"
+    "typedoc": "^0.25.12"
   }
 }
