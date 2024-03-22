@@ -1,0 +1,28 @@
+name: Publish GRS Page
+on:
+  push:
+    branches:
+      - main
+  workflow_run:
+    workflows:
+      ['Extension Lint CI', 'Extension Format CI', 'Extension Build CI']
+    branches: [main]
+    types:
+      - completed
+jobs:
+  publish-page:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: page/
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+      - name: Install dependencies
+        run: |
+          bun install
+      - name: Build and publish
+        run: |
+          bun run deploy
