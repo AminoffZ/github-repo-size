@@ -25,7 +25,7 @@
     "@catppuccin/tailwindcss": "^0.1.6",
     "@tailwindcss/forms": "^0.5.6",
     "@types/chrome": "^0.0.263",
-    "@typescript-eslint/eslint-plugin": "^7.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.5.0",
     "@typescript-eslint/parser": "^7.4.0",
     "astro-purgecss": "^3.2.1",
     "bun-types": "latest",
