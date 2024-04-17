@@ -39,7 +39,7 @@ devDependencies:
     version: 3.2.1(astro@3.6.5)(purgecss@5.0.0)
   bun-types:
     specifier: latest
-    version: 1.1.2
+    version: 1.1.3
   chalk:
     specifier: 5.3.0
     version: 5.3.0
@@ -1419,8 +1419,8 @@ packages:
       base64-js: 1.5.1
       ieee754: 1.2.1
 
-  /bun-types@1.1.2:
-    resolution: {integrity: sha512-orHLB/tiBuKlk3c/0Vqbu5F1F/dnLlLrcCJxPy3uxFsIhQbwet7gkthMJ6i9B+HI8aR2nV50uikOqd8lpRx2KQ==}
+  /bun-types@1.1.3:
+    resolution: {integrity: sha512-UB6AlrfSzOmSV3gCTrm2d2e+p/ZeHXrNdrEbFYFL3uy9pIJ02pEYCbtj/HHrDyxKt9YBRH13PDH6Avmt3rKYRA==}
     dependencies:
       '@types/node': 20.11.7
       '@types/ws': 8.5.10
