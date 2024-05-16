@@ -9,6 +9,7 @@
   $: tokenUpdated = false;
   $: showToken = false;
   $: tokenValid = token.match(/^github_pat_[a-zA-Z0-9]{22}_[a-zA-Z0-9]{59}$/);
+  $: savedToken = false;
 
   const readStorage = async (): Promise<string> => {
     return new Promise((resolve, reject) => {
@@ -39,10 +40,20 @@
       });
   }
 
+  async function removeGithubToken() {
+    await storage
+      .remove(GITHUB_TOKEN_KEY)
+      .then(() => (tokenUpdated = true))
+      .catch(console.error);
+  }
+
   onMount(async () => {
     await getGithubToken()
       .then((_token) => {
-        if (typeof _token === 'string') token = _token;
+        if (typeof _token === 'string') {
+          token = _token;
+          savedToken = true;
+        }
       })
       .catch((err) => {
         console.error(err);
@@ -52,7 +63,7 @@
 
 <div
   class="flex flex-col justify-center items-center token-dropdown {expanded
-    ? 'h-32'
+    ? 'h-40'
     : 'h-0'} overflow-hidden"
 >
   <div
@@ -112,8 +123,17 @@
       on:click={setGithubToken}>Set Token</button
     >
   </div>
+  <div class="mb-1 mt-2 flex justify-center items-center">
+    <button
+      disabled={!savedToken}
+      class="disabled:opacity-50 font-extrabold rounded text-base bg-ctp-crust px-3 py-1"
+      on:click={removeGithubToken}>Remove Token</button
+    >
+  </div>
   {#if tokenUpdated}
-    <span class="text-center">Token set, refresh the page to see changes.</span>
+    <span class="text-center"
+      >Token updated, refresh the page to see changes.</span
+    >
   {:else}
     <br />
   {/if}
