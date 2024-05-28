@@ -1003,10 +1003,10 @@ array-uniq@^1.0.1:
   resolved "https://registry.npmjs.org/array-uniq/-/array-uniq-1.0.3.tgz"
   integrity sha512-MNha4BWQ6JbwhFhj03YK552f7cb3AzoE8SzeljgChvL1dl3IcvggXVz1DilzySZkCja+CXuZbdW7yATchWn8/Q==
 
-astro@^4.8.6:
-  version "4.8.6"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-4.8.6.tgz#f5381f16580f3c573ba0d1f7437e7aa7f966b44c"
-  integrity sha512-psHIfK+e+bMPhRwghV9yCGH/uc1jvY4DHmDZdoEepax9yA7kzYH0wt3dpkqlcrO2zxl5jzSC3DmqZfkD6wnW9A==
+astro@^4.9.1:
+  version "4.9.1"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-4.9.1.tgz#2883fabd5c4c9f1ba9417236b4fdf70320432a65"
+  integrity sha512-9TsoAu0WBPiqyAIj9H0JW7R+tIjPjFsPKo70Nja6WL3imTTuUJQmnCre4ZVmoNV3oicTTlb+N4zjRYANW0Ty9A==
   dependencies:
     "@astrojs/compiler" "^2.8.0"
     "@astrojs/internal-helpers" "0.4.0"
