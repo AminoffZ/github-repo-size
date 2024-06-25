@@ -10,7 +10,7 @@ dependencies:
     version: 4.0.4(astro@3.6.5)(svelte@4.2.18)(typescript@5.3.3)(vite@4.5.3)
   '@astrojs/tailwind':
     specifier: ^5.0.0
-    version: 5.1.0(astro@3.6.5)(tailwindcss@3.4.3)
+    version: 5.1.0(astro@3.6.5)(tailwindcss@3.4.4)
   astro:
     specifier: ^3.6.5
     version: 3.6.5(typescript@5.3.3)
@@ -21,10 +21,10 @@ dependencies:
 devDependencies:
   '@catppuccin/tailwindcss':
     specifier: ^0.1.6
-    version: 0.1.6(tailwindcss@3.4.3)
+    version: 0.1.6(tailwindcss@3.4.4)
   '@tailwindcss/forms':
     specifier: ^0.5.6
-    version: 0.5.7(tailwindcss@3.4.3)
+    version: 0.5.7(tailwindcss@3.4.4)
   '@types/chrome':
     specifier: ^0.0.268
     version: 0.0.268
@@ -53,8 +53,8 @@ devDependencies:
     specifier: ^5.0.0
     version: 5.0.0
   tailwindcss:
-    specifier: ^3.4.3
-    version: 3.4.3
+    specifier: ^3.4.4
+    version: 3.4.4
   tiny-glob:
     specifier: ^0.2.9
     version: 0.2.9
@@ -129,7 +129,7 @@ packages:
       - vite
     dev: false
 
-  /@astrojs/tailwind@5.1.0(astro@3.6.5)(tailwindcss@3.4.3):
+  /@astrojs/tailwind@5.1.0(astro@3.6.5)(tailwindcss@3.4.4):
     resolution: {integrity: sha512-BJoCDKuWhU9FT2qYg+fr6Nfb3qP4ShtyjXGHKA/4mHN94z7BGcmauQK23iy+YH5qWvTnhqkd6mQPQ1yTZTe9Ig==}
     peerDependencies:
       astro: ^3.0.0 || ^4.0.0
@@ -139,7 +139,7 @@ packages:
       autoprefixer: 10.4.17(postcss@8.4.33)
       postcss: 8.4.33
       postcss-load-config: 4.0.2(postcss@8.4.33)
-      tailwindcss: 3.4.3
+      tailwindcss: 3.4.4
     transitivePeerDependencies:
       - ts-node
     dev: false
@@ -360,12 +360,12 @@ packages:
       '@babel/helper-validator-identifier': 7.22.20
       to-fast-properties: 2.0.0
 
-  /@catppuccin/tailwindcss@0.1.6(tailwindcss@3.4.3):
+  /@catppuccin/tailwindcss@0.1.6(tailwindcss@3.4.4):
     resolution: {integrity: sha512-V+Y0AwZ5SSyvOVAcDl7Ng30xy+m82OKnEJ+9+kcZZ7lRyXuZrAb2GScdq9XR3v+ggt8qiZ/G4TvaC9cJ88AAXA==}
     peerDependencies:
       tailwindcss: '>=3.0.0'
     dependencies:
-      tailwindcss: 3.4.3
+      tailwindcss: 3.4.4
     dev: true
 
   /@esbuild/aix-ppc64@0.19.12:
@@ -881,13 +881,13 @@ packages:
       - supports-color
     dev: false
 
-  /@tailwindcss/forms@0.5.7(tailwindcss@3.4.3):
+  /@tailwindcss/forms@0.5.7(tailwindcss@3.4.4):
     resolution: {integrity: sha512-QE7X69iQI+ZXwldE+rzasvbJiyV/ju1FGHH0Qn2W3FKbuYtqp8LKcy6iSw79fVUT5/Vvf+0XgLCeYVG+UV6hOw==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
     dependencies:
       mini-svg-data-uri: 1.4.4
-      tailwindcss: 3.4.3
+      tailwindcss: 3.4.4
     dev: true
 
   /@types/babel__core@7.20.5:
@@ -2138,6 +2138,7 @@ packages:
 
   /glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
+    deprecated: Glob versions prior to v9 are no longer supported
     dependencies:
       fs.realpath: 1.0.0
       inflight: 1.0.6
@@ -4013,8 +4014,8 @@ packages:
       periscopic: 3.1.0
     dev: false
 
-  /tailwindcss@3.4.3:
-    resolution: {integrity: sha512-U7sxQk/n397Bmx4JHbJx/iSOOv5G+II3f1kpLpY2QeUv5DcPdcTsYLlusZfq1NthHS1c1cZoyFmmkex1rzke0A==}
+  /tailwindcss@3.4.4:
+    resolution: {integrity: sha512-ZoyXOdJjISB7/BcLTR6SEsLgKtDStYyYZVLsUtWChO4Ps20CBad7lfJKVDiejocV4ME1hLmyY0WJE3hSDcmQ2A==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
