@@ -24,6 +24,7 @@ It's also possible to view private repository size summaries by adding a persona
 GitHubs API has a limit of 50 (at time of writing) requests per hour for unauthenticated requests. By clicking Authenticate and signing in with OAuth, you can make up to 5000 requests per hour.[^2]
 
 [^1]: [Managing your personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
+
 [^2]: [Rate limiting](https://docs.github.com/en/rest/overview/resources-in-the-rest-api?apiVersion=2022-11-28#rate-limits)
 
 ## Requirements
