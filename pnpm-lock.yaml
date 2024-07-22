@@ -13,7 +13,7 @@ importers:
         version: 4.0.4(astro@3.6.5(@types/node@20.12.11)(typescript@5.3.3))(svelte@4.2.18)(typescript@5.3.3)(vite@4.5.3(@types/node@20.12.11))
       '@astrojs/tailwind':
         specifier: ^5.0.0
-        version: 5.1.0(astro@3.6.5(@types/node@20.12.11)(typescript@5.3.3))(tailwindcss@3.4.4)
+        version: 5.1.0(astro@3.6.5(@types/node@20.12.11)(typescript@5.3.3))(tailwindcss@3.4.6)
       astro:
         specifier: ^3.6.5
         version: 3.6.5(@types/node@20.12.11)(typescript@5.3.3)
@@ -23,10 +23,10 @@ importers:
     devDependencies:
       '@catppuccin/tailwindcss':
         specifier: ^0.1.6
-        version: 0.1.6(tailwindcss@3.4.4)
+        version: 0.1.6(tailwindcss@3.4.6)
       '@tailwindcss/forms':
         specifier: ^0.5.6
-        version: 0.5.7(tailwindcss@3.4.4)
+        version: 0.5.7(tailwindcss@3.4.6)
       '@types/chrome':
         specifier: ^0.0.268
         version: 0.0.268
@@ -55,8 +55,8 @@ importers:
         specifier: ^5.0.0
         version: 5.0.0
       tailwindcss:
-        specifier: ^3.4.4
-        version: 3.4.4
+        specifier: ^3.4.6
+        version: 3.4.6
       tiny-glob:
         specifier: ^0.2.9
         version: 0.2.9
@@ -2186,6 +2186,7 @@ packages:
 
   shikiji@0.6.13:
     resolution: {integrity: sha512-4T7X39csvhT0p7GDnq9vysWddf2b6BeioiN3Ymhnt3xcy9tXmDcnsEFVxX18Z4YcQgEE/w48dLJ4pPPUcG9KkA==}
+    deprecated: Shikiji is merged back to Shiki v1.0, please migrate over to get the latest updates
 
   signal-exit@3.0.7:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}
@@ -2309,8 +2310,8 @@ packages:
     resolution: {integrity: sha512-d0FdzYIiAePqRJEb90WlJDkjUEx42xhivxN8muUBmfZnP+tzUgz12DJ2hRJi8sIHCME7jeK1PTMgKPSfTd8JrA==}
     engines: {node: '>=16'}
 
-  tailwindcss@3.4.4:
-    resolution: {integrity: sha512-ZoyXOdJjISB7/BcLTR6SEsLgKtDStYyYZVLsUtWChO4Ps20CBad7lfJKVDiejocV4ME1hLmyY0WJE3hSDcmQ2A==}
+  tailwindcss@3.4.6:
+    resolution: {integrity: sha512-1uRHzPB+Vzu57ocybfZ4jh5Q3SdlH7XW23J5sQoM9LhE9eIOlzxer/3XPSsycvih3rboRsvt0QCmzSrqyOYUIA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -2628,13 +2629,13 @@ snapshots:
       - typescript
       - vite
 
-  '@astrojs/tailwind@5.1.0(astro@3.6.5(@types/node@20.12.11)(typescript@5.3.3))(tailwindcss@3.4.4)':
+  '@astrojs/tailwind@5.1.0(astro@3.6.5(@types/node@20.12.11)(typescript@5.3.3))(tailwindcss@3.4.6)':
     dependencies:
       astro: 3.6.5(@types/node@20.12.11)(typescript@5.3.3)
       autoprefixer: 10.4.17(postcss@8.4.33)
       postcss: 8.4.33
       postcss-load-config: 4.0.2(postcss@8.4.33)
-      tailwindcss: 3.4.4
+      tailwindcss: 3.4.6
     transitivePeerDependencies:
       - ts-node
 
@@ -2795,9 +2796,9 @@ snapshots:
       '@babel/helper-validator-identifier': 7.22.20
       to-fast-properties: 2.0.0
 
-  '@catppuccin/tailwindcss@0.1.6(tailwindcss@3.4.4)':
+  '@catppuccin/tailwindcss@0.1.6(tailwindcss@3.4.6)':
     dependencies:
-      tailwindcss: 3.4.4
+      tailwindcss: 3.4.6
 
   '@esbuild/aix-ppc64@0.19.12':
     optional: true
@@ -3033,10 +3034,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@tailwindcss/forms@0.5.7(tailwindcss@3.4.4)':
+  '@tailwindcss/forms@0.5.7(tailwindcss@3.4.6)':
     dependencies:
       mini-svg-data-uri: 1.4.4
-      tailwindcss: 3.4.4
+      tailwindcss: 3.4.6
 
   '@types/babel__core@7.20.5':
     dependencies:
@@ -5201,7 +5202,7 @@ snapshots:
       magic-string: 0.30.5
       periscopic: 3.1.0
 
-  tailwindcss@3.4.4:
+  tailwindcss@3.4.6:
     dependencies:
       '@alloc/quick-lru': 5.2.0
       arg: 5.0.2
