@@ -16,7 +16,7 @@
     "@astrojs/tailwind": "^5.0.0",
     "astro": "^4.12.2",
     "marked": "^13.0.3",
-    "tailwindcss": "^3.4.4"
+    "tailwindcss": "^3.4.7"
   },
   "devDependencies": {
     "@catppuccin/tailwindcss": "^0.1.6",
