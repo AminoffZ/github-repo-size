@@ -24,7 +24,7 @@
   "devDependencies": {
     "@catppuccin/tailwindcss": "^0.1.6",
     "@tailwindcss/forms": "^0.5.6",
-    "@types/chrome": "^0.0.268",
+    "@types/chrome": "^0.0.269",
     "@typescript-eslint/eslint-plugin": "^7.17.0",
     "@typescript-eslint/parser": "^7.16.0",
     "astro-purgecss": "^3.2.1",
