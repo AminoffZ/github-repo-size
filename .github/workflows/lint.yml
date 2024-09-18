@@ -23,4 +23,4 @@ jobs:
         run: bun install
 
       - name: Check code linting
-        run: bun run lint
+        run: bunx run lint
