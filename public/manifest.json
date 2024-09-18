@@ -6,36 +6,22 @@
   "version": "0.2.7",
   "web_accessible_resources": [
     {
-      "resources": [
-        "script.js"
-      ],
-      "matches": [
-        "https://github.com/*"
-      ]
+      "resources": ["script.js"],
+      "matches": ["https://github.com/*"]
     }
   ],
   "content_scripts": [
     {
-      "matches": [
-        "https://github.com/*"
-      ],
-      "js": [
-        "content.js"
-      ],
+      "matches": ["https://github.com/*"],
+      "js": ["content.js"],
       "run_at": "document_end",
-      "css": [
-        "content.css"
-      ]
+      "css": ["content.css"]
     }
   ],
   "action": {
     "default_popup": "index.html"
   },
-  "permissions": [
-    "storage",
-    "tabs",
-    "webNavigation"
-  ],
+  "permissions": ["storage", "tabs", "webNavigation"],
   "background": {
     "service_worker": "background.js"
   },
