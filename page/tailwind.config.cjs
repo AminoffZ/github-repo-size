@@ -1,6 +1,7 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import forms from '@tailwindcss/forms';
+import catppuccin from '@catppuccin/tailwindcss';
+
+export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {},
@@ -15,8 +16,8 @@ module.exports = {
     'latte',
   ],
   plugins: [
-    require('@tailwindcss/forms'),
-    require('@catppuccin/tailwindcss')({
+    forms,
+    catppuccin({
       prefix: 'ctp',
       defaultFlavour: 'macchiato',
     }),
