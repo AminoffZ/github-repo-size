@@ -4,7 +4,7 @@
  * @returns element containing the nav buttons
  */
 export function getNavButtons() {
-  return document.querySelector('.js-repo-nav > ul') as HTMLUListElement | null;
+  return document.querySelector('nav[aria-label="Repository"] > ul') as HTMLUListElement | null;
 }
 
 /**
