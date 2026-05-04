@@ -152,3 +152,36 @@ export async function getRepoInfo(
   });
   return response;
 }
+
+/**
+ * Fallback to fetch the non-recursive contents of a specific directory
+ * when the repository is too large and the main tree API truncates.
+ *
+ * @example
+ * ```ts
+ * getFallbackDirectoryInfo('owner/repo', 'main', 'src');
+ * // [ { name: 'index.ts', path: 'src/index.ts', ... }, ... ]
+ * ```
+ */
+export async function getFallbackDirectoryInfo(
+  repo: string,
+  branch: string,
+  path: string
+) {
+  const headers = await createHeaders();
+  const safePath = path ? `/${path}` : '';
+  const request = new Request(
+    `https://api.github.com/repos/${repo}/contents${safePath}?ref=${branch}`,
+    { headers }
+  );
+
+  const response = await fetch(request).catch((err) => {
+    console.error(err);
+    return undefined;
+  });
+
+  if (response && response.ok) {
+    return await response.json();
+  }
+  return undefined;
+}

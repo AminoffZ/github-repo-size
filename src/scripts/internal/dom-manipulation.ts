@@ -15,6 +15,7 @@ import {
   getThead,
   getTotalSizeButton,
   getTotalSizeSpan,
+  getFallbackDirectoryInfo,
 } from '.';
 import type { GRSUpdate, GitHubTree } from './types';
 
@@ -162,7 +163,7 @@ export async function updateDOM() {
   }
 
   const type = pathObject.type;
-  let branch = pathObject.branch;
+  let branch = pathObject.branch || 'main';
   if (type !== 'tree' && type !== 'blob') {
     branch = 'main';
   }
@@ -180,6 +181,37 @@ export async function updateDOM() {
     `;
     console.warn(warnMessage);
     return false;
+  }
+
+  // Handle GitHub API truncation (repos with >100k files)
+  if (repoInfo.truncated) {
+    console.warn(
+      'Repository tree truncated by GitHub. Fetching fallback directory data...'
+    );
+
+    const fallbackData = await getFallbackDirectoryInfo(
+      pathObject.owner + '/' + pathObject.repo,
+      branch,
+      pathObject.path || ''
+    );
+
+    if (fallbackData && Array.isArray(fallbackData)) {
+      const existingPaths = new Set(repoInfo.tree.map((f) => f.path));
+
+      fallbackData.forEach((item) => {
+        if (!existingPaths.has(item.path)) {
+          repoInfo.tree.push({
+            path: item.path,
+            mode: '',
+            type: item.type === 'dir' ? 'tree' : 'blob',
+            sha: item.sha,
+            size: item.size ?? 0,
+            url: item.url,
+          });
+          existingPaths.add(item.path);
+        }
+      });
+    }
   }
 
   const updates: GRSUpdate = [];
