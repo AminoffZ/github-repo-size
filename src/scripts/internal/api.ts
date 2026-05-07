@@ -135,20 +135,23 @@ export async function getRepoInfo(
   branch: string = 'main',
   attempts: number = 0
 ): Promise<GitHubTree | undefined> {
-  const branchName = (await getDefaultBranch(repo)) || branch;
-  const request = await createTreeRequest(repo, branchName);
-  const response = await fetch(request).then(async (res) => {
-    if (await hasErrors(res)) {
-      if (attempts < 1) {
-        const defaultBranch = await getDefaultBranch(repo);
+  const request = await createTreeRequest(repo, branch);
+  const res = await fetch(request);
+
+  // If the branch does not exist, retry using the repository default branch
+  if (await hasErrors(res)) {
+    if (attempts < 1) {
+      const defaultBranch = await getDefaultBranch(repo);
+
+      if (defaultBranch && defaultBranch !== branch) {
         return getRepoInfo(repo, defaultBranch, attempts + 1);
       }
     }
-    if (attempts > 0) {
-      await setDefaultBranch(repo, branch);
-    }
-    const data = await res.json();
-    return data as GitHubTree;
-  });
-  return response;
+  }
+
+  if (attempts > 0 && res.ok) {
+    await setDefaultBranch(repo, branch);
+  }
+  const data = await res.json();
+  return data as GitHubTree;
 }
