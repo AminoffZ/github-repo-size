@@ -152,3 +152,32 @@ export async function getRepoInfo(
   });
   return response;
 }
+
+/**
+ * Fetch the total working-tree size of an external repository.
+ * Used for calculating Git submodule sizes.
+ *
+ * @param owner - The repository owner
+ * @param repo - The repository name
+ * @returns The total size in bytes
+ *
+ * @example
+ * ```ts
+ * getExternalRepoSize('AminoffZ', 'github-repo-size');
+ * // 204800
+ * ```
+ */
+export async function getExternalRepoSize(
+  owner: string,
+  repo: string
+): Promise<number> {
+  const repoInfo = await getRepoInfo(`${owner}/${repo}`);
+
+  if (!repoInfo || !repoInfo.tree) {
+    return 0;
+  }
+
+  return repoInfo.tree.reduce((totalSize, item) => {
+    return totalSize + (item.size ?? 0);
+  }, 0);
+}
